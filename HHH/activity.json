@@ -1,9 +1,19 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T13:14:00Z",
+  "updated_at": "2026-09-08T13:36:26Z",
   "timezone": "Australia/Sydney",
-  "current_id": "g2-ledger-data-blocked",
+  "current_id": "g2-native-factor-unresolved",
   "entries": [
+    {
+      "id": "g2-native-factor-unresolved",
+      "observed_at": "2026-09-08T13:36:26Z",
+      "kind": "research",
+      "status": "blocked",
+      "owner": "Python",
+      "title": {"zh": "因子 · 待解释", "en": "Factor / Unresolved"},
+      "detail": {"zh": "新增300107的8条原生记录：6月25日因子仍从9.864变为9.865。短查询能返回，不能把问题仅归因于断连；G2利润仍未确认。", "en": "Eight native records obtained for 300107: the June 25 factor still changes from 9.864 to 9.865. Short queries work; connectivity alone does not explain the blocker. G2 profit remains unavailable."},
+      "evidence": {"zh": "已核对当地日线前收与股本记录，尚不能解释该变化。保留原始数据，不放宽检查、不将未知分红当零；未重跑账本或启动G3，没有实盘信号。", "en": "Local previous-close and share-capital records were checked; the change remains unexplained. Raw data and strict checks are preserved; unknown dividends are not zero. No ledger rerun, G3 start or live signal."}
+    },
     {
       "id": "g2-ledger-data-blocked",
       "observed_at": "2026-09-08T13:14:00Z",
