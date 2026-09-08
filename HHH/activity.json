@@ -1,9 +1,19 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T12:30:00Z",
+  "updated_at": "2026-09-08T13:14:00Z",
   "timezone": "Australia/Sydney",
-  "current_id": "g2-capital-running",
+  "current_id": "g2-ledger-data-blocked",
   "entries": [
+    {
+      "id": "g2-ledger-data-blocked",
+      "observed_at": "2026-09-08T13:14:00Z",
+      "kind": "research",
+      "status": "blocked",
+      "owner": "Python",
+      "title": {"zh": "G2 · 数据待核", "en": "G2 / Data unresolved"},
+      "detail": {"zh": "9月8日日线与官方科创50已补齐；全A股月度Top20评分完成。资金账本暂停于300107的2024年6月25日复权变动，尚无可确认利润。", "en": "Daily data and official STAR50 reach September 8; all-A monthly Top20 scores are computed. The ledger stopped at the June 25, 2024 factor change in 300107. Profit remains unavailable."},
+      "evidence": {"zh": "428/428份分红历史、50项针对性测试完成，仍有16项分红条款未知。300641的3条来源差异只修正研究副本；后续原生查询连接失败。不是盈利策略，未生成实盘指令，当前没有后台计算在运行。", "en": "428/428 dividend histories and 50 targeted tests completed; 16 event terms remain unknown. Three source differences for 300641 were corrected only in the research copy. Follow-up native queries failed to connect. No profit qualification or live orders; no calculation is currently running."}
+    },
     {
       "id": "g2-capital-running",
       "observed_at": "2026-09-08T12:30:00Z",
