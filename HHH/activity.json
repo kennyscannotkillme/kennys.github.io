@@ -1,9 +1,29 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T11:33:31Z",
+  "updated_at": "2026-09-08T12:30:00Z",
   "timezone": "Australia/Sydney",
-  "current_id": "all-a-readiness",
+  "current_id": "g2-capital-running",
   "entries": [
+    {
+      "id": "g2-capital-running",
+      "observed_at": "2026-09-08T12:30:00Z",
+      "kind": "research",
+      "status": "active",
+      "owner": "Python",
+      "title": {"zh": "G2 · 计算中", "en": "G2 / Computing"},
+      "detail": {"zh": "全A股月度动量候选：最多20只，保留仍入选的持仓。选股模块已生成，资金账本正在实现。", "en": "All-A monthly momentum candidate: up to20 names, retaining selected incumbents. Ranking module exists; the capital ledger is being implemented."},
+      "evidence": {"zh": "规则先于结果冻结，这是本批第2个候选。尚无收益结果；开盘成交容量未验证，不可实盘。", "en": "Rules frozen before results; candidate2 of this batch. No profit result yet. Opening execution capacity remains unverified; no live trading."}
+    },
+    {
+      "id": "all-a-daily-fresh-0908",
+      "observed_at": "2026-09-08T12:30:00Z",
+      "kind": "research",
+      "status": "done",
+      "owner": "Python",
+      "title": {"zh": "数据 · 09.08", "en": "Data / 09.08"},
+      "detail": {"zh": "日线、复权、每日指标、涨跌停均补齐12/12；官方科创50更新到9月8日。只增量入库，旧历史未覆盖。", "en": "Daily bars, adjustments, daily metrics and limits each12/12 complete. Official STAR50 reaches September8. Additive publication; old history unchanged."},
+      "evidence": {"zh": "新增66,565条日线、66,761条复权、66,565条每日指标、67,583条涨跌停；三组日线关联缺失均为0。4项针对性测试通过。", "en": "Added66,565 daily bars,66,761 adjustments,66,565 daily metrics and67,583 limits. All three daily-key joins have zero missing rows. Four targeted tests passed."}
+    },
     {
       "id": "all-a-readiness",
       "observed_at": "2026-09-08T11:33:31Z",
