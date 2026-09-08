@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { validateActivity, activityDays } from '../lib/activity.mjs';
+const seed = JSON.parse(readFileSync(new URL('../public/activity.json',import.meta.url),'utf8'));
+const copy = () => structuredClone(seed);
+test('published records obey the explicit public schema', () => assert.equal(validateActivity(seed),true));
+test('duplicate activity identities are rejected', () => {const d=copy();d.entries.push(d.entries[0]);assert.equal(validateActivity(d),false);});
+test('unlisted fields cannot enter a public feed', () => {const d=copy();d.internal_log='not public';assert.equal(validateActivity(d),false);});
+test('future observations relative to publication are rejected', () => {const d=copy();d.updated_at='2000-01-01T00:00:00Z';assert.equal(validateActivity(d),false);});
+test('unknown active task and malformed rows are rejected', () => {const d=copy();d.current_id='missing';assert.equal(validateActivity(d),false);d.entries=[null];assert.equal(validateActivity(d),false);});
+test('both languages are required', () => {const d=copy();delete d.entries[0].title.en;assert.equal(validateActivity(d),false);});
+test('local paths never enter public text', () => {const d=copy();d.entries[0].detail.en='C:/private/example';assert.equal(validateActivity(d),false);});
+test('record counts come only from real entries, not generated calendar days', () => {assert.ok(activityDays(seed).length<=seed.entries.length);assert.equal(new Set(seed.entries.map(e=>e.id)).size,seed.entries.length);});

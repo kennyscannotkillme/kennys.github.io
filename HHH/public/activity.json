@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-08T10:26:22Z",
+  "timezone": "Australia/Sydney",
+  "current_id": "hhh-interface",
+  "entries": [
+    {
+      "id": "hhh-polish",
+      "observed_at": "2026-09-08T10:26:22Z",
+      "kind": "design",
+      "status": "done",
+      "owner": "Claude",
+      "title": {
+        "zh": "材质 · 精修",
+        "en": "Material / Refined"
+      },
+      "detail": {
+        "zh": "依据真实桌面与手机截图，增强玻璃层次，收起重复卡片。",
+        "en": "Based on actual desktop and phone screenshots: stronger glass separation and quieter history layers."
+      },
+      "evidence": {
+        "zh": "Claude Opus 5 提出建议，Codex 已实现；静态截图不能证明动效质量。",
+        "en": "Advice from Claude Opus 5, implemented by Codex. Still screenshots alone cannot establish motion quality."
+      }
+    },
+    {
+      "id": "hhh-interface",
+      "observed_at": "2026-09-08T10:26:22Z",
+      "kind": "code",
+      "status": "done",
+      "owner": "Codex",
+      "title": {
+        "zh": "HHH · 已构建",
+        "en": "HHH / Built"
+      },
+      "detail": {
+        "zh": "玻璃界面、双语、历史抽屉与日夜模式已可操作。",
+        "en": "Glass interface, bilingual controls, history drawers and day/night modes are working."
+      },
+      "evidence": {
+        "zh": "8 项记录测试通过；桌面与手机交互已检查。记录不代表后台仍在持续运行。",
+        "en": "Eight feed tests passed; desktop and phone interactions checked. A record is not a continuous process heartbeat."
+      }
+    },
+    {
+      "id": "hhh-design",
+      "observed_at": "2026-09-08T09:56:34Z",
+      "kind": "design",
+      "status": "done",
+      "owner": "Claude",
+      "title": {
+        "zh": "层 · Strata",
+        "en": "Strata / Art direction"
+      },
+      "detail": {
+        "zh": "Claude Opus 建议以磨砂玻璃层表达现在与历史，减少文字，移除侧栏。",
+        "en": "Claude Opus proposed frosted strata for now and history, minimal copy and no sidebar."
+      },
+      "evidence": {
+        "zh": "已收到设计建议；这不是用户验收或独立审计。",
+        "en": "Design advice received. This is neither user acceptance nor an independent audit."
+      }
+    },
+    {
+      "id": "g1-implementation",
+      "observed_at": "2026-09-08T09:48:57Z",
+      "kind": "code",
+      "status": "queued",
+      "owner": "Claude",
+      "title": {
+        "zh": "G1 · 待续",
+        "en": "G1 / Queued"
+      },
+      "detail": {
+        "zh": "代码与针对性测试草稿已生成。按照新的优先级，先完成 HHH。",
+        "en": "Implementation and targeted test drafts exist. HHH takes priority before research resumes."
+      },
+      "evidence": {
+        "zh": "尚未运行测试或回测；不能据此判断策略有效。",
+        "en": "Tests and backtest have not run. Strategy validity is not established."
+      }
+    },
+    {
+      "id": "gen2-replay",
+      "observed_at": "2026-09-08T09:45:03Z",
+      "kind": "research",
+      "status": "done",
+      "owner": "Python",
+      "title": {
+        "zh": "账本 · 复现",
+        "en": "Ledger / Replayed"
+      },
+      "detail": {
+        "zh": "已完成已有账本的同口径复现；历史结果与新增策略研究分开保留。",
+        "en": "Same-spec replay of the existing ledger completed. Historical results remain separate from new strategy research."
+      },
+      "evidence": {
+        "zh": "复现曲线与已保存曲线数值一致；不等于成交容量或可部署性验证。",
+        "en": "Replayed NAV matches the saved curve numerically; this does not validate capacity or deployability."
+      }
+    }
+  ]
+}
