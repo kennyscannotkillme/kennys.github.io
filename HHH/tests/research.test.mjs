@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {validateResearch,privateWorkspaceUrl,chartPaths} from '../lib/research.mjs';
+const data=JSON.parse(readFileSync(new URL('../public/research.json',import.meta.url),'utf8'));
+test('only sanitized simulated results are accepted',()=>{assert.equal(validateResearch(data),true);assert.equal(validateResearch({...data,live_ordering:true}),false);});
+test('blocked results never acquire a fabricated flat curve',()=>{const d=structuredClone(data);const c=d.candidates.at(-1);c.status='LEDGER_DATA_BLOCKED';c.curve=[{date:'20250102',strategy:0,benchmark:0}];assert.equal(validateResearch(d),false);});
+test('duplicate dates and nonfinite values are rejected',()=>{const d=structuredClone(data);d.candidates[0].curve[1].date=d.candidates[0].curve[0].date;assert.equal(validateResearch(d),false);d.candidates[0].curve[1].strategy=NaN;assert.equal(validateResearch(d),false);});
+test('public origins cannot embed a private ledger',()=>{for(const h of ['hhh.nailon.chatgpt.site','localhost.evil.example','127.0.0.1.evil.example'])assert.equal(privateWorkspaceUrl(h,'ibkr'),null);assert.equal(privateWorkspaceUrl('127.0.0.1','../.env'),null);assert.match(privateWorkspaceUrl('127.0.0.1','daily-review'),/page=daily-review&hhh_embed=1$/);});
+test('curve is derived from actual points without smoothing or invented gains',()=>{assert.equal(chartPaths([]),null);const s=chartPaths([{strategy:0,benchmark:0},{strategy:-10,benchmark:20}]);assert.ok(s.strategy.startsWith('M12.00'));assert.ok(s.strategy.includes('L788.00'));});
+test('unit portfolio is never labeled CNY capital',()=>{const g=data.candidates.find(c=>c.id==='gen2');assert.equal(g.basis,'NORMALIZED_UNITS_NOT_CNY');assert.equal(g.metrics.profit_cny,null);assert.ok(Math.abs(g.curve.at(-1).strategy-g.metrics.net_return*100)<1e-8);});

@@ -1,5 +1,19 @@
 # HHH
 
+## Public GitHub Pages mirror
+
+`node scripts/github-pages.mjs` builds the same HHH component as a self-contained
+static page in `outputs/github-pages/HHH`. Publish only its generated manifest
+files to repository `HHH/`; preserve the original repository root homepage. The
+entry is `https://kennyscannotkillme.github.io/kennys.github.io/HHH/`. All runtime
+assets and snapshots use relative same-origin URLs; no ChatGPT login or external
+font/CDN is required. Mainland network reachability is not guaranteed by a build.
+
+Every validated material update is authorized for automatic public publication.
+Publish only the explicit sanitized research/activity snapshots, not private data.
+New research targets all A-shares and after-cost outperformance versus STAR50;
+historical STAR-only results retain their original universe and evidence level.
+
 Work, made visible. / 让工作可见。
 
 An icon-first bilingual work journal: frosted strata, expandable records, a quiet light/dark palette, keyboard access and reduced-motion support. Design advice by Claude Opus; implementation by Codex.
