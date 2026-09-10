@@ -1,9 +1,19 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T13:36:26Z",
+  "updated_at": "2026-09-10T08:37:27Z",
   "timezone": "Australia/Sydney",
-  "current_id": "g2-native-factor-unresolved",
+  "current_id": "all-a-daily-fresh-0910",
   "entries": [
+    {
+      "id": "all-a-daily-fresh-0910",
+      "observed_at": "2026-09-10T08:37:27Z",
+      "kind": "research",
+      "status": "done",
+      "owner": "Python",
+      "title": {"zh": "数据 · 09.10", "en": "Data / 09.10"},
+      "detail": {"zh": "全A股四类日频数据与官方科创50已更新至9月10日。9–10日共8/8分区完成，旧数据未覆盖。", "en": "Four all-A daily families and official STAR50 now reach September 10. All 8/8 September 9–10 partitions completed; old data was not overwritten."},
+      "evidence": {"zh": "新增日线11,099、复权11,121、每日指标11,099、涨跌停11,279条；关联缺失0，11项针对性测试通过。G2历史复权问题仍未解决，无新增收益结果；9月11日实盘信号不可用。", "en": "Added 11,099 daily bars, 11,121 factors, 11,099 daily metrics and 11,279 limits; zero missing daily-key joins and 11 targeted tests passed. G2's historical factor issue remains unresolved. No new profit result; September 11 live signal unavailable."}
+    },
     {
       "id": "g2-native-factor-unresolved",
       "observed_at": "2026-09-08T13:36:26Z",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "exported_at": "2026-09-08T12:30:19.637725+00:00",
+  "exported_at": "2026-09-10T08:37:50.867011+00:00",
   "scope": "PUBLIC_SIMULATED_RESEARCH_ONLY",
   "live_ordering": false,
   "objective": {
@@ -10,11 +10,11 @@
     "auto_publish_authorized": true
   },
   "operations": {
-    "as_of": "2026-09-08T12:29:58.364569+00:00",
-    "entry_date": "20260909",
+    "as_of": "2026-09-10T08:37:24.501586+00:00",
+    "entry_date": "20260911",
     "signal_status": "UNAVAILABLE_NOT_QUALIFIED",
-    "daily_max_date": "20260908",
-    "benchmark_max_date": "20260908",
+    "daily_max_date": "20260910",
+    "benchmark_max_date": "20260910",
     "minute_max_date": "20260807",
     "execution_feasibility": "NOT_PASSED"
   },
