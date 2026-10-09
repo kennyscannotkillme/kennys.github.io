@@ -2,9 +2,16 @@ export function validateResearch(v) {
   if (!v || v.version !== 1 || v.scope !== 'PUBLIC_SIMULATED_RESEARCH_ONLY' || v.live_ordering !== false || !Array.isArray(v.candidates)) return false;
   if (!v.operations || !/^\d{8}$/.test(v.operations.entry_date) || !/^\d{8}$/.test(v.operations.daily_max_date) || !/^\d{8}$/.test(v.operations.minute_max_date)) return false;
   if (v.objective?.universe !== 'ALL_A_SHARES' || v.objective?.benchmark !== '000688.SH') return false;
+  const w=v.operations.watchlist;
+  if (!w || !/^\d{8}$/.test(w.signal_date) || !/^\d{8}$/.test(w.intended_session) || w.signal_date>=w.intended_session || !Array.isArray(w.items)) return false;
+  if (!['PENDING_CURRENT_DATA','RESEARCH_WATCHLIST_READY','RISK_OFF_NO_BUY'].includes(w.status)) return false;
+  if (w.status==='PENDING_CURRENT_DATA' && w.items.length) return false;
+  if (w.status==='RISK_OFF_NO_BUY' && w.risk_on!==false) return false;
+  if (w.status==='RESEARCH_WATCHLIST_READY' && w.risk_on!==true) return false;
+  if (!w.items.every(r=>/^\d{6}\.(SH|SZ|BJ)$/.test(r.ticker) && typeof r.name==='string' && Number.isFinite(r.score) && r.score>=0 && r.score<=1 && Number.isFinite(r.reference_close) && r.reference_close>0 && r.risk_flags?.includes('OFF_CYCLE_OBSERVATION_NOT_MONTHLY_BUY'))) return false;
   const ids = new Set();
   return v.candidates.every(c => {
-    if (!['gen2','s2','s3','g1'].includes(c.id) || ids.has(c.id) || c.automated_ordering !== false || !Array.isArray(c.curve)) return false;
+    if (!['gen2','s2','s3','g1','composite'].includes(c.id) || ids.has(c.id) || c.automated_ordering !== false || !Array.isArray(c.curve)) return false;
     ids.add(c.id);
     if (!['NORMALIZED_UNITS_NOT_CNY','CNY_SIMULATED_CAPITAL'].includes(c.basis) || !/^\d{8}$/.test(c.data_as_of) || !c.metrics) return false;
     if (c.status === 'LEDGER_DATA_BLOCKED' && c.curve.length) return false;

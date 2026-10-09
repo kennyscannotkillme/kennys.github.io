@@ -1,6 +1,6 @@
 'use client';
 import {useCallback,useEffect,useRef,useState,type ReactNode} from 'react';
-import {Activity,Aperture,ArrowUpRight,ArrowRight,BookOpen,ChartNoAxesCombined,Check,Circle,Code2,Database,ExternalLink,FileClock,FlaskConical,FolderOpen,Globe2,Grid2X2,History,Layers3,LockKeyhole,Moon,Pause,PenLine,Play,RefreshCw,ShieldCheck,Sigma,Sun,TriangleAlert,TrendingUp,Wallet,Waves,X} from 'lucide-react';
+import {Activity,Aperture,ArrowUpRight,ArrowRight,BookOpen,CalendarClock,ChartNoAxesCombined,Check,Circle,Code2,Database,ExternalLink,FileClock,FlaskConical,FolderOpen,Globe2,Grid2X2,History,Layers3,LockKeyhole,Moon,Pause,PenLine,Play,RefreshCw,ShieldCheck,Sigma,Sun,TriangleAlert,TrendingUp,Wallet,Waves,X} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
 import {Sheet,SheetClose,SheetContent,SheetDescription,SheetHeader,SheetTitle} from '@/components/ui/sheet';
@@ -12,8 +12,19 @@ import {validateResearch,privateWorkspaceUrl,chartPaths} from '@/lib/research.mj
 type Lang='zh'|'en';
 type View='research'|'activity'|'workspace'|'sources';
 type Point={date:string;strategy:number;benchmark:number};
-type Candidate={id:string;name:string;status:string;data_as_of:string;basis:string;period?:string[]|null;capacity?:string;curve:Point[];metrics:Record<string,number|null>};
-const candidateIcons={gen2:Layers3,s2:Waves,s3:Sigma,g1:TrendingUp};
+type Candidate={id:string;name:string;status:string;data_as_of:string;basis:string;period?:string[]|null;capacity?:string;curve:Point[];metrics:Record<string,number|null|undefined>};
+type WatchItem={ticker:string;name:string;rank:number;score:number;reference_close:number;pb:number;momentum:number;volatility:number;risk_flags:string[]};
+const candidateIcons={gen2:Layers3,s2:Waves,s3:Sigma,g1:TrendingUp,composite:Aperture};
+const compositeMethod={
+ zh:['全A股：趋势、低估值、低波动，三项等权排序。',
+ '每月首个交易日评估前20只；仍入选的持仓保留，新仓每只目标为信号净值的5%。',
+ '市场中位动量不为正时转为现金。T−1收盘决定，次日开盘作模拟成交参考。',
+ '包含费用、分红、T+1和延迟退出；按此前20日均量的5%限制成交，尚未证明开盘可成交。'],
+ en:['All A-shares: equal ranks of trend, value and low volatility.',
+ 'Review the top 20 on the first session each month. Retain qualified holdings; target 5% of signal NAV per new slot.',
+ 'Use cash when median market momentum is non-positive. Decide at the prior close; simulate at the next open.',
+ 'Include costs, distributions, T+1 and delayed exits. Cap fills at 5% of prior 20-session ADV; opening fills remain unverified.']
+};
 const kindIcons={design:PenLine,code:Code2,test:ShieldCheck,research:FlaskConical,publish:Globe2};
 const g1Method={
  zh:['只在指数与个股20日EMA高于60日EMA×1.001时找机会；按个股趋势强度排名。',
@@ -67,14 +78,15 @@ function Curve({candidate,benchmark,onPoint}:{candidate:Candidate;benchmark:bool
 }
 export default function Home(){
  const [lang,setLang]=useState<Lang>('zh'),[view,setView]=useState<View>('research');
- const [panel,setPanel]=useState<'result'|'entry'|'about'|'private'|'method'|null>(null);
+ const [panel,setPanel]=useState<'result'|'entry'|'about'|'private'|'method'|'plan'|null>(null);
  const [activity,setActivity]=useState(activitySeed),[research,setResearch]=useState(researchSeed);
- const [id,setId]=useState('g1'),[entryId,setEntryId]=useState(activitySeed.current_id);
- const [night,setNight]=useState(false),[motion,setMotion]=useState(true),[benchmark,setBenchmark]=useState(true);
+ const [id,setId]=useState('composite'),[entryId,setEntryId]=useState(activitySeed.current_id);
+ const [night,setNight]=useState(false),[motion,setMotion]=useState(true),[benchmark,setBenchmark]=useState(false);
  const [network,setNetwork]=useState<'ok'|'loading'|'error'>('ok');
  const [local,setLocal]=useState(false),[embedded,setEmbedded]=useState<string|null>(null),[point,setPoint]=useState<Point|null>(null);
  const abortRef=useRef<AbortController|null>(null),w=labels[lang];
  const candidates=research.candidates as Candidate[],candidate=candidates.find(c=>c.id===id)??candidates[0];
+ const watch=research.operations.watchlist as {status:string;signal_date:string;intended_session:string;items:WatchItem[];risk_on:boolean;breadth_median_momentum?:number|null;eligible_ranked_count?:number|null};
  const entry=activity.entries.find(e=>e.id===entryId)??activity.entries[0];
  const pct=(n:number|null|undefined)=>n==null?'—':(n>0?'+':'')+(n*100).toFixed(2)+'%';
  const number=(n:number|null|undefined)=>n==null?'—':new Intl.NumberFormat(lang==='zh'?'zh-CN':'en-GB',{maximumFractionDigits:2}).format(n);
@@ -120,7 +132,8 @@ export default function Home(){
  {view==='research'?<>
  <div className="equity-heading"><div className="equity-number" aria-label={candidate.name+' '+w.return+' '+pct(value)}>{pct(value)}</div><time className="curve-date">{point?date(point.date):candidate.period?.map(date).join(' — ')??date(candidate.data_as_of)}</time></div>
  <Curve key={candidate.id+'-'+benchmark} candidate={candidate} benchmark={benchmark} onPoint={setPoint}/>
- <div className="sheet-bottom chart-bottom"><div className="process-icons"><Control label={candidate.name+' / '+w.strategy} active onClick={()=>setPanel('result')}><TrendingUp strokeWidth={1.3}/></Control><span className="hairline"/><Control label={w.benchmark} active={benchmark} onClick={()=>setBenchmark(!benchmark)}><Waves strokeWidth={1.3}/></Control>{candidate.id==='g1'?<Control label={lang==='zh'?'G1 · 方法':'G1 · Method'} onClick={()=>setPanel('method')}><BookOpen strokeWidth={1.2}/></Control>:null}</div><Control label={w.detail} onClick={()=>setPanel('result')}><ArrowUpRight strokeWidth={1.1}/></Control></div>
+ <div className="sheet-bottom chart-bottom"><div className="process-icons"><Control label={candidate.name+' / '+w.strategy} active onClick={()=>setPanel('result')}><TrendingUp strokeWidth={1.3}/></Control><span className="hairline"/><Control label={w.benchmark} active={benchmark} onClick={()=>setBenchmark(!benchmark)}><Waves strokeWidth={1.3}/></Control>{['g1','composite'].includes(candidate.id)?<Control label={lang==='zh'?'策略方法':'Strategy method'} onClick={()=>setPanel('method')}><BookOpen strokeWidth={1.2}/></Control>:null}</div><Control label={w.detail} onClick={()=>setPanel('result')}><ArrowUpRight strokeWidth={1.1}/></Control></div>
+ {candidate.id==='composite'?<button className="session-plan" onClick={()=>setPanel('plan')} aria-label={lang==='zh'?'周一推断 · 查看观察名单':'Monday outlook · View watchlist'}><CalendarClock size={17} strokeWidth={1.2}/><span>{date(watch.intended_session)} · {watch.status==='RISK_OFF_NO_BUY'?(lang==='zh'?'不买入 · 观察':'No buy · Watchlist'):(lang==='zh'?'周一推断':'Monday outlook')}</span><ArrowUpRight size={15}/></button>:null}
  </>:null}
  {view==='activity'?<div className="activity-canvas">{activity.entries.map((item,i)=>{const Icon=kindIcons[item.kind as keyof typeof kindIcons];return <button className="activity-node" key={item.id} onClick={()=>openEntry(item.id)} aria-label={item.title[lang]+' / '+item.status}><span className="node-index">{String(i+1).padStart(2,'0')}</span><span className={'node-symbol '+item.status}><Icon size={30} strokeWidth={1}/></span><span className="node-status"><Mark status={item.status}/></span><time>{time(item.observed_at)}</time></button>;})}</div>:null}
  {view==='workspace'&&!embedded?<div className="module-grid">{modules.map(m=><Control key={m.slug} label={m[lang]+' / '+(local?w.open:w.private)} className="module-control" onClick={()=>openModule(m.slug)}><m.icon strokeWidth={1.1}/>{!local?<LockKeyhole className="module-lock"/>:null}</Control>)}</div>:null}
@@ -139,21 +152,29 @@ export default function Home(){
  <div className="sr-only" aria-live="polite">{network==='error'?w.offline:''}</div>
  <Sheet open={panel!==null} onOpenChange={open=>{if(!open)setPanel(null);}}><SheetContent className="detail-sheet glass" showCloseButton={false}>
  <SheetClose render={<Button variant="ghost" size="icon" className="close-sheet" aria-label={w.close}/>}><X strokeWidth={1.3}/></SheetClose>
- <SheetHeader><SheetTitle>{panel==='method'?(lang==='zh'?'G1 · 趋势与耐心':'G1 · Trend & patience'):panel==='result'?candidate.name:panel==='entry'?entry.title[lang]:panel==='private'?w.private:w.about}</SheetTitle><SheetDescription>{panel==='result'||panel==='method'?w.history:panel==='entry'?entry.detail[lang]:w.privacy}</SheetDescription></SheetHeader>
+ <SheetHeader><SheetTitle>{panel==='plan'?(lang==='zh'?'下一步':'Next action'):panel==='method'?(candidate.id==='composite'?(lang==='zh'?'G3 · 价值、趋势、低波':'G3 · Value, trend & low volatility'):(lang==='zh'?'G1 · 趋势与耐心':'G1 · Trend & patience')):panel==='result'?candidate.name:panel==='entry'?entry.title[lang]:panel==='private'?w.private:w.about}</SheetTitle><SheetDescription>{panel==='result'||panel==='method'?w.history:panel==='entry'?entry.detail[lang]:w.privacy}</SheetDescription></SheetHeader>
  <div className="drawer-body">{panel==='result'?<>
- <p className="result-warning"><TriangleAlert size={18}/>{candidate.curve.length?(candidate.basis==='NORMALIZED_UNITS_NOT_CNY'?w.unit:w.capacity):w.blocked}</p>
+ <p className="result-warning"><TriangleAlert size={18}/>{candidate.id==='composite'?(lang==='zh'?'历史扣费盈利；开盘成交容量未验证，非实盘指令。':'Historically profitable after costs; opening capacity unverified. Not a live instruction.'):(candidate.curve.length?(candidate.basis==='NORMALIZED_UNITS_NOT_CNY'?w.unit:w.capacity):w.blocked)}</p>
  <dl className="result-metrics"><div><dt>{w.cutoff}</dt><dd>{date(candidate.data_as_of)}</dd></div><div><dt>{w.period}</dt><dd>{candidate.period?.map(date).join(' — ')??'—'}</dd></div>
  <div><dt>{candidate.basis==='NORMALIZED_UNITS_NOT_CNY'?w.normalized:w.money}</dt><dd>{candidate.basis==='CNY_SIMULATED_CAPITAL'?'¥':''}{number(candidate.metrics.initial_nav)} → {candidate.basis==='CNY_SIMULATED_CAPITAL'?'¥':''}{number(candidate.metrics.final_nav)}</dd></div>
  {candidate.basis==='CNY_SIMULATED_CAPITAL'?<div><dt>{w.net}</dt><dd>¥{number(candidate.metrics.profit_cny)}</dd></div>:null}
  {([['net_return',w.return],['benchmark_return',w.benchmark],['matched_benchmark_return',w.cashBenchmark],['max_drawdown',w.drawdown],['mean_position_weight',w.exposure]] as const).map(([key,label])=><div key={key}><dt>{label}</dt><dd>{pct(candidate.metrics[key])}</dd></div>)}
  <div><dt>{w.trades}</dt><dd>{number(candidate.metrics.trades)}</dd></div><div><dt>{w.cost}</dt><dd>{candidate.basis==='CNY_SIMULATED_CAPITAL'?'¥':''}{number(candidate.metrics.total_cost)}</dd></div></dl>
+ {candidate.id==='composite'?<><dl className="result-metrics"><div><dt>{lang==='zh'?'非税摩擦 +50% · 收益':'Non-tax friction +50% · return'}</dt><dd>{pct(candidate.metrics.stress_net_return)}</dd></div><div><dt>{lang==='zh'?'期末模拟仓位':'Final simulated exposure'}</dt><dd>{pct(candidate.metrics.final_position_weight)}</dd></div></dl><p className="footnote">{lang==='zh'?'2024 +9.79% · 2025 +5.75% · 2026截至9月10日 −4.02%。20只期末持仓未强制平仓；20条估值延用旧价。当前供应商历史版本，不是完整公告点时档案。':'2024 +9.79% · 2025 +5.75% · 2026 through Sep 10 −4.02%. 20 positions remain open; 20 stale-price valuation marks. Current provider history, not a complete archival point-in-time dataset.'}</p></>:null}
  {candidate.id==='g1'?<><dl className="result-metrics"><div><dt>{lang==='zh'?'非税摩擦 +50% · 终值':'Non-tax friction +50% · final NAV'}</dt><dd>¥{number(candidate.metrics.stress_final_nav)}</dd></div><div><dt>{lang==='zh'?'延用旧价的估值记录':'Stale valuation marks'}</dt><dd>{number(candidate.metrics.stale_marks)}</dd></div></dl><p className="footnote">{lang==='zh'?'仅8笔平仓交易。期末仍有未平仓股票；成员与分红按有效日期处理，并非完整公告历史版本库。':'Only 8 closed trades. An open position remains at the end; membership and dividends use effective dates, not a complete archive of publication vintages.'}</p></>:null}
  <p className="footnote">{w.different}</p>{candidate.id==='gen2'?<p className="footnote">{w.gen2Benchmark}</p>:null}<p className="footnote">{w.noProfit}</p>
  <a className="text-action" href="research.json" download="HHH-research.json"><Database size={17}/>{w.download}<ArrowUpRight size={16}/></a>
  </>:null}
  {panel==='entry'?<><div className="detail-meta"><Mark status={entry.status}/><time>{new Date(entry.observed_at).toLocaleString(lang==='zh'?'zh-CN':'en-GB',{timeZone:activity.timezone})}</time></div><div className="evidence"><ShieldCheck size={19}/><p>{entry.evidence[lang]}</p></div><p className="footnote">{w.snapshot}</p></>:null}
- {panel==='method'?<><p className="result-warning"><TriangleAlert size={18}/>{lang==='zh'?'G1仅在科创板历史上小幅盈利，未跑赢科创50；不能直接实盘。':'G1 showed a small historical STAR-stock profit but underperformed STAR50; not approved for live use.'}</p>{g1Method[lang].map((line,i)=><p className="method-line" key={line}><span>{String(i+1).padStart(2,'0')}</span>{line}</p>)}<p className="footnote">{lang==='zh'?'后续范围已扩大为全A股，目标是扣费后跑赢科创50。G1旧成绩不随范围改变。':'Future research covers all A-shares, aiming to beat STAR50 after costs. G1 history is not relabeled.'}</p><a className="text-action" href="https://github.com/QuantConnect/Lean/blob/master/Algorithm.Python/FuturesMomentumAlgorithm.py" target="_blank" rel="noopener noreferrer"><Code2 size={18}/>LEAN<ArrowUpRight size={16}/></a><p className="footnote">{lang==='zh'?'仅借鉴趋势机制，并非复现原期货策略收益。':'Trend mechanism adapted only; not a reproduction of the original futures returns.'}</p></>:null}
- {panel==='about'||panel==='private'?<><p className="result-warning"><Globe2 size={18}/>{lang==='zh'?'全 A 股选股 → 扣费后争取跑赢科创50':'All A-shares → aim to beat STAR50 after costs'}</p><p className="footnote">{date(research.operations.entry_date)} · {lang==='zh'?'预测尚未开放：实盘可行性和全A股新鲜数据未通过。先模拟，不自动下单。':'Prediction not enabled: execution feasibility and fresh all-A-share inputs have not passed. Simulation first; no automated orders.'}</p><p className="footnote">{lang==='zh'?'日线截止':'Daily through'} {date(research.operations.daily_max_date)} · {lang==='zh'?'执行分钟截止':'Execution minutes through'} {date(research.operations.minute_max_date)}</p><p className="footnote">{w.snapshot}</p><p className="footnote">{w.noProfit}</p><a className="text-action" href="https://github.com/kennyscannotkillme/kennys.github.io/tree/main/HHH" target="_blank" rel="noopener noreferrer"><Code2 size={18}/>{w.source}<ExternalLink size={16}/></a></>:null}
+ {panel==='method'?<><p className="result-warning"><TriangleAlert size={18}/>{lang==='zh'?'目标：扣费后盈利。科创50仅作参考，不是通过门槛。':'Objective: profit after costs. STAR50 is context, not an acceptance gate.'}</p>{(candidate.id==='composite'?compositeMethod:g1Method)[lang].map((line,i)=><p className="method-line" key={line}><span>{String(i+1).padStart(2,'0')}</span>{line}</p>)}<p className="footnote">{lang==='zh'?'已冻结，不为转正继续调参。历史盈利不保证未来盈利，尚未获准实盘。':'Frozen, with no retuning to force profit. Historical gains do not guarantee future gains; not live-approved.'}</p></>:null}
+ {panel==='plan'?<><p className="result-warning"><CalendarClock size={18}/>{date(watch.intended_session)} · {lang==='zh'?'周一推断 / 观察名单':'Monday outlook / watchlist'}</p>
+ <p className="footnote">{lang==='zh'?'评分收盘日':'Scoring close'} {date(watch.signal_date)} · {watch.status==='PENDING_CURRENT_DATA'?(lang==='zh'?'等待完整数据':'Awaiting complete data'):watch.risk_on?(lang==='zh'?'趋势条件满足':'Trend condition met'):(lang==='zh'?'风控条件要求不买入':'Risk-off: no buy')}</p>
+ {watch.status==='RISK_OFF_NO_BUY'?<div className="watch-decision"><Pause size={22}/><div><strong>{lang==='zh'?'周一不买入':'No buy on Monday'}</strong><p>{lang==='zh'?'池内中位动量':'Pool median momentum'} {pct(watch.breadth_median_momentum)} · {number(watch.eligible_ranked_count)} {lang==='zh'?'只参与计算':'stocks scored'}</p></div></div>:null}
+ {watch.items.map(item=><div className="watch-item" key={item.ticker}><div className="watch-title"><span className="watch-rank">{String(item.rank).padStart(2,'0')}</span><strong>{item.name}</strong><span>{item.ticker}</span></div><dl className="watch-metrics"><div><dt>{lang==='zh'?'评分':'Score'}</dt><dd>{item.score.toFixed(3)}</dd></div><div><dt>PB</dt><dd>{number(item.pb)}</dd></div><div><dt>{lang==='zh'?'收盘参考':'Close ref.'}</dt><dd>¥{number(item.reference_close)}</dd></div></dl><p className="footnote">{lang==='zh'?'趋势 + 低估值 + 低波动的综合排名；评分不是上涨概率。':'Combined trend, value and low-volatility rank; the score is not an upside probability.'}</p>{item.risk_flags.includes('SPECIAL_TREATMENT_OR_DELISTING_RISK')?<p className="footnote">{lang==='zh'?'特别风险：ST / 退市标识':'Special risk: ST / delisting designation'}</p>:null}{item.risk_flags.includes('FRIDAY_CLOSED_AT_UPPER_LIMIT')?<p className="footnote">{lang==='zh'?'周五涨停，周一可买性待确认':'Friday limit-up; Monday buyability unconfirmed'}</p>:null}</div>)}
+ <p className="footnote">{lang==='zh'?'这里只展示综合排名前5只，不是改成Top5策略。原策略是月度20槽；10月12日不是调仓日，月度回测收益不代表周一买入这几只的收益。':'Showing the first 5 ranks does not change the monthly 20-slot strategy. October 12 is off-cycle; monthly backtest returns do not validate buying these names on Monday.'}</p>
+ <p className="footnote">{lang==='zh'?'周一开盘价、停牌、涨跌停与成交容量尚未确认；收盘价不是买入限价。未读取你的真实持仓，不自动下单，不恢复定时任务。':'Monday open, suspensions, limits and capacity are unconfirmed. The close is not a buy-limit price. No access to your real holdings, automated orders or scheduled jobs.'}</p>
+ <dl className="result-metrics"><div><dt>{lang==='zh'?'规则内下次调仓':'Next scheduled rebalance'}</dt><dd>{date(research.operations.next_scheduled_rebalance)}</dd></div><div><dt>{lang==='zh'?'届时所需收盘数据':'Required signal close'}</dt><dd>{date(research.operations.required_signal_date)}</dd></div></dl></>:null}
+ {panel==='about'||panel==='private'?<><p className="result-warning"><Globe2 size={18}/>{lang==='zh'?'全 A 股 → 扣费后盈利':'All A-shares → profit after costs'}</p><p className="footnote">{lang==='zh'?'G3历史盈利已完成，非当前可交易信号；科创50只作参考。':'G3 historical profit is calculated, not a current tradable signal. STAR50 is context only.'}</p><p className="footnote">{lang==='zh'?'研究行情截止':'Research inputs through'} {date(research.operations.research_data_max_date)} · {lang==='zh'?'独立暂存':'Separate staging'}</p><p className="footnote">{lang==='zh'?'历史资金账本截至':'Historical capital ledger through'} {date(research.operations.daily_max_date)}</p><p className="footnote">{w.snapshot}</p><p className="footnote">{w.noProfit}</p><a className="text-action" href="https://github.com/kennyscannotkillme/kennys.github.io/tree/main/HHH" target="_blank" rel="noopener noreferrer"><Code2 size={18}/>{w.source}<ExternalLink size={16}/></a></>:null}
  </div></SheetContent></Sheet>
  </main></TooltipProvider>;
 }

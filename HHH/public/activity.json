@@ -1,18 +1,65 @@
 {
   "version": 1,
-  "updated_at": "2026-09-10T08:37:27Z",
+  "updated_at": "2026-10-09T10:39:56.781239+00:00",
   "timezone": "Australia/Sydney",
-  "current_id": "all-a-daily-fresh-0910",
+  "current_id": "composite-monday-20261012",
   "entries": [
+    {
+      "id": "composite-monday-20261012",
+      "observed_at": "2026-10-09T10:39:56.781239+00:00",
+      "kind": "research",
+      "status": "done",
+      "owner": "Python",
+      "title": {
+        "zh": "周一 · 推断",
+        "en": "Monday / Outlook"
+      },
+      "detail": {
+        "zh": "按10月9日真实收盘资料计算综合排名，公开前5名观察名单；非月度调仓指令。",
+        "en": "Composite scores calculated from actual October9 closing inputs. First5 ranks shown as an off-cycle watchlist, not a monthly order."
+      },
+      "evidence": {
+        "zh": "四类数据各15/15增量分区，股票身份表已刷新。只使用校验后的独立暂存数据，未改历史账本或数据库；不自动交易。",
+        "en": "Four daily families15/15 partitions each; identities refreshed. Validated staging only; historical ledger and canonical database unchanged. No automated trading."
+      }
+    },
+    {
+      "id": "composite-profit-20261009",
+      "observed_at": "2026-10-09T10:39:56.781239+00:00",
+      "kind": "research",
+      "status": "done",
+      "owner": "Python",
+      "title": {
+        "zh": "G3 · 历史盈利",
+        "en": "G3 / Historical profit"
+      },
+      "detail": {
+        "zh": "冻结综合策略资金账本完成。全A股，趋势、估值、低波动等权；月度20槽，保留合格持仓。",
+        "en": "Frozen composite capital ledger completed. All-A trend, value and low volatility, equal rank weights; monthly20 slots with retention."
+      },
+      "evidence": {
+        "zh": "模拟1000万元→1114.39万元，扣费+11.44%，最大回撤15.91%；总费用47.74万元。开发期历史，不是实盘批准。",
+        "en": "Simulated CNY10M→11.144M, net+11.44%, drawdown15.91%; total costs CNY477,430.65. Exposed development history, not live approval."
+      }
+    },
     {
       "id": "all-a-daily-fresh-0910",
       "observed_at": "2026-09-10T08:37:27Z",
       "kind": "research",
       "status": "done",
       "owner": "Python",
-      "title": {"zh": "数据 · 09.10", "en": "Data / 09.10"},
-      "detail": {"zh": "全A股四类日频数据与官方科创50已更新至9月10日。9–10日共8/8分区完成，旧数据未覆盖。", "en": "Four all-A daily families and official STAR50 now reach September 10. All 8/8 September 9–10 partitions completed; old data was not overwritten."},
-      "evidence": {"zh": "新增日线11,099、复权11,121、每日指标11,099、涨跌停11,279条；关联缺失0，11项针对性测试通过。G2历史复权问题仍未解决，无新增收益结果；9月11日实盘信号不可用。", "en": "Added 11,099 daily bars, 11,121 factors, 11,099 daily metrics and 11,279 limits; zero missing daily-key joins and 11 targeted tests passed. G2's historical factor issue remains unresolved. No new profit result; September 11 live signal unavailable."}
+      "title": {
+        "zh": "数据 · 09.10",
+        "en": "Data / 09.10"
+      },
+      "detail": {
+        "zh": "全A股四类日频数据与官方科创50已更新至9月10日。9–10日共8/8分区完成，旧数据未覆盖。",
+        "en": "Four all-A daily families and official STAR50 now reach September 10. All 8/8 September 9–10 partitions completed; old data was not overwritten."
+      },
+      "evidence": {
+        "zh": "新增日线11,099、复权11,121、每日指标11,099、涨跌停11,279条；关联缺失0，11项针对性测试通过。G2历史复权问题仍未解决，无新增收益结果；9月11日实盘信号不可用。",
+        "en": "Added 11,099 daily bars, 11,121 factors, 11,099 daily metrics and 11,279 limits; zero missing daily-key joins and 11 targeted tests passed. G2's historical factor issue remains unresolved. No new profit result; September 11 live signal unavailable."
+      }
     },
     {
       "id": "g2-native-factor-unresolved",
@@ -20,9 +67,18 @@
       "kind": "research",
       "status": "blocked",
       "owner": "Python",
-      "title": {"zh": "因子 · 待解释", "en": "Factor / Unresolved"},
-      "detail": {"zh": "新增300107的8条原生记录：6月25日因子仍从9.864变为9.865。短查询能返回，不能把问题仅归因于断连；G2利润仍未确认。", "en": "Eight native records obtained for 300107: the June 25 factor still changes from 9.864 to 9.865. Short queries work; connectivity alone does not explain the blocker. G2 profit remains unavailable."},
-      "evidence": {"zh": "已核对当地日线前收与股本记录，尚不能解释该变化。保留原始数据，不放宽检查、不将未知分红当零；未重跑账本或启动G3，没有实盘信号。", "en": "Local previous-close and share-capital records were checked; the change remains unexplained. Raw data and strict checks are preserved; unknown dividends are not zero. No ledger rerun, G3 start or live signal."}
+      "title": {
+        "zh": "因子 · 待解释",
+        "en": "Factor / Unresolved"
+      },
+      "detail": {
+        "zh": "新增300107的8条原生记录：6月25日因子仍从9.864变为9.865。短查询能返回，不能把问题仅归因于断连；G2利润仍未确认。",
+        "en": "Eight native records obtained for 300107: the June 25 factor still changes from 9.864 to 9.865. Short queries work; connectivity alone does not explain the blocker. G2 profit remains unavailable."
+      },
+      "evidence": {
+        "zh": "已核对当地日线前收与股本记录，尚不能解释该变化。保留原始数据，不放宽检查、不将未知分红当零；未重跑账本或启动G3，没有实盘信号。",
+        "en": "Local previous-close and share-capital records were checked; the change remains unexplained. Raw data and strict checks are preserved; unknown dividends are not zero. No ledger rerun, G3 start or live signal."
+      }
     },
     {
       "id": "g2-ledger-data-blocked",
@@ -30,9 +86,18 @@
       "kind": "research",
       "status": "blocked",
       "owner": "Python",
-      "title": {"zh": "G2 · 数据待核", "en": "G2 / Data unresolved"},
-      "detail": {"zh": "9月8日日线与官方科创50已补齐；全A股月度Top20评分完成。资金账本暂停于300107的2024年6月25日复权变动，尚无可确认利润。", "en": "Daily data and official STAR50 reach September 8; all-A monthly Top20 scores are computed. The ledger stopped at the June 25, 2024 factor change in 300107. Profit remains unavailable."},
-      "evidence": {"zh": "428/428份分红历史、50项针对性测试完成，仍有16项分红条款未知。300641的3条来源差异只修正研究副本；后续原生查询连接失败。不是盈利策略，未生成实盘指令，当前没有后台计算在运行。", "en": "428/428 dividend histories and 50 targeted tests completed; 16 event terms remain unknown. Three source differences for 300641 were corrected only in the research copy. Follow-up native queries failed to connect. No profit qualification or live orders; no calculation is currently running."}
+      "title": {
+        "zh": "G2 · 数据待核",
+        "en": "G2 / Data unresolved"
+      },
+      "detail": {
+        "zh": "9月8日日线与官方科创50已补齐；全A股月度Top20评分完成。资金账本暂停于300107的2024年6月25日复权变动，尚无可确认利润。",
+        "en": "Daily data and official STAR50 reach September 8; all-A monthly Top20 scores are computed. The ledger stopped at the June 25, 2024 factor change in 300107. Profit remains unavailable."
+      },
+      "evidence": {
+        "zh": "428/428份分红历史、50项针对性测试完成，仍有16项分红条款未知。300641的3条来源差异只修正研究副本；后续原生查询连接失败。不是盈利策略，未生成实盘指令，当前没有后台计算在运行。",
+        "en": "428/428 dividend histories and 50 targeted tests completed; 16 event terms remain unknown. Three source differences for 300641 were corrected only in the research copy. Follow-up native queries failed to connect. No profit qualification or live orders; no calculation is currently running."
+      }
     },
     {
       "id": "g2-capital-running",
@@ -40,9 +105,18 @@
       "kind": "research",
       "status": "active",
       "owner": "Python",
-      "title": {"zh": "G2 · 计算中", "en": "G2 / Computing"},
-      "detail": {"zh": "全A股月度动量候选：最多20只，保留仍入选的持仓。选股模块已生成，资金账本正在实现。", "en": "All-A monthly momentum candidate: up to20 names, retaining selected incumbents. Ranking module exists; the capital ledger is being implemented."},
-      "evidence": {"zh": "规则先于结果冻结，这是本批第2个候选。尚无收益结果；开盘成交容量未验证，不可实盘。", "en": "Rules frozen before results; candidate2 of this batch. No profit result yet. Opening execution capacity remains unverified; no live trading."}
+      "title": {
+        "zh": "G2 · 计算中",
+        "en": "G2 / Computing"
+      },
+      "detail": {
+        "zh": "全A股月度动量候选：最多20只，保留仍入选的持仓。选股模块已生成，资金账本正在实现。",
+        "en": "All-A monthly momentum candidate: up to20 names, retaining selected incumbents. Ranking module exists; the capital ledger is being implemented."
+      },
+      "evidence": {
+        "zh": "规则先于结果冻结，这是本批第2个候选。尚无收益结果；开盘成交容量未验证，不可实盘。",
+        "en": "Rules frozen before results; candidate2 of this batch. No profit result yet. Opening execution capacity remains unverified; no live trading."
+      }
     },
     {
       "id": "all-a-daily-fresh-0908",
@@ -50,9 +124,18 @@
       "kind": "research",
       "status": "done",
       "owner": "Python",
-      "title": {"zh": "数据 · 09.08", "en": "Data / 09.08"},
-      "detail": {"zh": "日线、复权、每日指标、涨跌停均补齐12/12；官方科创50更新到9月8日。只增量入库，旧历史未覆盖。", "en": "Daily bars, adjustments, daily metrics and limits each12/12 complete. Official STAR50 reaches September8. Additive publication; old history unchanged."},
-      "evidence": {"zh": "新增66,565条日线、66,761条复权、66,565条每日指标、67,583条涨跌停；三组日线关联缺失均为0。4项针对性测试通过。", "en": "Added66,565 daily bars,66,761 adjustments,66,565 daily metrics and67,583 limits. All three daily-key joins have zero missing rows. Four targeted tests passed."}
+      "title": {
+        "zh": "数据 · 09.08",
+        "en": "Data / 09.08"
+      },
+      "detail": {
+        "zh": "日线、复权、每日指标、涨跌停均补齐12/12；官方科创50更新到9月8日。只增量入库，旧历史未覆盖。",
+        "en": "Daily bars, adjustments, daily metrics and limits each12/12 complete. Official STAR50 reaches September8. Additive publication; old history unchanged."
+      },
+      "evidence": {
+        "zh": "新增66,565条日线、66,761条复权、66,565条每日指标、67,583条涨跌停；三组日线关联缺失均为0。4项针对性测试通过。",
+        "en": "Added66,565 daily bars,66,761 adjustments,66,565 daily metrics and67,583 limits. All three daily-key joins have zero missing rows. Four targeted tests passed."
+      }
     },
     {
       "id": "all-a-readiness",
@@ -60,9 +143,18 @@
       "kind": "research",
       "status": "blocked",
       "owner": "Python",
-      "title": {"zh": "全 A · 待补齐", "en": "All A / Gaps identified"},
-      "detail": {"zh": "后续从全A股选股，目标为扣费后跑赢科创50。现有日线到8月21日，执行用分钟数据到8月7日，不覆盖全A股。", "en": "Future selection covers all A-shares, aiming to beat STAR50 net of costs. Existing daily data ends August 21; execution-minute data ends August 7 and does not cover all A-shares."},
-      "evidence": {"zh": "只读检查与3项针对性测试已完成。G1未跑赢基准、实盘可行性未通过；2026年9月9日信号暂不可用。", "en": "Read-only checks and three targeted tests completed. G1 underperformed and execution feasibility has not passed; the September 9, 2026 signal is unavailable."}
+      "title": {
+        "zh": "全 A · 待补齐",
+        "en": "All A / Gaps identified"
+      },
+      "detail": {
+        "zh": "后续从全A股选股，目标为扣费后跑赢科创50。现有日线到8月21日，执行用分钟数据到8月7日，不覆盖全A股。",
+        "en": "Future selection covers all A-shares, aiming to beat STAR50 net of costs. Existing daily data ends August 21; execution-minute data ends August 7 and does not cover all A-shares."
+      },
+      "evidence": {
+        "zh": "只读检查与3项针对性测试已完成。G1未跑赢基准、实盘可行性未通过；2026年9月9日信号暂不可用。",
+        "en": "Read-only checks and three targeted tests completed. G1 underperformed and execution feasibility has not passed; the September 9, 2026 signal is unavailable."
+      }
     },
     {
       "id": "g1-method-published-copy",
@@ -70,9 +162,18 @@
       "kind": "code",
       "status": "done",
       "owner": "Codex",
-      "title": {"zh": "方法 · 可查看", "en": "Method / Available"},
-      "detail": {"zh": "书本图标可查看G1的趋势过滤、持仓保留、费用与成交限制；保留其科创板历史范围。", "en": "The book icon explains G1 trend filters, retention, costs and execution limits; its historical STAR-only universe is preserved."},
-      "evidence": {"zh": "依据冻结策略说明，不把借鉴GitHub等同于复现收益；用户已授权后续验证完成后自动同步官网。", "en": "Based on the frozen strategy specification. GitHub inspiration is not a return reproduction; the user authorized automatic publication after validation."}
+      "title": {
+        "zh": "方法 · 可查看",
+        "en": "Method / Available"
+      },
+      "detail": {
+        "zh": "书本图标可查看G1的趋势过滤、持仓保留、费用与成交限制；保留其科创板历史范围。",
+        "en": "The book icon explains G1 trend filters, retention, costs and execution limits; its historical STAR-only universe is preserved."
+      },
+      "evidence": {
+        "zh": "依据冻结策略说明，不把借鉴GitHub等同于复现收益；用户已授权后续验证完成后自动同步官网。",
+        "en": "Based on the frozen strategy specification. GitHub inspiration is not a return reproduction; the user authorized automatic publication after validation."
+      }
     },
     {
       "id": "hhh-migration",
@@ -80,9 +181,18 @@
       "kind": "code",
       "status": "done",
       "owner": "Codex",
-      "title": {"zh": "图标 · 接回", "en": "Icons / Reconnected"},
-      "detail": {"zh": "本地玻璃界面已接入四组真实研究曲线、工作记录及原功能入口；首页仅保留图标、数值与日期。", "en": "Local glass UI includes four actual research curves, recorded work and original workspace entry points; the default surface keeps only icons, numbers and dates."},
-      "evidence": {"zh": "14项前端数据测试通过；电脑、手机、双语、曲线切换与本地旧功能已检查。新研究曲线尚未公开发布；私人账户仅限本机。", "en": "Fourteen frontend data tests passed; desktop, mobile, bilingual controls, curve selection and a local legacy module checked. New curves are not publicly released; private accounts remain local."}
+      "title": {
+        "zh": "图标 · 接回",
+        "en": "Icons / Reconnected"
+      },
+      "detail": {
+        "zh": "本地玻璃界面已接入四组真实研究曲线、工作记录及原功能入口；首页仅保留图标、数值与日期。",
+        "en": "Local glass UI includes four actual research curves, recorded work and original workspace entry points; the default surface keeps only icons, numbers and dates."
+      },
+      "evidence": {
+        "zh": "14项前端数据测试通过；电脑、手机、双语、曲线切换与本地旧功能已检查。新研究曲线尚未公开发布；私人账户仅限本机。",
+        "en": "Fourteen frontend data tests passed; desktop, mobile, bilingual controls, curve selection and a local legacy module checked. New curves are not publicly released; private accounts remain local."
+      }
     },
     {
       "id": "g1-capital-result",
@@ -90,9 +200,18 @@
       "kind": "research",
       "status": "done",
       "owner": "Python",
-      "title": {"zh": "G1 · 已计算", "en": "G1 / Calculated"},
-      "detail": {"zh": "模拟千万元终值为10,035,343.31元，扣费后+0.35%；仅8笔平仓交易，未跑赢基准。", "en": "Simulated CNY10M ended at CNY10,035,343.31, +0.35% net. Only eight closed trades; benchmark underperformance."},
-      "evidence": {"zh": "2025-01-02至2026-08-07的顺序资金账本；总费用24,743.78元，平均仓位4.00%。不是盲测或实盘盈利证明。", "en": "Sequential capital ledger, 2025-01-02 to 2026-08-07. Costs CNY24,743.78; mean exposure 4.00%. Not a blind test or proof of live profitability."}
+      "title": {
+        "zh": "G1 · 已计算",
+        "en": "G1 / Calculated"
+      },
+      "detail": {
+        "zh": "模拟千万元终值为10,035,343.31元，扣费后+0.35%；仅8笔平仓交易，未跑赢基准。",
+        "en": "Simulated CNY10M ended at CNY10,035,343.31, +0.35% net. Only eight closed trades; benchmark underperformance."
+      },
+      "evidence": {
+        "zh": "2025-01-02至2026-08-07的顺序资金账本；总费用24,743.78元，平均仓位4.00%。不是盲测或实盘盈利证明。",
+        "en": "Sequential capital ledger, 2025-01-02 to 2026-08-07. Costs CNY24,743.78; mean exposure 4.00%. Not a blind test or proof of live profitability."
+      }
     },
     {
       "id": "g1-company-actions",
@@ -100,9 +219,18 @@
       "kind": "test",
       "status": "done",
       "owner": "Codex",
-      "title": {"zh": "分红 · 接续", "en": "Dividends / Resumed"},
-      "detail": {"zh": "复用136份已下载历史，只补齐5份本候选需要的分红历史；未知分红没有改写为零。", "en": "Reused 136 existing histories and fetched only five additional histories required by this candidate; unknown dividends were not replaced with zero."},
-      "evidence": {"zh": "Claude编写接续模块，Codex完成6项针对性测试；原G1的5项测试通过。属于同上下文测试，不是独立审计。", "en": "Claude implemented the resume module; Codex completed six targeted tests. Five original G1 tests passed. Same-context testing, not independent audit."}
+      "title": {
+        "zh": "分红 · 接续",
+        "en": "Dividends / Resumed"
+      },
+      "detail": {
+        "zh": "复用136份已下载历史，只补齐5份本候选需要的分红历史；未知分红没有改写为零。",
+        "en": "Reused 136 existing histories and fetched only five additional histories required by this candidate; unknown dividends were not replaced with zero."
+      },
+      "evidence": {
+        "zh": "Claude编写接续模块，Codex完成6项针对性测试；原G1的5项测试通过。属于同上下文测试，不是独立审计。",
+        "en": "Claude implemented the resume module; Codex completed six targeted tests. Five original G1 tests passed. Same-context testing, not independent audit."
+      }
     },
     {
       "id": "hhh-polish",
