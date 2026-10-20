@@ -18,7 +18,7 @@ No account or installation required. Desktop and mobile supported. / 无需注�
 
 | Area / 模块 | What it shows / 主要内容 |
 | --- | --- |
-| Daily research / 每日研究 | Screening across 5,353 eligible Shanghai, Shenzhen and Beijing A-shares; a separate 20-ETF universe; T+1, T+3 and T+5 observation journals. / 沪深北 5,353 只符合条件的 A 股、独立的 20 只 ETF 范围，以及三个观察周期的记录。 |
+| Daily research / 每日研究 | Daily ranking across 5,378 eligible A-shares, with separate T+1, T+3 and T+5 return models, preserved forecasts and a 20-ETF journal. / 沪深北 5,378 只符合条件的 A 股，三个期限分别预测、排名并保留历史，另有 20 只 ETF 记录。 |
 | Strategy comparison / 策略对比 | Simulated NAV, benchmark comparisons, drawdowns, costs and exposure, with dates and units visible. / 模拟净值、基准、回撤、成本与仓位，并显示对应日期与单位。 |
 | Sector and company research / 产业与公司研究 | An interactive industry panorama and company research views. / 可交互的产业全景与公司研究视图。 |
 | Quant research and evidence / 量化研究与证据 | Model and factor research, source-linked results and explicit validation limitations. / 模型与因子研究、可追溯结果及明确的验证限制。 |
@@ -32,7 +32,8 @@ Research is easier to judge when its assumptions, data dates and unsuccessful re
 ## Read the results correctly / 如何理解结果
 
 - **Research snapshot, not a live trading service.** The daily journal in this release uses 19 October 2026 signals, with a scheduled 21 October entry reference. Historical strategy data ends on 10 September 2026; sector research has its own date. / **这是研究快照。** 本版每日记录使用 2026 年 10 月 19 日信号，计划入场参考日为 10 月 21 日；历史策略数据截至 9 月 10 日，产业研究另有日期。
-- Scores are composite research rankings, **not expected returns or probabilities**. A result is recorded only when its observation becomes available; pending outcomes remain pending. / 评分是综合研究排名，**不等于预期收益或概率**；结果实际可观察后才记录，尚未发生的结果保持待观察。
+- The three return models are **research estimates, not promised returns**. Initial validation underperformed both historical-mean and zero-return baselines, and the page shows these results. Original composite scores remain in a separate archive. / 三个期限模型提供**研究估计，不是收益承诺**；首轮验证未超过历史均值及零收益基线，页面公开显示这一结果。原综合评分保留在独立档案中。
+- Forecasts are preserved before their outcomes. Actual results are appended only when observed; the first batch is still waiting for entry. / 预测先于结果保存；实际结果仅在可观察后追加，首批记录仍待入场。
 - Charts show **historical simulated performance**, not personal brokerage holdings or live profit. Backtests do not establish future returns; this release does not claim a validated profitable strategy. / 图表展示**历史模拟表现**，不代表个人券商持仓或实盘盈利，也不宣称已验证的盈利策略。
 - This public site contains sanitized research artifacts. Private accounts, credentials, databases and execution systems are excluded. / 公开站点仅包含整理后的研究文件，不包含私人账户、凭据、数据库或交易执行系统。
 

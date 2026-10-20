@@ -72,3 +72,84 @@ body:has(.tm-shell){background:#eeeef0}
  .research-archive>.tm-module{padding:0 8px 12px}
 }
 @media(min-width:701px){.stock-horizon.is-mobile-hidden{display:block}}
+/* 全 A 股三期限预期收益（主栏目）。沿用同一套象牙白 / 琥珀 / 薄荷 / 青 + 深描边 +
+   衬线数字，不新增配色；涨跌沿用终端既有的 .tm-pos / .tm-neg。 */
+.er-journal{display:flex;flex-direction:column;gap:14px}
+.er-heading{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.er-heading>div{min-width:0;max-width:100%}
+.tm-shell .er-heading h1{font-family:Georgia,'Microsoft Yahei',serif;font-size:27px;font-weight:700;margin:0;letter-spacing:0;line-height:1.3;white-space:normal;overflow-wrap:anywhere}
+.er-heading p{margin:4px 0 0;max-width:64ch;color:var(--tm-ink-2)}
+.er-pick-history{display:flex;gap:8px;align-items:center}
+.er-pick-history select{padding:8px;max-width:100%;background:var(--tm-surface);border:1px solid var(--tm-line);border-radius:3px;font:inherit;color:inherit}
+.er-badges{display:flex;flex-wrap:wrap;gap:7px}
+.er-badge{border:1px solid #8c9385;border-radius:4px;background:#fffdf7;padding:3px 9px;font-size:12px;color:#464b43}
+.er-badge.is-model{background:#f9ecd3;border-color:#d0b078;color:#80551e;font-weight:600}
+.er-dates{display:flex;gap:20px;flex-wrap:wrap;background:#fffdf7;border:1px solid #8c9385;padding:10px 14px;margin:0}
+.er-dates div{display:flex;gap:7px;align-items:baseline;max-width:100%}
+.er-dates dt{font-size:12px;color:var(--tm-ink-3);flex-shrink:0}
+.er-dates dd{margin:0;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.er-tabs{display:none}
+.er-horizons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.er-horizons>.er-state{grid-column:1/-1;margin:0}
+.er-horizon{min-width:0;border:1.5px solid #44483f;background:#fffdf7;border-radius:5px;box-shadow:2px 3px 0 #727468}
+.er-horizon>header{background:#e9bb74;border-bottom:1px solid #44483f;padding:9px 14px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.er-horizon:nth-child(2)>header{background:#acd8c7}
+.er-horizon:nth-child(3)>header{background:#dcebed}
+.er-horizon h2{font-size:16px;margin:0}
+.er-horizon>header span{font-size:12px;color:#3c4740}
+.er-pick{padding:12px 14px;border-bottom:1px solid #dedfd4}
+.er-pick:last-of-type{border-bottom:0}
+.er-pick-top{display:flex;gap:9px;align-items:baseline}
+.er-rank{font-family:Georgia,serif;font-size:19px;font-weight:700;min-width:1.6em;text-align:right;color:#80551e}
+.er-pick-name{font-size:15px;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.er-code{display:block;font-size:11px;font-weight:400;color:#63685f;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.er-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.er-pair-cell{border:1px solid #c6ccbf;border-radius:4px;padding:7px 9px;min-width:0}
+.er-pair-cell.is-expect{background:#f9ecd3;border-color:#d0b078}
+.er-pair-cell.is-actual{background:#e3eee9;border-color:#a9c4c7}
+.er-pair-label{display:block;font-size:11px;color:#545d50}
+.er-pair-value{display:block;font-family:Georgia,Cambria,'Times New Roman',serif;font-size:23px;font-weight:700;letter-spacing:.015em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.er-pair-cell small{display:block;font-size:10px;color:#63685f}
+.er-pct{margin:9px 0 0;font-size:12px;color:#464b43}
+.er-pct strong{font-family:Georgia,serif;font-size:15px;font-variant-numeric:tabular-nums}
+.er-pct-note{display:block;color:#63685f;font-size:11px}
+.er-pick-facts{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 0}
+.er-pick-facts dt{font-size:11px;color:#63685f}
+.er-pick-facts dd{margin:0;font-size:14px;font-variant-numeric:tabular-nums}
+.er-pick-foot{margin:9px 0 0;font-size:12px;color:#545d50;font-variant-numeric:tabular-nums}
+.er-more{display:block;width:100%;min-height:40px;padding:9px 12px;border:0;border-top:1px solid #44483f;background:#f3f0e6;font:inherit;font-size:13px;text-align:center;border-radius:0 0 4px 4px}
+.er-more:hover{background:#e9bb74}
+.er-state{display:block;background:#fffdf7;border:1px solid #8c9385;border-radius:4px;padding:11px 14px;font-size:13px}
+.er-state.is-error{background:#f9ecd3;border-color:#d0b078;color:#80551e}
+.er-state.is-inline{border-style:dashed;color:#545d50;margin:0 14px 12px}
+.er-retry{margin-left:10px;min-height:36px;padding:6px 12px;border:1px solid #44483f;border-radius:3px;background:#fffdf7;font:inherit;font-size:12px}
+.er-obs{margin:0;padding:10px 14px;background:#f3f0e6;border:1px solid #dedbcd;font-size:12px}
+.er-notes{border:1px solid #8c9385;border-radius:4px;background:#fffdf7;font-size:12px;color:#464b43}
+.er-notes>summary{cursor:pointer;padding:11px 14px;background:#dcebed;font-size:13px;font-weight:600;color:#282c28;border-radius:3px}
+.er-notes[open]>summary{border-bottom:1px solid #a9b8ae;border-radius:3px 3px 0 0}
+.er-notes>*:not(summary){margin:11px 14px}
+.er-defs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 18px}
+.er-defs dt{font-size:11px;color:#63685f}
+.er-defs dd{margin:0;overflow-wrap:anywhere}
+.er-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all}
+.er-bullets{padding-left:18px}
+.er-bullets li{margin:4px 0;max-width:92ch}
+.er-valnote{max-width:92ch;line-height:1.75}
+.er-metrics{font-variant-numeric:tabular-nums}
+@media(max-width:700px){
+ .tm-shell .er-heading h1{font-size:24px}
+ .er-heading label{width:100%;justify-content:space-between}
+ .er-pick-history select{min-width:0;flex:1;min-height:44px}
+ .er-dates{gap:8px 15px}
+ .er-horizons{display:block}
+ .er-horizon.is-mobile-hidden{display:none}
+ .er-tabs{display:flex;gap:6px}
+ .er-tabs button{flex:1;min-width:0;min-height:44px;padding:0 4px;background:#fffdf7;border:1px solid #44483f;border-radius:3px;font:inherit;font-size:13px}
+ .er-tabs button[aria-pressed=true]{background:#e9bb74;box-shadow:1px 2px 0 #44483f;font-weight:600}
+ .er-pair{gap:6px}
+ .er-pair-value{font-size:20px}
+ .er-defs{grid-template-columns:1fr}
+ .er-notes>*:not(summary){margin:10px}
+ .er-state.is-inline{margin:0 10px 10px}
+}
+@media(min-width:701px){.er-horizon.is-mobile-hidden{display:block}}

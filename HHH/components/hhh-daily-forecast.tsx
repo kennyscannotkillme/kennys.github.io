@@ -2,6 +2,11 @@
 /**
  * HHH 研究终端 — 每日预测 Daily Forecast
  *
+ * 主栏目是「全 A 股三期限预期收益」（components/hhh-return-journal.tsx，数据来自
+ * public/expected-return.json，契约见 docs/HHH_EXPECTED_RETURN_V1.md）。原有的全 A 股
+ * 综合评分选股名单不再是主栏目，但完整保留在下方带标签的折叠存档中；板块 ETF、
+ * 市场线索与既有主题预测/历史个股档案均原样保留。
+ *
  * 数据来源：public/daily-forecast.json（由 scripts/hhh_daily_forecast.py 导出，
  * 契约见 docs/HHH_DAILY_FORECAST.md）。该文件在前端构建时可能尚未生成，因此本
  * 模块在运行时以相对地址 ./daily-forecast.json 取数，并显式区分
@@ -11,6 +16,7 @@
  * 格式化（契约规定的「小数 → 百分比」单位展示）、排序与筛选。缺值一律显示
  * 「暂无数据」，不用 0 代替。
  */
+import ReturnJournal from './hhh-return-journal';
 import StockJournal from './hhh-stock-journal';
 import MarketContext from './hhh-market-context';
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
@@ -360,7 +366,14 @@ export default function DailyForecast({ onRoute }: { onRoute?: (r: string) => vo
 
   return (
     <div className="tm-module tm-df-root" data-testid="hhh-daily-forecast">
-      <StockJournal />
+      <ReturnJournal />
+      <details className="research-archive"><summary>原综合评分 · 历史存档</summary><div className="tm-module">
+        <p className="tm-foot">
+          这是被预期收益模型取代之前的原栏目，原样保留：排名依据是综合评分，不输出预期收益率。
+          两套名单各自独立记录，互不回填。
+        </p>
+        <StockJournal />
+      </div></details>
       <details className="research-archive"><summary>板块 ETF · 代表代码与趋势</summary><div className="tm-module"><StockJournal etf /></div></details>
       <MarketContext />
       <details className="research-archive"><summary>重点产业观察 · 既有预测与历史个股档案</summary><div className="tm-module">
