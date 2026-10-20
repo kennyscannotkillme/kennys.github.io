@@ -14,6 +14,16 @@ No account or installation required. Desktop and mobile supported. / 无需注�
 
 *Actual dashboard capture, 20 October 2026. Historical simulated portfolio; dates and limitations are shown in the interface. / 2026 年 10 月 20 日实际页面截图；图中为历史模拟组合，页面明确显示数据日期与研究限制。*
 
+## Start here: a 30-second tour / 30 秒开始体验
+
+1. [Open the daily journal / 打开每日研究](https://kennyscannotkillme.github.io/kennys.github.io/HHH/#daily). Compare T+1, T+3 and T+5, then check the signal and observation dates. / 对比三个期限，并查看信号与观察日期。
+2. Read the validation panel. It includes unsuccessful results and baselines, not just forecasts. / 查看验证面板，其中保留未成功的结果与基线对照。
+3. Tell us what is unclear: [feedback / 提建议](https://github.com/kennyscannotkillme/kennys.github.io/issues/new?template=feedback.yml) · [report a problem / 报告问题](https://github.com/kennyscannotkillme/kennys.github.io/issues/new?template=bug_report.yml). If useful, **Star** the repository to bookmark it. / 如果有帮助，欢迎点 **Star** 收藏。
+
+![Daily forecasts and validation / 每日预测与验证](docs/images/hhh-daily-preview.png)
+
+*Actual interface, 20 October 2026. Research estimates; first-batch actual outcomes are pending. / 2026 年 10 月 20 日实拍；研究估计，首批实际结果尚待观察。*
+
 ## What you can explore / 可以探索什么
 
 | Area / 模块 | What it shows / 主要内容 |
@@ -78,6 +88,9 @@ node --test tests/github-pages.test.mjs tests/activity.test.mjs tests/research.t
 The static export is written to `HHH/outputs/github-pages/HHH/`. Building the frontend uses the included snapshots and does not fetch fresh market data. / 静态输出位于上述目录；前端构建使用仓库快照，不会自动获取新行情。
 
 ## Feedback and support / 反馈与支持
+
+[Ways to contribute / 参与方式](CONTRIBUTING.md) — feedback, accessibility and clearer explanations are welcome. / 欢迎反馈、可访问性改进与更清楚的解释。
+
 
 Found an unclear chart, a data inconsistency or a mobile layout issue? [Open an issue](https://github.com/kennyscannotkillme/kennys.github.io/issues) with the page, displayed date and steps to reproduce. Please omit personal account details and credentials.
 

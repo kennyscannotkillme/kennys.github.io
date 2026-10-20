@@ -1,0 +1,26 @@
+name: Report a problem / 报告问题
+description: Help improve the public HHH demo / 帮助改进 HHH 公开演示
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please include only public demo information. / 请仅提供公开演示信息，勿上传账户、凭据或私人交易记录。"
+  - type: input
+    id: page
+    attributes:
+      label: Page and device / 页面与设备
+      placeholder: "Daily journal, mobile Chrome / 每日研究，手机 Chrome"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened? / 出现了什么问题？
+      description: "Steps, expected result and actual result; a public-demo screenshot helps. / 复现步骤、预期与实际结果，可附公开演示截图。"
+    validations:
+      required: true
+  - type: textarea
+    id: data_context
+    attributes:
+      label: Displayed date and value / 显示日期与数值
+      description: "For a data issue, include the horizon, ticker and source you compared against. Otherwise leave blank. / 如涉及数据，请补充期限、代码与对照来源；其他问题可留空。"

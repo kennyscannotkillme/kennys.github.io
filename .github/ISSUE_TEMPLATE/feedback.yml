@@ -1,0 +1,18 @@
+name: Feedback or idea / 反馈与建议
+description: Tell us what would make HHH more useful / 说说怎样让 HHH 更有用
+title: "[Feedback] "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What were you trying to understand? / 你想了解什么？
+      description: "Describe the page or research question that brought you here. / 描述你查看的页面或研究问题。"
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would help? / 怎样改进会有帮助？
+      description: "One concrete example is enough. Chinese and English are both welcome. / 提供一个具体例子即可，中英文均可。"
+    validations:
+      required: true

@@ -4,10 +4,11 @@ import { readFileSync, existsSync } from 'node:fs';
 const root = new URL('../outputs/github-pages/HHH/', import.meta.url);
 await test('Pages build uses relative self-hosted assets and the HHH title', () => {
   const html = readFileSync(new URL('index.html', root), 'utf8');
-  assert.match(html, /<title>HHH<\/title>/);
+  assert.match(html, /<title>HHH — A-share Research Workbench \/ A 股研究工作台<\/title>/);
   const assets = [...html.matchAll(/(?:src|href)="([^"]+)"/g)].map(m => m[1]);
   assert.ok(assets.length >= 3);
   for (const asset of assets) {
+    if (asset === 'https://kennyscannotkillme.github.io/kennys.github.io/HHH/') continue;
     assert.ok(asset.startsWith('./'));
     assert.ok(existsSync(new URL(asset, root)));
   }
