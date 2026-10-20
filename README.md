@@ -62,6 +62,10 @@ Completed V7 (21 October): 21 new fits tested eight turnover-based cost-state in
 
 V7 已完成：成本状态特征与固定符号筛选均未通过六组验证；部分观察收益改善不构成稳定优势，线上模型与历史记录保留。
 
+Completed V8 (21 October): 42 new fits tested phase dependence and continuous state interactions. Both candidates selected 20 names on every evaluation date, but each passed 0/6 development groups. July loss reduction did not establish stable predictive performance. Public V1 and forecasts remain unchanged. [Results / 完整结果](docs/research/v8-20261021.md).
+
+V8 已完成：选满 20 只的覆盖缺口已解决，两个候选仍均未通过六组验证；单月改善不等于稳定盈利，线上 V1 保留。
+
 ## Repository guide / 仓库说明
 
 ```text
@@ -112,4 +116,5 @@ Found an unclear chart, a data inconsistency or a mobile layout issue? [Open an 
 如果发现图表难理解、数据不一致或手机排版问题，欢迎 [提交 Issue](https://github.com/kennyscannotkillme/kennys.github.io/issues)，附上页面、显示日期和复现步骤，请勿包含私人账户信息或凭据。
 
 **If HHH helps you think more clearly about research, a star is appreciated. / 如果 HHH 能帮助你更清楚地理解研究，欢迎点一颗 Star。**
+
 

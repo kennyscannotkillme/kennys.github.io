@@ -19,3 +19,9 @@ Completed V7 (21 October): 21 new fits tested eight turnover-based cost-state in
 
 V7 已完成：成本状态特征与固定符号筛选均未通过六组验证；部分观察收益改善不构成稳定优势，线上模型与历史记录保留。
 
+
+
+Completed V8 (21 October): 42 new fits tested phase dependence and continuous state interactions. Both candidates selected 20 names on every evaluation date, but each passed 0/6 development groups. July loss reduction did not establish stable predictive performance. Public V1 and forecasts remain unchanged. [Results / 完整结果](../docs/research/v8-20261021.md).
+
+V8 已完成：选满 20 只的覆盖缺口已解决，两个候选仍均未通过六组验证；单月改善不等于稳定盈利，线上 V1 保留。
+
