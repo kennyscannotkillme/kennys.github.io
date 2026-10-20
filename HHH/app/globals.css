@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
+@import './terminal.css';
+@import './industry.css';
+@import './research-theme.css';
 @custom-variant dark (&:is(.dark *));
 .method-line {display:flex;gap:18px;font-size:14px;line-height:1.8;margin:22px 0;color:var(--foreground)}
 .method-line>span {flex-shrink:0;opacity:.45;font-size:12px;letter-spacing:.12em;padding-top:3px}
@@ -47,6 +50,12 @@ button:disabled { cursor:default; }
 .topbar { position:relative; padding:30px 44px; display:flex; justify-content:space-between; align-items:center; z-index:5; }
 .wordmark { font-size:15px; font-weight:400; letter-spacing:.43em; background:none; border:0; padding:10px 0; }
 .top-actions { display:flex; gap:10px; }
+/* 旧版工作台顶部的「返回研究终端」文字入口。 */
+.text-nav { display:flex; align-items:center; gap:4px; margin-right:auto; margin-left:18px; }
+.text-nav button { padding:8px 13px; border:0; border-radius:9px; background:transparent; font:inherit; font-size:13px; letter-spacing:.04em; color:var(--ink2); transition:background .22s,color .22s; }
+.text-nav button:hover { background:rgba(154,156,158,.1); color:var(--foreground); }
+.text-nav button[aria-current='page'] { color:var(--foreground); background:rgba(154,156,158,.13); }
+@media (max-width:640px) { .text-nav { margin-left:6px; gap:0; } .text-nav button { padding:7px 9px; font-size:12px; } }
 .icon-control { position:relative; width:44px; height:44px; border-radius:50%; color:var(--ink2); background:transparent; border:0; box-shadow:none; transition:background .3s,color .3s,transform .4s; }
 .icon-control svg:not([class*='size-']) { width:21px; height:21px; }
 .icon-control:hover { background:rgba(154,156,158,.09); color:var(--foreground); transform:translateY(-2px); }

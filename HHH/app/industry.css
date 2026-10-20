@@ -1,0 +1,145 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   HHH 研究终端 — 产业全景模块样式
+   全部作用域在 .ind-root 之下；设计变量继承自 .tm-shell（见 app/terminal.css）。
+   16 列宽表、前两列冻结、横向滚动限制在表格容器内，不产生整页横向溢出。
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── 主题选择 ──────────────────────────────────────────── */
+
+.ind-root .ind-themes { display: flex; flex-wrap: wrap; gap: 6px; }
+.ind-root .ind-theme {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+  padding: 7px 14px; border: 1px solid var(--tm-line); border-radius: 7px;
+  background: var(--tm-surface); font: inherit; color: var(--tm-ink-2); cursor: pointer;
+  transition: border-color .16s, background .16s, color .16s;
+}
+.ind-root .ind-theme span { font-size: 13px; }
+.ind-root .ind-theme small { font-size: 10.5px; color: var(--tm-ink-3); }
+.ind-root .ind-theme:hover { border-color: var(--tm-navy); color: var(--tm-ink); }
+.ind-root .ind-theme.is-active { background: var(--tm-navy); border-color: var(--tm-navy); color: #fff; }
+.ind-root .ind-theme.is-active small { color: #cfe0ee; }
+.ind-root .ind-theme.is-custom { border-style: dashed; }
+
+/* ── 筛选条 ────────────────────────────────────────────── */
+
+.ind-root .ind-filters {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  padding: 10px 14px; background: var(--tm-surface);
+  border: 1px solid var(--tm-line); border-radius: 8px;
+}
+.ind-root .ind-reset {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 11px; border: 1px solid var(--tm-line); border-radius: 6px;
+  background: var(--tm-surface); font: inherit; font-size: 12px; color: var(--tm-ink-2); cursor: pointer;
+}
+.ind-root .ind-reset:hover { border-color: var(--tm-navy); color: var(--tm-navy); }
+.ind-root .ind-count { margin-left: auto; font-size: 12px; color: var(--tm-ink-3); font-variant-numeric: tabular-nums; }
+
+/* ── 16 列主表 ─────────────────────────────────────────── */
+
+.ind-root .ind-table {
+  width: 2770px; min-width: 2770px; table-layout:fixed; border-collapse: separate; border-spacing: 0; font-size: 12.5px;
+}
+.ind-root .ind-table thead th {
+  position: sticky; top: 0; z-index: 3;
+  background: var(--tm-head); color: var(--tm-head-ink);
+  border-bottom: 1px solid var(--tm-head-line);
+  padding: 9px 11px; text-align: left; font-size: 11.5px; font-weight: 600; white-space: nowrap;
+}
+.ind-root .ind-table tbody th,
+.ind-root .ind-table tbody td {
+  padding: 7px 10px; border-bottom: 1px solid var(--tm-line-soft);
+  text-align: left; font-weight: 400; vertical-align: top; color: var(--tm-ink-2);
+  overflow-wrap:anywhere;
+}
+.ind-root .ind-table tbody tr:hover > th,
+.ind-root .ind-table tbody tr:hover > td { background: var(--tm-surface-2); }
+.ind-root .ind-table tbody tr.is-open > th,
+.ind-root .ind-table tbody tr.is-open > td { background: #eef4fa; }
+
+/* 前两列冻结 */
+.ind-root .ind-sticky { position: sticky; z-index: 2; background: var(--tm-surface); }
+.ind-root .ind-table thead th.ind-sticky { z-index: 4; background: var(--tm-head); }
+.ind-root .ind-sticky-1 { left: 0; min-width: 50px; width: 50px; }
+.ind-root .ind-sticky-2 { left: 50px; min-width: 190px; box-shadow: 1px 0 0 var(--tm-line); }
+.ind-root .ind-clamp { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden; line-height:18px; max-height:36px; }
+.ind-root .ind-signal {color:#7a6738;font-size:11px;line-height:18px;}
+.ind-root .ind-signal.is-growth {color:#287b67;}
+.ind-root tbody tr:hover > .ind-sticky { background: var(--tm-surface-2); }
+.ind-root tbody tr.is-open > .ind-sticky { background: #eef4fa; }
+.ind-root .ind-code { font-variant-numeric: tabular-nums; color: var(--tm-ink-3); font-weight: 600; }
+
+.ind-root .ind-expand {
+  display: inline-flex; align-items: flex-start; gap: 5px; width: 100%;
+  padding: 0; border: 0; background: none; font: inherit; font-size: 12.5px; font-weight: 600;
+  color: var(--tm-ink); text-align: left; cursor: pointer;
+}
+.ind-root .ind-expand:hover { color: var(--tm-navy); }
+.ind-root .ind-expand svg { flex: none; margin-top: 4px; }
+
+/* 公司代码 token → 公司研究页 */
+.ind-root .ind-cos { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.ind-root .ind-token {
+  padding: 2px 8px; border: 1px solid #c3d6e8; border-radius: 4px;
+  background: #eef4fa; font: inherit; font-size: 11.5px; color: var(--tm-navy);
+  cursor: pointer; font-variant-numeric: tabular-nums;
+}
+.ind-root .ind-token:hover { background: var(--tm-navy); color: #fff; border-color: var(--tm-navy); }
+.ind-root .ind-token.is-wide { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; }
+.ind-root .ind-token-meta { margin-left: auto; font-size: 10.5px; opacity: .8; }
+
+/* ── 展开的技术上下游明细 ──────────────────────────────── */
+
+.ind-root .ind-detail-row > td { background: #f7f9fb; padding: 14px 16px; }
+.ind-root .ind-detail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ind-root .ind-detail h4 { margin: 0 0 5px; font-size: 12px; font-weight: 600; color: var(--tm-navy); letter-spacing: .04em; }
+.ind-root .ind-detail h4:not(:first-child) { margin-top: 14px; }
+.ind-root .ind-detail h5 { margin: 0 0 4px; font-size: 11.5px; font-weight: 600; color: var(--tm-ink-3); }
+.ind-root .ind-rel { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+.ind-root .ind-kv > div { padding: 5px 0; border-bottom: 1px solid var(--tm-line-soft); }
+.ind-root .ind-kv dt { font-size: 11px; color: var(--tm-ink-3); }
+.ind-root .ind-kv dd { margin: 2px 0 0; font-size: 12.5px; }
+
+/* ── 自定义分类构建器（仅浏览器本地） ──────────────────── */
+
+.ind-root .ind-builder { display: flex; flex-direction: column; gap: 12px; }
+.ind-root .ind-picker {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 4px;
+  max-height: 260px; overflow-y: auto;
+  border: 1px solid var(--tm-line); border-radius: 6px; padding: 10px;
+}
+.ind-root .ind-picker legend { font-size: 12px; color: var(--tm-ink-3); padding: 0 5px; }
+.ind-root .ind-pick { display: flex; align-items: flex-start; gap: 7px; font-size: 12.5px; cursor: pointer; padding: 3px 4px; }
+.ind-root .ind-pick:hover { background: var(--tm-surface-2); border-radius: 4px; }
+.ind-root .ind-pick small { display: block; font-size: 10.5px; color: var(--tm-ink-3); }
+.ind-root .ind-builder-actions { display: flex; gap: 8px; }
+.ind-root .ind-customlist { margin: 0; padding: 0; list-style: none; }
+.ind-root .ind-customlist li {
+  display: flex; align-items: center; gap: 12px; padding: 7px 0;
+  border-bottom: 1px solid var(--tm-line-soft); font-size: 12.5px;
+}
+
+/* ── 估值敏感性 ────────────────────────────────────────── */
+
+.ind-root .ind-scenario { display: flex; flex-direction: column; gap: 14px; }
+.ind-root .ind-scenario-controls { display: flex; flex-wrap: wrap; gap: 20px; }
+.ind-root .ind-scenario-out {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 220px)); gap: 20px;
+  padding-top: 12px; border-top: 1px solid var(--tm-line-soft);
+}
+.ind-root .ind-scenario-out > div { display: flex; flex-direction: column; gap: 3px; }
+.ind-root .ind-scenario-out span { font-size: 11.5px; color: var(--tm-ink-3); }
+.ind-root .ind-scenario-out strong { font-size: 28px; font-weight: 600; line-height: 1.15; font-variant-numeric: tabular-nums; color: var(--tm-teal); }
+.ind-root .ind-scenario-out small { font-size: 11px; color: var(--tm-ink-3); }
+
+/* ── responsive ────────────────────────────────────────── */
+
+@media (max-width: 1280px) {
+  .ind-root .ind-detail { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .ind-root .ind-count { margin-left: 0; }
+  .ind-root .ind-sticky-1,
+  .ind-root .ind-sticky-2 { position: static; box-shadow: none; }
+  .ind-root .ind-scenario-out { grid-template-columns: 1fr; }
+}
