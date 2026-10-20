@@ -53,6 +53,11 @@ The 20 October data refresh reuses the frozen V1 models. It updates observations
 
 10 月 20 日数据刷新复用冻结的 V1 模型，未重新拟合或重复旧验证。已完成的有界 V5 特征与排序研究没有候选通过开发期筛选。未晋升研究模型，自动下单仍禁用。
 
+
+Completed V6: 42 new fits tested paper-informed peer/stock return features and concentration-based selection across all three horizons and both entry clocks. Both candidates passed 0/6 development groups; the public model remains unchanged. [Full results / 完整结果](docs/research/v6-20261020.md).
+
+V6 已完成：论文特征拆分与集中度选股共42次新拟合，覆盖三个期限及两种入场时钟。两个候选均0/6组通过，线上模型与历史记录保留。
+
 ## Repository guide / 仓库说明
 
 ```text
