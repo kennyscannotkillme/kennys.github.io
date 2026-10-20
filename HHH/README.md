@@ -13,3 +13,9 @@ Accepted research release: 20 October 2026, daily-data source commit `bbb246b334
 Daily signals are dated 20 October 2026, with a 21 October entry reference. Frozen V1 models are unchanged. Historical records remain available. / 每日信号日期为 2026 年 10 月 20 日，入场参考日为 10 月 21 日；冻结 V1 模型未变，历史记录保留。
 
 [Completed V6 study / V6 完整验证结果](../docs/research/v6-20261020.md): paper-derived features and selection tested; 0/6 groups passed for both candidates. Public V1 and historical records retained.
+
+
+Completed V7 (21 October): 21 new fits tested eight turnover-based cost-state inputs and fixed sign-conflict selection. Both candidates passed 0/6 development groups. B2 reduced observed losses but had six dates below 20 names; full coverage/stress gates failed. Public V1 and daily forecasts remain unchanged. [Results and exact return definition / 结果与收益口径](../docs/research/v7-20261021.md).
+
+V7 已完成：成本状态特征与固定符号筛选均未通过六组验证；部分观察收益改善不构成稳定优势，线上模型与历史记录保留。
+

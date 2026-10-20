@@ -58,6 +58,10 @@ Completed V6: 42 new fits tested paper-informed peer/stock return features and c
 
 V6 已完成：论文特征拆分与集中度选股共42次新拟合，覆盖三个期限及两种入场时钟。两个候选均0/6组通过，线上模型与历史记录保留。
 
+Completed V7 (21 October): 21 new fits tested eight turnover-based cost-state inputs and fixed sign-conflict selection. Both candidates passed 0/6 development groups. B2 reduced observed losses but had six dates below 20 names; full coverage/stress gates failed. Public V1 and daily forecasts remain unchanged. [Results and exact return definition / 结果与收益口径](docs/research/v7-20261021.md).
+
+V7 已完成：成本状态特征与固定符号筛选均未通过六组验证；部分观察收益改善不构成稳定优势，线上模型与历史记录保留。
+
 ## Repository guide / 仓库说明
 
 ```text
@@ -108,3 +112,4 @@ Found an unclear chart, a data inconsistency or a mobile layout issue? [Open an 
 如果发现图表难理解、数据不一致或手机排版问题，欢迎 [提交 Issue](https://github.com/kennyscannotkillme/kennys.github.io/issues)，附上页面、显示日期和复现步骤，请勿包含私人账户信息或凭据。
 
 **If HHH helps you think more clearly about research, a star is appreciated. / 如果 HHH 能帮助你更清楚地理解研究，欢迎点一颗 Star。**
+
