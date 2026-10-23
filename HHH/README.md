@@ -25,3 +25,4 @@ Completed V8 (21 October): 42 new fits tested phase dependence and continuous st
 
 V8 已完成：选满 20 只的覆盖缺口已解决，两个候选仍均未通过六组验证；单月改善不等于稳定盈利，线上 V1 保留。
 
+[23 October data-source integration / 10 月 23 日数据源接入进度](../docs/research/provider-integration-20261023.md): authenticated catalogs, one cached news-retrieval check and 63 passing targeted tests; forecasting models and historical records unchanged. / 认证目录、单次新闻读取及缓存验证完成，63 项针对性测试通过；预测模型与历史记录保留。
