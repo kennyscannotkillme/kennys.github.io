@@ -48,3 +48,14 @@ A predeclared CHL liquidity-measurement feature experiment completed 21 new mont
 - [中文方法、结果与失败诊断](../docs/research/expected-return-v10-20261023.zh.md)
 - [English methods and results](../docs/research/expected-return-v10-20261023.en.md)
 - [Aggregate data](../docs/research/expected-return-v10-20261023.json)
+
+
+## V11 research update · 23 October 2026
+
+The current forecasting pipeline tested training and target alignment with its existing selection pool. All six observed net cohort means improved versus the saved research control, but all six remained negative and the candidate passed 0/6 development groups. The website model and every historical forecast/outcome remain unchanged.
+
+本轮针对当前预测模型调整训练范围与目标：六组平均亏损均较原研究对照缩小，但仍未稳定超过简单基线，0/6 组通过。保留全部验证结果和历史预测，不替换网页模型。
+
+- [中文方法与结果](../docs/research/expected-return-v11-20261023.zh.md)
+- [English methods and results](../docs/research/expected-return-v11-20261023.en.md)
+- [Aggregate data](../docs/research/expected-return-v11-20261023.json)
