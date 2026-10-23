@@ -1,0 +1,216 @@
+{
+  "study": "HHH native Astra event-classification V2 bounded pilot",
+  "report_date": "2026-10-23",
+  "status": "RESEARCH_ONLY_CLASSIFICATION_PILOT_COMPLETE",
+  "execution": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "ultra",
+    "execution": "native_codex_agent"
+  },
+  "test_scope": "Synthetic contract tests, not independent promotion audit or evidence of semantic correctness",
+  "targeted_synthetic_tests_passed": 52,
+  "materials": 19,
+  "validated_materials": 19,
+  "failed_materials": 0,
+  "all_citations_location_valid": true,
+  "semantic_support_verified": false,
+  "reference": {
+    "human_verified": false,
+    "same_model_family": true,
+    "frozen_before_inference": true,
+    "read_by_classifier": false,
+    "clear_fields": 46,
+    "ambiguous_fields": 11,
+    "ambiguity_exclusion_rule": "Predeclared reference ambiguity only; classifier ambiguity does not remove a scored field"
+  },
+  "classifier_status_counts": {
+    "ambiguous": 17,
+    "clear": 40
+  },
+  "comparison": {
+    "native_astra_inputs": "TITLE_AND_PROVIDER_EXCERPT",
+    "fixed_keyword_inputs": "TITLE_ONLY",
+    "same_information_set": false,
+    "keyword_rule_changed_after_result": false,
+    "human_gold_accuracy_claim": false,
+    "pure_model_advantage_claim": false,
+    "comparison_to_previous_local_pilot_scores": false
+  },
+  "combined_reference_clear_fields": {
+    "native_astra": {
+      "matches": 41,
+      "clear_fields": 46,
+      "agreement": 0.8913043478260869
+    },
+    "fixed_title_keyword": {
+      "matches": 19,
+      "clear_fields": 46,
+      "agreement": 0.41304347826086957
+    }
+  },
+  "per_axis_reference_clear_fields": {
+    "event_kind": {
+      "native_astra": {
+        "matches": 6,
+        "total": 10,
+        "agreement": 0.6
+      },
+      "fixed_title_keyword": {
+        "matches": 2,
+        "total": 10,
+        "agreement": 0.2
+      }
+    },
+    "material_form": {
+      "native_astra": {
+        "matches": 18,
+        "total": 19,
+        "agreement": 0.9473684210526315
+      },
+      "fixed_title_keyword": {
+        "matches": 11,
+        "total": 19,
+        "agreement": 0.5789473684210527
+      }
+    },
+    "subject_kind": {
+      "native_astra": {
+        "matches": 17,
+        "total": 17,
+        "agreement": 1.0
+      },
+      "fixed_title_keyword": {
+        "matches": 6,
+        "total": 17,
+        "agreement": 0.35294117647058826
+      }
+    }
+  },
+  "secondary_all_fields_including_reference_ambiguity": {
+    "subject_kind": {
+      "native_astra": {
+        "agreement": 1.0,
+        "correct": 19,
+        "total": 19
+      },
+      "fixed_title_keyword": {
+        "agreement": 0.3157894736842105,
+        "correct": 6,
+        "total": 19
+      }
+    },
+    "event_kind": {
+      "native_astra": {
+        "agreement": 0.7368421052631579,
+        "correct": 14,
+        "total": 19
+      },
+      "fixed_title_keyword": {
+        "agreement": 0.3157894736842105,
+        "correct": 6,
+        "total": 19
+      }
+    },
+    "material_form": {
+      "native_astra": {
+        "agreement": 0.9473684210526315,
+        "correct": 18,
+        "total": 19
+      },
+      "fixed_title_keyword": {
+        "agreement": 0.5789473684210527,
+        "correct": 11,
+        "total": 19
+      }
+    }
+  },
+  "macro_f1_reference_supported_classes": {
+    "subject_kind": {
+      "native_astra": 1.0,
+      "fixed_title_keyword": 0.3533834586466165
+    },
+    "event_kind": {
+      "native_astra": 0.6666666666666667,
+      "fixed_title_keyword": 0.16
+    },
+    "material_form": {
+      "native_astra": 0.9449275362318841,
+      "fixed_title_keyword": 0.5476190476190476
+    }
+  },
+  "reference_clear_disagreement_count": 5,
+  "reference_clear_disagreements_aggregate": {
+    "subject_kind": [],
+    "event_kind": [
+      {
+        "count": 4,
+        "prediction": "industry",
+        "reference": "earnings_results"
+      }
+    ],
+    "material_form": [
+      {
+        "count": 1,
+        "prediction": "analyst_commentary",
+        "reference": "news_report"
+      }
+    ]
+  },
+  "material_form_reference_support_all_fields": {
+    "analyst_commentary": 11,
+    "disclosure_excerpt": 0,
+    "insufficient": 0,
+    "news_report": 8
+  },
+  "sample_quality": {
+    "provider": "eastmoney",
+    "provider_queries": 1,
+    "returned_materials": 20,
+    "requested_date_window": "2026-10-21 00:00:00 to 23:59:59 Asia/Shanghai",
+    "returned_rows_matching_requested_date": 0,
+    "missing_original_url": 12,
+    "normalized_title_duplicates_excluded": 1,
+    "retained_materials": 19,
+    "classification_test_only": true,
+    "current_news_coverage_verified": false,
+    "point_in_time_eligible": false,
+    "dedup_does_not_prove_semantic_novelty": true
+  },
+  "replay": {
+    "new_classifications": 0,
+    "prior_status": "VALIDATED_CLASSIFICATION_INTERNAL_ONLY",
+    "status": "UNCHANGED"
+  },
+  "local_model_calls": 0,
+  "external_model_api_calls": 0,
+  "paid_information_queries": 0,
+  "native_codex_usage_cost": "NOT_MEASURED",
+  "return_horizons": {
+    "1": {
+      "mse_improvement": null,
+      "net_return_improvement": null,
+      "rank_ic": null,
+      "status": "NOT_READY"
+    },
+    "3": {
+      "mse_improvement": null,
+      "net_return_improvement": null,
+      "rank_ic": null,
+      "status": "NOT_READY"
+    },
+    "5": {
+      "mse_improvement": null,
+      "net_return_improvement": null,
+      "rank_ic": null,
+      "status": "NOT_READY"
+    }
+  },
+  "feature_eligible": false,
+  "public_model_replaced": false,
+  "official_documentation": {
+    "models": "https://learn.chatgpt.com/docs/models",
+    "native_subagents": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+    "information_provider": "https://ai.eastmoney.com/mxmcp"
+  },
+  "publication_scope": "Aggregate methods and statistics only; no source texts, material identifiers, row labels, private files or credentials"
+}

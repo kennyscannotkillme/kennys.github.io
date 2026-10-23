@@ -34,3 +34,6 @@ V9 已完成：历史规模、估值、收益显著性及特征分组选股均�
 
 
 [Free local event-classification pilot / 免费本地资讯分类试验（23 October）](../docs/research/free-event-classification-20261023.md): 43 local calls, 27 accepted and 16 evidence-check rejections. The local model trailed fixed keyword rules on all three classification axes against a predeclared assistant reference. All-A T+1/T+3/T+5 return validation remains NOT_READY; the public forecast model and historical records are unchanged.
+
+
+[Native Astra event-classification V2 / 原生 Astra 资讯分类 V2（23 October）](../docs/research/native-astra-events-20261023.md): 19/19 materials passed structure and citation-location checks. Reference agreement was 41/46 versus 19/46 for fixed title keywords; the nonhuman reference and different input information limit interpretation. All-A T+1/T+3/T+5 return validation remains NOT_READY, with the public model and history preserved. / 仅发布分类工程与参考一致性结果，不作人工金标准准确率、纯模型优势或收益提升声明。
