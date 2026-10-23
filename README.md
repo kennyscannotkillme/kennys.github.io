@@ -118,3 +118,8 @@ Found an unclear chart, a data inconsistency or a mobile layout issue? [Open an 
 **If HHH helps you think more clearly about research, a star is appreciated. / 如果 HHH 能帮助你更清楚地理解研究，欢迎点一颗 Star。**
 
 
+
+
+Completed V9 (23 October): 21 native Ridge fits and 21 characteristic-cell table bundles tested historical size/BM and return salience across all three horizons and both entry clocks. D1 and D2 each passed 0/6 development groups. Full Top20 coverage was retained, but prediction and economic gates failed. Public V1 and historical forecasts remain unchanged. [Results / 完整结果](docs/research/v9-20261023.md).
+
+V9 已完成：历史规模、估值、收益显著性及特征分组选股均已按三个期限、两种入场时钟验证。两个候选均 0/6 组通过，保留线上 V1 与全部历史记录。

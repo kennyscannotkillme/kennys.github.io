@@ -26,3 +26,8 @@ Completed V8 (21 October): 42 new fits tested phase dependence and continuous st
 V8 已完成：选满 20 只的覆盖缺口已解决，两个候选仍均未通过六组验证；单月改善不等于稳定盈利，线上 V1 保留。
 
 [23 October data-source integration / 10 月 23 日数据源接入进度](../docs/research/provider-integration-20261023.md): authenticated catalogs, one cached news-retrieval check and 63 passing targeted tests; forecasting models and historical records unchanged. / 认证目录、单次新闻读取及缓存验证完成，63 项针对性测试通过；预测模型与历史记录保留。
+
+
+Completed V9 (23 October): 21 native Ridge fits and 21 characteristic-cell table bundles tested historical size/BM and return salience across all three horizons and both entry clocks. D1 and D2 each passed 0/6 development groups. Full Top20 coverage was retained, but prediction and economic gates failed. Public V1 and historical forecasts remain unchanged. [Results / 完整结果](../docs/research/v9-20261023.md).
+
+V9 已完成：历史规模、估值、收益显著性及特征分组选股均已按三个期限、两种入场时钟验证。两个候选均 0/6 组通过，保留线上 V1 与全部历史记录。
