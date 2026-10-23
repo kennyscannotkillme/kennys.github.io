@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T09:49:16.382399+00:00",
+  "generated_at": "2026-10-23T09:55:29.131625+00:00",
   "method": {
     "id": "ETF_TREND_V1",
     "label": "A股板块ETF趋势预测",
@@ -9,6 +9,349 @@
   },
   "universe_count": 20,
   "records": [
+    {
+      "id": "ETF_TREND_V1_20261023_20261026",
+      "created_at": "2026-10-23T09:55:29.114622+00:00",
+      "signal_date": "20261023",
+      "entry_date": "20261026",
+      "model_version": "ETF_TREND_V1",
+      "horizons": [
+        {
+          "days": 1,
+          "exit_date": "20261027"
+        },
+        {
+          "days": 3,
+          "exit_date": "20261029"
+        },
+        {
+          "days": 5,
+          "exit_date": "20261102"
+        }
+      ],
+      "candidates": [
+        {
+          "sector_id": "software",
+          "sector_name": "软件",
+          "ticker": "515230.SH",
+          "name": "国泰中证全指软件ETF",
+          "benchmark": "中证全指软件指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 1,
+          "score": 79.91082615484815,
+          "bias": "偏强",
+          "status": "Estimated",
+          "reference_close": 0.681,
+          "return_5d": 0.07075471698113223,
+          "return_20d": 0.031818181818181746,
+          "selected": true
+        },
+        {
+          "sector_id": "robot",
+          "sector_name": "机器人",
+          "ticker": "562500.SH",
+          "name": "华夏中证机器人ETF",
+          "benchmark": "中证机器人指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 2,
+          "score": 66.37019045875861,
+          "bias": "偏强",
+          "status": "Estimated",
+          "reference_close": 0.885,
+          "return_5d": 0.11601513240857497,
+          "return_20d": -0.03384279475982532,
+          "selected": true
+        },
+        {
+          "sector_id": "medical",
+          "sector_name": "医药卫生",
+          "ticker": "512010.SH",
+          "name": "易方达沪深300医药卫生ETF",
+          "benchmark": "沪深300医药卫生指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 3,
+          "score": 64.04245957801261,
+          "bias": "偏强",
+          "status": "Estimated",
+          "reference_close": 0.376,
+          "return_5d": 0.02452316076294303,
+          "return_20d": 0.010752688172043223,
+          "selected": true
+        },
+        {
+          "sector_id": "cloud",
+          "sector_name": "云计算与大数据",
+          "ticker": "516510.SH",
+          "name": "易方达中证云计算与大数据主题ETF",
+          "benchmark": "中证云计算与大数据主题指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 4,
+          "score": 56.30796808692523,
+          "bias": "震荡",
+          "status": "Estimated",
+          "reference_close": 1.501,
+          "return_5d": 0.057042253521126796,
+          "return_20d": -0.0636306924516532,
+          "selected": true
+        },
+        {
+          "sector_id": "consumer",
+          "sector_name": "主要消费",
+          "ticker": "159928.SZ",
+          "name": "汇添富中证主要消费ETF",
+          "benchmark": "中证主要消费指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 5,
+          "score": 52.32658528300207,
+          "bias": "震荡",
+          "status": "Estimated",
+          "reference_close": 0.663,
+          "return_5d": -0.005997001499250421,
+          "return_20d": 0.02157164869029282,
+          "selected": true
+        },
+        {
+          "sector_id": "bank",
+          "sector_name": "银行",
+          "ticker": "512800.SH",
+          "name": "华宝中证银行ETF",
+          "benchmark": "中证银行指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 6,
+          "score": 45.21212776483405,
+          "bias": "震荡",
+          "status": "Estimated",
+          "reference_close": 0.849,
+          "return_5d": -0.01736111111111116,
+          "return_20d": 0.014336917562723928,
+          "selected": false
+        },
+        {
+          "sector_id": "ai",
+          "sector_name": "人工智能",
+          "ticker": "159819.SZ",
+          "name": "易方达中证人工智能主题ETF",
+          "benchmark": "中证人工智能主题指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 7,
+          "score": 43.648916211635125,
+          "bias": "震荡",
+          "status": "Estimated",
+          "reference_close": 1.497,
+          "return_5d": 0.03455425017277136,
+          "return_20d": -0.12660443407234534,
+          "selected": false
+        },
+        {
+          "sector_id": "infrastructure",
+          "sector_name": "基建",
+          "ticker": "516950.SH",
+          "name": "银华中证基建ETF",
+          "benchmark": "中证基建指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 8,
+          "score": 39.07409139869179,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.97,
+          "return_5d": -0.00512820512820511,
+          "return_20d": -0.03482587064676612,
+          "selected": false
+        },
+        {
+          "sector_id": "power",
+          "sector_name": "电力公用事业",
+          "ticker": "159611.SZ",
+          "name": "广发中证全指电力公用事业ETF",
+          "benchmark": "中证全指电力公用事业指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 9,
+          "score": 37.1815459844541,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 1.02,
+          "return_5d": -0.018286814244465766,
+          "return_20d": -0.016393442622950727,
+          "selected": false
+        },
+        {
+          "sector_id": "defense",
+          "sector_name": "军工",
+          "ticker": "512660.SH",
+          "name": "国泰中证军工ETF",
+          "benchmark": "中证军工指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 10,
+          "score": 35.68817894722042,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 1.061,
+          "return_5d": 0.0018885741265344258,
+          "return_20d": -0.07092819614711032,
+          "selected": false
+        },
+        {
+          "sector_id": "broker",
+          "sector_name": "证券",
+          "ticker": "512000.SH",
+          "name": "华宝中证全指证券公司ETF",
+          "benchmark": "中证全指证券公司指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 11,
+          "score": 33.960720853350935,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.484,
+          "return_5d": -0.018255578093306357,
+          "return_20d": -0.030060120240480992,
+          "selected": false
+        },
+        {
+          "sector_id": "solar",
+          "sector_name": "光伏",
+          "ticker": "515790.SH",
+          "name": "华泰柏瑞中证光伏产业ETF",
+          "benchmark": "中证光伏产业指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 12,
+          "score": 31.41109952423055,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.717,
+          "return_5d": 0.0,
+          "return_20d": -0.09583858764186637,
+          "selected": false
+        },
+        {
+          "sector_id": "game",
+          "sector_name": "动漫游戏",
+          "ticker": "159869.SZ",
+          "name": "华夏中证动漫游戏ETF",
+          "benchmark": "中证动漫游戏指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 13,
+          "score": 29.70267503279542,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 1.003,
+          "return_5d": -0.01279527559055127,
+          "return_20d": -0.0634920634920636,
+          "selected": false
+        },
+        {
+          "sector_id": "semi",
+          "sector_name": "半导体",
+          "ticker": "512480.SH",
+          "name": "国联安中证全指半导体产品与设备ETF",
+          "benchmark": "中证全指半导体产品与设备指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 14,
+          "score": 27.98234516597665,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.836,
+          "return_5d": 0.0023980815347721673,
+          "return_20d": -0.1648351648351648,
+          "selected": false
+        },
+        {
+          "sector_id": "chemical",
+          "sector_name": "化工",
+          "ticker": "159870.SZ",
+          "name": "鹏华中证细分化工产业主题ETF",
+          "benchmark": "中证细分化工产业主题指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 15,
+          "score": 26.591932874654297,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.687,
+          "return_5d": -0.008658008658008476,
+          "return_20d": -0.10078534031413611,
+          "selected": false
+        },
+        {
+          "sector_id": "coal",
+          "sector_name": "煤炭",
+          "ticker": "515220.SH",
+          "name": "国泰中证煤炭ETF",
+          "benchmark": "中证煤炭指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 16,
+          "score": 21.57039399766362,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 1.205,
+          "return_5d": -0.04743083003952564,
+          "return_20d": -0.04213036565977735,
+          "selected": false
+        },
+        {
+          "sector_id": "photonics",
+          "sector_name": "通信设备与光通信",
+          "ticker": "515880.SH",
+          "name": "国泰中证全指通信设备ETF",
+          "benchmark": "中证全指通信设备指数收益率×100%",
+          "coverage_note": "通信设备行业代理，非纯光通信指数",
+          "rank": 17,
+          "score": 17.898284151326234,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.514,
+          "return_5d": -0.01532567049808431,
+          "return_20d": -0.25072886297376096,
+          "selected": false
+        },
+        {
+          "sector_id": "metals",
+          "sector_name": "有色金属",
+          "ticker": "512400.SH",
+          "name": "南方中证申万有色金属ETF",
+          "benchmark": "中证申万有色金属指数×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 18,
+          "score": 16.97564189461168,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 1.487,
+          "return_5d": -0.02491803278688509,
+          "return_20d": -0.1293911007025761,
+          "selected": false
+        },
+        {
+          "sector_id": "energy",
+          "sector_name": "新能源",
+          "ticker": "516160.SH",
+          "name": "南方中证新能源ETF",
+          "benchmark": "中证新能源指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 19,
+          "score": 15.195529729955204,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 2.002,
+          "return_5d": -0.030038759689922645,
+          "return_20d": -0.12728857890148237,
+          "selected": false
+        },
+        {
+          "sector_id": "equipment",
+          "sector_name": "半导体材料设备",
+          "ticker": "159516.SZ",
+          "name": "国泰中证半导体材料设备主题ETF",
+          "benchmark": "中证半导体材料设备主题指数收益率×100%",
+          "coverage_note": "A股行业或主题指数ETF",
+          "rank": 20,
+          "score": 1.6190507761594084,
+          "bias": "偏弱",
+          "status": "Estimated",
+          "reference_close": 0.54,
+          "return_5d": -0.09395973154362414,
+          "return_20d": -0.23186344238975798,
+          "selected": false
+        }
+      ]
+    },
     {
       "id": "ETF_TREND_V1_20261022_20261023",
       "created_at": "2026-10-22T09:49:16.362367+00:00",
@@ -1041,13 +1384,13 @@
   ],
   "observations": [
     {
-      "forecast_id": "ETF_TREND_V1_20261022_20261023",
-      "as_of": "20261022",
-      "evaluated_at": "2026-10-22T09:49:16.382399+00:00",
+      "forecast_id": "ETF_TREND_V1_20261023_20261026",
+      "as_of": "20261023",
+      "evaluated_at": "2026-10-23T09:55:29.131625+00:00",
       "items": [
         {
-          "ticker": "512800.SH",
-          "entry_date": "20261023",
+          "ticker": "515230.SH",
+          "entry_date": "20261026",
           "entry_open": null,
           "mark_date": null,
           "mark_close": null,
@@ -1056,7 +1399,7 @@
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261026",
+              "exit_date": "20261027",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1064,7 +1407,7 @@
             },
             {
               "days": 3,
-              "exit_date": "20261028",
+              "exit_date": "20261029",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1072,7 +1415,7 @@
             },
             {
               "days": 5,
-              "exit_date": "20261030",
+              "exit_date": "20261102",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1082,7 +1425,7 @@
         },
         {
           "ticker": "562500.SH",
-          "entry_date": "20261023",
+          "entry_date": "20261026",
           "entry_open": null,
           "mark_date": null,
           "mark_close": null,
@@ -1091,7 +1434,7 @@
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261026",
+              "exit_date": "20261027",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1099,7 +1442,7 @@
             },
             {
               "days": 3,
-              "exit_date": "20261028",
+              "exit_date": "20261029",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1107,77 +1450,7 @@
             },
             {
               "days": 5,
-              "exit_date": "20261030",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry",
-              "remaining_sessions": 6
-            }
-          ]
-        },
-        {
-          "ticker": "159928.SZ",
-          "entry_date": "20261023",
-          "entry_open": null,
-          "mark_date": null,
-          "mark_close": null,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261026",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry",
-              "remaining_sessions": 2
-            },
-            {
-              "days": 3,
-              "exit_date": "20261028",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry",
-              "remaining_sessions": 4
-            },
-            {
-              "days": 5,
-              "exit_date": "20261030",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry",
-              "remaining_sessions": 6
-            }
-          ]
-        },
-        {
-          "ticker": "515230.SH",
-          "entry_date": "20261023",
-          "entry_open": null,
-          "mark_date": null,
-          "mark_close": null,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261026",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry",
-              "remaining_sessions": 2
-            },
-            {
-              "days": 3,
-              "exit_date": "20261028",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry",
-              "remaining_sessions": 4
-            },
-            {
-              "days": 5,
-              "exit_date": "20261030",
+              "exit_date": "20261102",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1187,7 +1460,7 @@
         },
         {
           "ticker": "512010.SH",
-          "entry_date": "20261023",
+          "entry_date": "20261026",
           "entry_open": null,
           "mark_date": null,
           "mark_close": null,
@@ -1196,7 +1469,7 @@
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261026",
+              "exit_date": "20261027",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1204,7 +1477,7 @@
             },
             {
               "days": 3,
-              "exit_date": "20261028",
+              "exit_date": "20261029",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1212,7 +1485,77 @@
             },
             {
               "days": 5,
-              "exit_date": "20261030",
+              "exit_date": "20261102",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry",
+              "remaining_sessions": 6
+            }
+          ]
+        },
+        {
+          "ticker": "516510.SH",
+          "entry_date": "20261026",
+          "entry_open": null,
+          "mark_date": null,
+          "mark_close": null,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261027",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry",
+              "remaining_sessions": 2
+            },
+            {
+              "days": 3,
+              "exit_date": "20261029",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry",
+              "remaining_sessions": 4
+            },
+            {
+              "days": 5,
+              "exit_date": "20261102",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry",
+              "remaining_sessions": 6
+            }
+          ]
+        },
+        {
+          "ticker": "159928.SZ",
+          "entry_date": "20261026",
+          "entry_open": null,
+          "mark_date": null,
+          "mark_close": null,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261027",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry",
+              "remaining_sessions": 2
+            },
+            {
+              "days": 3,
+              "exit_date": "20261029",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry",
+              "remaining_sessions": 4
+            },
+            {
+              "days": 5,
+              "exit_date": "20261102",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry",
@@ -1223,17 +1566,199 @@
       ]
     },
     {
+      "forecast_id": "ETF_TREND_V1_20261022_20261023",
+      "as_of": "20261023",
+      "evaluated_at": "2026-10-23T09:55:29.123626+00:00",
+      "items": [
+        {
+          "ticker": "512800.SH",
+          "entry_date": "20261023",
+          "entry_open": 0.862,
+          "mark_date": "20261023",
+          "mark_close": 0.849,
+          "current_return": -0.015081206496519783,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261026",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 1
+            },
+            {
+              "days": 3,
+              "exit_date": "20261028",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 3
+            },
+            {
+              "days": 5,
+              "exit_date": "20261030",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 5
+            }
+          ]
+        },
+        {
+          "ticker": "562500.SH",
+          "entry_date": "20261023",
+          "entry_open": 0.812,
+          "mark_date": "20261023",
+          "mark_close": 0.885,
+          "current_return": 0.08990147783251223,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261026",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 1
+            },
+            {
+              "days": 3,
+              "exit_date": "20261028",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 3
+            },
+            {
+              "days": 5,
+              "exit_date": "20261030",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 5
+            }
+          ]
+        },
+        {
+          "ticker": "159928.SZ",
+          "entry_date": "20261023",
+          "entry_open": 0.653,
+          "mark_date": "20261023",
+          "mark_close": 0.663,
+          "current_return": 0.015313935681470214,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261026",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 1
+            },
+            {
+              "days": 3,
+              "exit_date": "20261028",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 3
+            },
+            {
+              "days": 5,
+              "exit_date": "20261030",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 5
+            }
+          ]
+        },
+        {
+          "ticker": "515230.SH",
+          "entry_date": "20261023",
+          "entry_open": 0.634,
+          "mark_date": "20261023",
+          "mark_close": 0.681,
+          "current_return": 0.07413249211356465,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261026",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 1
+            },
+            {
+              "days": 3,
+              "exit_date": "20261028",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 3
+            },
+            {
+              "days": 5,
+              "exit_date": "20261030",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 5
+            }
+          ]
+        },
+        {
+          "ticker": "512010.SH",
+          "entry_date": "20261023",
+          "entry_open": 0.366,
+          "mark_date": "20261023",
+          "mark_close": 0.376,
+          "current_return": 0.02732240437158473,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261026",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 1
+            },
+            {
+              "days": 3,
+              "exit_date": "20261028",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 3
+            },
+            {
+              "days": 5,
+              "exit_date": "20261030",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking",
+              "remaining_sessions": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
       "forecast_id": "ETF_TREND_V1_20261020_20261021",
-      "as_of": "20261022",
-      "evaluated_at": "2026-10-22T09:49:16.370877+00:00",
+      "as_of": "20261023",
+      "evaluated_at": "2026-10-23T09:55:29.121626+00:00",
       "items": [
         {
           "ticker": "159928.SZ",
           "entry_date": "20261021",
           "entry_open": 0.663,
-          "mark_date": "20261022",
-          "mark_close": 0.654,
-          "current_return": -0.013574660633484226,
+          "mark_date": "20261023",
+          "mark_close": 0.663,
+          "current_return": 0.0,
           "status": "Tracking",
           "horizons": [
             {
@@ -1250,7 +1775,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1258,7 +1783,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1266,9 +1791,9 @@
           "ticker": "512010.SH",
           "entry_date": "20261021",
           "entry_open": 0.381,
-          "mark_date": "20261022",
-          "mark_close": 0.368,
-          "current_return": -0.03412073490813661,
+          "mark_date": "20261023",
+          "mark_close": 0.376,
+          "current_return": -0.013123359580052507,
           "status": "Tracking",
           "horizons": [
             {
@@ -1285,7 +1810,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1293,7 +1818,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1301,9 +1826,9 @@
           "ticker": "512800.SH",
           "entry_date": "20261021",
           "entry_open": 0.865,
-          "mark_date": "20261022",
-          "mark_close": 0.863,
-          "current_return": -0.0023121387283236983,
+          "mark_date": "20261023",
+          "mark_close": 0.849,
+          "current_return": -0.018497109826589697,
           "status": "Tracking",
           "horizons": [
             {
@@ -1320,7 +1845,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1328,7 +1853,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1336,9 +1861,9 @@
           "ticker": "159611.SZ",
           "entry_date": "20261021",
           "entry_open": 1.04,
-          "mark_date": "20261022",
-          "mark_close": 1.026,
-          "current_return": -0.013461538461538525,
+          "mark_date": "20261023",
+          "mark_close": 1.02,
+          "current_return": -0.019230769230769273,
           "status": "Tracking",
           "horizons": [
             {
@@ -1355,7 +1880,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1363,7 +1888,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1371,9 +1896,9 @@
           "ticker": "515230.SH",
           "entry_date": "20261021",
           "entry_open": 0.656,
-          "mark_date": "20261022",
-          "mark_close": 0.64,
-          "current_return": -0.024390243902439046,
+          "mark_date": "20261023",
+          "mark_close": 0.681,
+          "current_return": 0.038109756097560954,
           "status": "Tracking",
           "horizons": [
             {
@@ -1390,7 +1915,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1398,7 +1923,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         }
@@ -1406,16 +1931,16 @@
     },
     {
       "forecast_id": "ETF_TREND_V1_20261019_20261021",
-      "as_of": "20261022",
-      "evaluated_at": "2026-10-22T09:49:16.368876+00:00",
+      "as_of": "20261023",
+      "evaluated_at": "2026-10-23T09:55:29.119626+00:00",
       "items": [
         {
           "ticker": "512800.SH",
           "entry_date": "20261021",
           "entry_open": 0.865,
-          "mark_date": "20261022",
-          "mark_close": 0.863,
-          "current_return": -0.0023121387283236983,
+          "mark_date": "20261023",
+          "mark_close": 0.849,
+          "current_return": -0.018497109826589697,
           "status": "Tracking",
           "horizons": [
             {
@@ -1432,7 +1957,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1440,7 +1965,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1448,9 +1973,9 @@
           "ticker": "159928.SZ",
           "entry_date": "20261021",
           "entry_open": 0.663,
-          "mark_date": "20261022",
-          "mark_close": 0.654,
-          "current_return": -0.013574660633484226,
+          "mark_date": "20261023",
+          "mark_close": 0.663,
+          "current_return": 0.0,
           "status": "Tracking",
           "horizons": [
             {
@@ -1467,7 +1992,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1475,7 +2000,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1483,9 +2008,9 @@
           "ticker": "515220.SH",
           "entry_date": "20261021",
           "entry_open": 1.252,
-          "mark_date": "20261022",
-          "mark_close": 1.202,
-          "current_return": -0.039936102236421744,
+          "mark_date": "20261023",
+          "mark_close": 1.205,
+          "current_return": -0.03753993610223638,
           "status": "Tracking",
           "horizons": [
             {
@@ -1502,7 +2027,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1510,7 +2035,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1518,9 +2043,9 @@
           "ticker": "159611.SZ",
           "entry_date": "20261021",
           "entry_open": 1.04,
-          "mark_date": "20261022",
-          "mark_close": 1.026,
-          "current_return": -0.013461538461538525,
+          "mark_date": "20261023",
+          "mark_close": 1.02,
+          "current_return": -0.019230769230769273,
           "status": "Tracking",
           "horizons": [
             {
@@ -1537,7 +2062,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1545,7 +2070,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         },
@@ -1553,9 +2078,9 @@
           "ticker": "512010.SH",
           "entry_date": "20261021",
           "entry_open": 0.381,
-          "mark_date": "20261022",
-          "mark_close": 0.368,
-          "current_return": -0.03412073490813661,
+          "mark_date": "20261023",
+          "mark_close": 0.376,
+          "current_return": -0.013123359580052507,
           "status": "Tracking",
           "horizons": [
             {
@@ -1572,7 +2097,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 2
+              "remaining_sessions": 1
             },
             {
               "days": 5,
@@ -1580,7 +2105,7 @@
               "exit_close": null,
               "realized_return": null,
               "status": "Tracking",
-              "remaining_sessions": 4
+              "remaining_sessions": 3
             }
           ]
         }
