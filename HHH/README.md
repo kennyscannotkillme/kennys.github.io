@@ -37,3 +37,14 @@ V9 已完成：历史规模、估值、收益显著性及特征分组选股均�
 
 
 [Native Astra event-classification V2 / 原生 Astra 资讯分类 V2（23 October）](../docs/research/native-astra-events-20261023.md): 19/19 materials passed structure and citation-location checks. Reference agreement was 41/46 versus 19/46 for fixed title keywords; the nonhuman reference and different input information limit interpretation. All-A T+1/T+3/T+5 return validation remains NOT_READY, with the public model and history preserved. / 仅发布分类工程与参考一致性结果，不作人工金标准准确率、纯模型优势或收益提升声明。
+
+
+## V10 research update · 23 October 2026
+
+A predeclared CHL liquidity-measurement feature experiment completed 21 new monthly fits across all-A T+1/T+3/T+5 and two entry lags. It passed 0/6 development groups and did not replace the website model. Both the negative findings and prior forecasts/outcomes are retained.
+
+新增 CHL 流动性测量特征完成三期限、两种入场延迟验证，6 组均未通过；保留失败证据与历史预测，不替换网页模型。
+
+- [中文方法、结果与失败诊断](../docs/research/expected-return-v10-20261023.zh.md)
+- [English methods and results](../docs/research/expected-return-v10-20261023.en.md)
+- [Aggregate data](../docs/research/expected-return-v10-20261023.json)
