@@ -1,0 +1,97 @@
+{
+  "schema": "HHH_FREE_EVENT_CLASSIFICATION_PILOT_V1",
+  "as_of": "2026-10-23",
+  "timezone": "Australia/Sydney",
+  "status": "CLASSIFICATION_PILOT_COMPLETED_NO_RETURN_VALIDATION",
+  "model": "qwen3-vl:4b-instruct",
+  "runtime": "local Ollama",
+  "local_inference_calls": 43,
+  "paid_api_calls": 0,
+  "new_model_downloads": 0,
+  "materials": 43,
+  "accepted_records": 27,
+  "rejected_records": 16,
+  "rejection_reason": "Quoted supporting text did not pass the exact substring evidence check.",
+  "reference": {
+    "author": "Codex",
+    "human_verified": false,
+    "frozen_before_inference": true,
+    "fields": 129,
+    "unambiguous_scored_fields": 114,
+    "ambiguous_excluded_fields": 15,
+    "ambiguous_records": 8,
+    "sample_type": "convenience development sample"
+  },
+  "metrics": {
+    "event_kind": {
+      "unambiguous_fields": 37,
+      "ambiguous_excluded": 6,
+      "qwen_reference_matches": 21,
+      "qwen_agreement_percent": 56.76,
+      "keyword_reference_matches": 24,
+      "keyword_agreement_percent": 64.86
+    },
+    "material_form": {
+      "unambiguous_fields": 39,
+      "ambiguous_excluded": 4,
+      "qwen_reference_matches": 14,
+      "qwen_agreement_percent": 35.9,
+      "keyword_reference_matches": 33,
+      "keyword_agreement_percent": 84.62
+    },
+    "subject_kind": {
+      "unambiguous_fields": 38,
+      "ambiguous_excluded": 5,
+      "qwen_reference_matches": 22,
+      "qwen_agreement_percent": 57.89,
+      "keyword_reference_matches": 30,
+      "keyword_agreement_percent": 78.95
+    }
+  },
+  "scoring_policy": "Agreement with predeclared assistant reference. Ambiguous fields excluded separately by axis; rejected records count as nonmatches on unambiguous fields.",
+  "result": "Local Qwen pilot trails the fixed keyword baseline on all three classification axes.",
+  "generalization_verified": false,
+  "return_effect_verified": false,
+  "return_model_fits": 0,
+  "horizons": [
+    {
+      "horizon": "T+1",
+      "status": "NOT_READY",
+      "return_experiment_executed": false,
+      "stable_baseline_outperformance": null,
+      "new_mature_candidate_dates": 0
+    },
+    {
+      "horizon": "T+3",
+      "status": "NOT_READY",
+      "return_experiment_executed": false,
+      "stable_baseline_outperformance": null,
+      "new_mature_candidate_dates": 0
+    },
+    {
+      "horizon": "T+5",
+      "status": "NOT_READY",
+      "return_experiment_executed": false,
+      "stable_baseline_outperformance": null,
+      "new_mature_candidate_dates": 0
+    }
+  ],
+  "missing_inputs": [
+    "Verified point-in-time publication and availability evidence",
+    "Validated security mapping and longitudinal eligible-all-A event coverage",
+    "Frozen prospective return candidate and new mature candidate dates"
+  ],
+  "public_forecast_model_replaced": false,
+  "old_forecasts_or_returns_overwritten": false,
+  "publication_scope": "Aggregate pilot results only; no source articles, raw labels, private logs or account data.",
+  "method_links": [
+    {
+      "label": "Qwen3-VL-4B-Instruct model card",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct"
+    },
+    {
+      "label": "Ollama structured outputs",
+      "url": "https://docs.ollama.com/capabilities/structured-outputs"
+    }
+  ]
+}

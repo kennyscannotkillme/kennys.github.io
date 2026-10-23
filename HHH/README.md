@@ -31,3 +31,6 @@ V8 已完成：选满 20 只的覆盖缺口已解决，两个候选仍均未通�
 Completed V9 (23 October): 21 native Ridge fits and 21 characteristic-cell table bundles tested historical size/BM and return salience across all three horizons and both entry clocks. D1 and D2 each passed 0/6 development groups. Full Top20 coverage was retained, but prediction and economic gates failed. Public V1 and historical forecasts remain unchanged. [Results / 完整结果](../docs/research/v9-20261023.md).
 
 V9 已完成：历史规模、估值、收益显著性及特征分组选股均已按三个期限、两种入场时钟验证。两个候选均 0/6 组通过，保留线上 V1 与全部历史记录。
+
+
+[Free local event-classification pilot / 免费本地资讯分类试验（23 October）](../docs/research/free-event-classification-20261023.md): 43 local calls, 27 accepted and 16 evidence-check rejections. The local model trailed fixed keyword rules on all three classification axes against a predeclared assistant reference. All-A T+1/T+3/T+5 return validation remains NOT_READY; the public forecast model and historical records are unchanged.
