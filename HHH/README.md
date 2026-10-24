@@ -59,3 +59,14 @@ The current forecasting pipeline tested training and target alignment with its e
 - [中文方法与结果](../docs/research/expected-return-v11-20261023.zh.md)
 - [English methods and results](../docs/research/expected-return-v11-20261023.en.md)
 - [Aggregate data](../docs/research/expected-return-v11-20261023.json)
+
+
+## V12 research update · 24 October 2026
+
+A paper-derived signed lead–lag feature was tested in 21 new monthly fits across all-A T+1/T+3/T+5 and both entry lags. All six groups failed. Rank correlation improved against the saved V8 research control but remained negative, while prediction error worsened in all six groups. Five net cohort means improved, yet every group remained negative after the fixed cost and below the same-pool low-volatility baseline. Public V1 and all original forecasts/outcomes remain unchanged.
+
+原生 GPT-6 Astra ultra 将论文中的领先滞后关系适配为新特征，完成三个期限、两种入场延迟的固定验证。6 组均未达标：排序相关性虽改善但仍为负，收益预测误差全部扩大。新增资讯因时间及证券映射不足，未倒填成历史特征。保留完整失败结果与历史记录，不替换网页模型。
+
+- [中文方法与结果](../docs/research/expected-return-v12-20261024.zh.md)
+- [English methods and results](../docs/research/expected-return-v12-20261024.en.md)
+- [Aggregate data](../docs/research/expected-return-v12-20261024.json)
