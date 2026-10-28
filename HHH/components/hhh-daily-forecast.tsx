@@ -17,6 +17,7 @@
  * 「暂无数据」，不用 0 代替。
  */
 import ReturnJournal from './hhh-return-journal';
+import ModelIterations from './hhh-model-iterations';
 import StockJournal from './hhh-stock-journal';
 import MarketContext from './hhh-market-context';
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
@@ -367,6 +368,7 @@ export default function DailyForecast({ onRoute }: { onRoute?: (r: string) => vo
   return (
     <div className="tm-module tm-df-root" data-testid="hhh-daily-forecast">
       <ReturnJournal />
+      <ModelIterations />
       <details className="research-archive"><summary>原综合评分 · 历史存档</summary><div className="tm-module">
         <p className="tm-foot">
           这是被预期收益模型取代之前的原栏目，原样保留：排名依据是综合评分，不输出预期收益率。

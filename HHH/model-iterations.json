@@ -1,0 +1,1210 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-28T06:25:27.911116+00:00",
+  "current_daily_model_id": "HHH_ALL_A_RETURN_RIDGE_V1",
+  "iteration": {
+    "id": "V13",
+    "model_id": "HHH_HIGH_AMOUNT_NORMAL_RETURN_RIDGE_V13",
+    "date": "2026-10-28",
+    "status": "COMPLETED_NOT_ADOPTED",
+    "adopted": false,
+    "adoption_reason_zh": "本轮更新研究记录，不替换每日 V1：全期 T+1、入场延迟1日的收益较 V1 倒退；新增状态相对保存 C2 对照的筛选候选池误差 5/6 组更差，扣成本均值 4/6 组更差，增量不稳定。",
+    "original_gate_passed": 0,
+    "original_gate_total": 6,
+    "method_zh": "自身 50 交易日高成交额与正常收益的联合状态，加缺失标记；C2 架构与预期收益排序不变。",
+    "summary_zh": "全期 6/6 组误差、6/6 组 RankIC 较 V1 改善，Top20 扣成本均值 5/6 组改善；增量相对 C2 不稳定。",
+    "limitations_zh": [
+      "重复使用的开发期，不是新的未见样本外证据。",
+      "Top20 收益为逐日等权重叠持有队列的均值，固定扣 0.31%（31bp）；不是净值、复利收益或已验证成交。",
+      "V1 原方案从全部合格股票选股，V13 从筛选候选池选股；收益差包含已有架构和选股池变化。",
+      "把 V1 放入相同筛选候选池重新排序仅为诊断，不是网页原策略；该诊断的排序相关性未在正式汇总中保存。",
+      "同一协作任务内的数值复核，不是独立晋升审计。",
+      "原论文计入市价买卖价差后的结果为负，不能据此声称可直接获得利润。"
+    ],
+    "links": [
+      {
+        "label": "中文研究记录",
+        "url": "https://github.com/kennyscannotkillme/kennys.github.io/blob/main/docs/research/expected-return-v13-20261028.zh.md"
+      },
+      {
+        "label": "English research note",
+        "url": "https://github.com/kennyscannotkillme/kennys.github.io/blob/main/docs/research/expected-return-v13-20261028.en.md"
+      },
+      {
+        "label": "Aggregate comparison data",
+        "url": "https://github.com/kennyscannotkillme/kennys.github.io/blob/main/docs/research/expected-return-v13-20261028.json"
+      },
+      {
+        "label": "原作者论文 / Author manuscript",
+        "url": "https://rodneywhitecenter.wharton.upenn.edu/wp-content/uploads/2014/04/9901.pdf"
+      }
+    ],
+    "adoption_decision_status": "RESEARCH_VERSION_RECORDED_DAILY_SELECTOR_NOT_ADOPTED",
+    "adoption_decision_reason_zh": "本轮更新研究记录，不替换每日 V1：全期 T+1、入场延迟1日的收益较 V1 倒退；新增状态相对保存 C2 对照的筛选候选池误差 5/6 组更差，扣成本均值 4/6 组更差，增量不稳定。",
+    "selection_pool_zh": "在全部合格股票中，要求额外特征完整、20日平均成交额至少2000万元、20日波动率排名不高于同日80%分位，且当日最高价与最低价不同。新状态缺失保留缺失标记，不删原有候选。"
+  },
+  "windows": [
+    {
+      "id": "full",
+      "label": "全期",
+      "date_start": "2026-04-01",
+      "date_end": "2026-10-08",
+      "dates": 126
+    },
+    {
+      "id": "recent60",
+      "label": "最近 60 个成熟信号日",
+      "date_start": "2026-07-09",
+      "date_end": "2026-10-08",
+      "dates": 60
+    }
+  ],
+  "comparisons": [
+    {
+      "period": "full",
+      "days": 1,
+      "lag_sessions": 1,
+      "dates": 126,
+      "v1_original": {
+        "mse": 0.00226355277970757,
+        "rank_ic": -0.04448836185218175,
+        "net_return": -0.0011658099246303897
+      },
+      "v1_same_p": {
+        "mse": 0.0016586778271496534,
+        "rank_ic": null,
+        "net_return": -0.0033080254137126315
+      },
+      "c2": {
+        "mse": 0.002243392876002388,
+        "rank_ic": -0.014969154410255533,
+        "pool_mse": 0.0016441586939136572,
+        "pool_rank_ic": -0.01343375869390027,
+        "net_return": -0.004429826523588311
+      },
+      "v13": {
+        "mse": 0.002243384111453557,
+        "rank_ic": -0.014984974392186927,
+        "pool_mse": 0.0016441890540229238,
+        "pool_rank_ic": -0.013531968452309726,
+        "net_return": -0.004814145018117496
+      },
+      "vs_v1": {
+        "mse_improvement": 0.008910182450712956,
+        "rank_ic_change": 0.029503387459994826,
+        "net_return_change": -0.003648335093487106
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.00873513402637549,
+        "pool_rank_ic_change": null,
+        "net_return_change": -0.0015061196044048645
+      },
+      "vs_c2": {
+        "mse_improvement": 3.906827433008964e-06,
+        "rank_ic_change": -1.5819981931394084e-05,
+        "pool_mse_improvement": -1.8465437295667186e-05,
+        "pool_mse_change": -3.0360109266663535e-08,
+        "pool_rank_ic_change": -9.820975840945691e-05,
+        "net_return_change": -0.0003843184945291848
+      },
+      "baselines": {
+        "m0_mse": 0.0022329268157422547,
+        "zero_mse": 0.002225337134877923,
+        "median_mse": 0.0022441470784714474,
+        "low_vol20_net_return": -0.002430998598334044,
+        "high_mom20_net_return": -0.0013312209728623431,
+        "low_r5_net_return": -0.004547528661319939,
+        "laggard_net_return": -0.005331658472252489,
+        "v13_mse_improvement_vs_m0": -0.004683223667510283,
+        "v13_net_change_vs_low_vol20": -0.002383146419783452
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v1",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "full",
+      "days": 1,
+      "lag_sessions": 2,
+      "dates": 126,
+      "v1_original": {
+        "mse": 0.002249647936019315,
+        "rank_ic": -0.04537510110118018,
+        "net_return": -0.004787298970494376
+      },
+      "v1_same_p": {
+        "mse": 0.0016648555885589377,
+        "rank_ic": null,
+        "net_return": -0.0041361269829934206
+      },
+      "c2": {
+        "mse": 0.002232400730056271,
+        "rank_ic": -0.018485698117007295,
+        "pool_mse": 0.001651040586621505,
+        "pool_rank_ic": -0.015839647541783443,
+        "net_return": -0.004137162351806439
+      },
+      "v13": {
+        "mse": 0.002232393614531701,
+        "rank_ic": -0.018436751182794385,
+        "pool_mse": 0.001651070040756474,
+        "pool_rank_ic": -0.01589951025251503,
+        "net_return": -0.004520150457056264
+      },
+      "vs_v1": {
+        "mse_improvement": 0.00766978744156066,
+        "rank_ic_change": 0.0269383499183858,
+        "net_return_change": 0.0002671485134381124
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.0082803264722775,
+        "pool_rank_ic_change": null,
+        "net_return_change": -0.0003840234740628435
+      },
+      "vs_c2": {
+        "mse_improvement": 3.1873867778475784e-06,
+        "rank_ic_change": 4.894693421290952e-05,
+        "pool_mse_improvement": -1.7839740105607405e-05,
+        "pool_mse_change": -2.9454134969127826e-08,
+        "pool_rank_ic_change": -5.98627107315855e-05,
+        "net_return_change": -0.00038298810524982525
+      },
+      "baselines": {
+        "m0_mse": 0.002221682460080554,
+        "zero_mse": 0.0022168213726916648,
+        "median_mse": 0.002234447180735433,
+        "low_vol20_net_return": -0.0024695963578308363,
+        "high_mom20_net_return": -0.001945971278108886,
+        "low_r5_net_return": -0.004717914562954085,
+        "laggard_net_return": -0.004315434216494238,
+        "v13_mse_improvement_vs_m0": -0.0048211905362745,
+        "v13_net_change_vs_low_vol20": -0.002050554099225428
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v1",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "full",
+      "days": 3,
+      "lag_sessions": 1,
+      "dates": 126,
+      "v1_original": {
+        "mse": 0.004908715725892385,
+        "rank_ic": -0.059614528754719114,
+        "net_return": -0.011708602711875927
+      },
+      "v1_same_p": {
+        "mse": 0.0035731788636058173,
+        "rank_ic": null,
+        "net_return": -0.011030829206995177
+      },
+      "c2": {
+        "mse": 0.004864590994336101,
+        "rank_ic": -0.026029853013961365,
+        "pool_mse": 0.0035414068702589543,
+        "pool_rank_ic": -0.025387269398319794,
+        "net_return": -0.00659114546733016
+      },
+      "v13": {
+        "mse": 0.004864474033225543,
+        "rank_ic": -0.025646290712636334,
+        "pool_mse": 0.0035414671221523325,
+        "pool_rank_ic": -0.025159411425207234,
+        "net_return": -0.006290143145493638
+      },
+      "vs_v1": {
+        "mse_improvement": 0.00901288547500878,
+        "rank_ic_change": 0.03396823804208278,
+        "net_return_change": 0.005418459566382289
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.008874938161221313,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.004740686061501539
+      },
+      "vs_c2": {
+        "mse_improvement": 2.4043359594716485e-05,
+        "rank_ic_change": 0.0003835623013250314,
+        "pool_mse_improvement": -1.701354732319693e-05,
+        "pool_mse_change": -6.025189337819509e-08,
+        "pool_rank_ic_change": 0.00022785797311256073,
+        "net_return_change": 0.0003010023218365226
+      },
+      "baselines": {
+        "m0_mse": 0.00482432920836083,
+        "zero_mse": 0.004792604727413905,
+        "median_mse": 0.004850013719198142,
+        "low_vol20_net_return": -0.002141955126676252,
+        "high_mom20_net_return": -0.0033109018688201666,
+        "low_r5_net_return": -0.008343941434721783,
+        "laggard_net_return": -0.008230858472351403,
+        "v13_mse_improvement_vs_m0": -0.008321327822143454,
+        "v13_net_change_vs_low_vol20": -0.004148188018817386
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "full",
+      "days": 3,
+      "lag_sessions": 2,
+      "dates": 126,
+      "v1_original": {
+        "mse": 0.0049255889578194165,
+        "rank_ic": -0.05559872099952979,
+        "net_return": -0.01236457270900057
+      },
+      "v1_same_p": {
+        "mse": 0.003638416602978157,
+        "rank_ic": null,
+        "net_return": -0.011809641620971532
+      },
+      "c2": {
+        "mse": 0.004890825211661049,
+        "rank_ic": -0.03131077715034853,
+        "pool_mse": 0.0036099239545863333,
+        "pool_rank_ic": -0.029213943997160007,
+        "net_return": -0.006249498027085626
+      },
+      "v13": {
+        "mse": 0.004890718076764624,
+        "rank_ic": -0.030826743476058464,
+        "pool_mse": 0.003609976161926712,
+        "pool_rank_ic": -0.028935918037962065,
+        "net_return": -0.006175071022271735
+      },
+      "vs_v1": {
+        "mse_improvement": 0.007079535331391162,
+        "rank_ic_change": 0.024771977523471326,
+        "net_return_change": 0.006189501686728836
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.007816708242856407,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.005634570598699797
+      },
+      "vs_c2": {
+        "mse_improvement": 2.1905280149780992e-05,
+        "rank_ic_change": 0.0004840336742900665,
+        "pool_mse_improvement": -1.4462171789686451e-05,
+        "pool_mse_change": -5.220734037875846e-08,
+        "pool_rank_ic_change": 0.000278025959197941,
+        "net_return_change": 7.442700481389165e-05
+      },
+      "baselines": {
+        "m0_mse": 0.004850409407317848,
+        "zero_mse": 0.004824344098252718,
+        "median_mse": 0.0048709784707618355,
+        "low_vol20_net_return": -0.0023200840605364435,
+        "high_mom20_net_return": -0.0036541580533824814,
+        "low_r5_net_return": -0.009509576961867612,
+        "laggard_net_return": -0.00870321244219561,
+        "v13_mse_improvement_vs_m0": -0.008310364355215372,
+        "v13_net_change_vs_low_vol20": -0.003854986961735291
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "full",
+      "days": 5,
+      "lag_sessions": 1,
+      "dates": 126,
+      "v1_original": {
+        "mse": 0.007783776950160425,
+        "rank_ic": -0.07027517481472345,
+        "net_return": -0.019778036679486688
+      },
+      "v1_same_p": {
+        "mse": 0.005672646436712598,
+        "rank_ic": null,
+        "net_return": -0.015719772102504682
+      },
+      "c2": {
+        "mse": 0.0077593114625626085,
+        "rank_ic": -0.03774293002478118,
+        "pool_mse": 0.005647657851109817,
+        "pool_rank_ic": -0.037033825735478754,
+        "net_return": -0.007238771205798808
+      },
+      "v13": {
+        "mse": 0.0077590883521587,
+        "rank_ic": -0.03715356751793779,
+        "pool_mse": 0.005647658073076177,
+        "pool_rank_ic": -0.03660492799605283,
+        "net_return": -0.007525322764587172
+      },
+      "vs_v1": {
+        "mse_improvement": 0.0031718018334552234,
+        "rank_ic_change": 0.03312160729678566,
+        "net_return_change": 0.012252713914899516
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.004405062771883683,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.00819444933791751
+      },
+      "vs_c2": {
+        "mse_improvement": 2.8753892015509486e-05,
+        "rank_ic_change": 0.0005893625068433897,
+        "pool_mse_improvement": -3.930237379989876e-08,
+        "pool_mse_change": -2.2196636022264737e-10,
+        "pool_rank_ic_change": 0.0004288977394259208,
+        "net_return_change": -0.000286551558788364
+      },
+      "baselines": {
+        "m0_mse": 0.00767838924938903,
+        "zero_mse": 0.007601632418325327,
+        "median_mse": 0.007707357893808852,
+        "low_vol20_net_return": -0.0020636977578637598,
+        "high_mom20_net_return": -0.003933443444391988,
+        "low_r5_net_return": -0.01313752907883676,
+        "laggard_net_return": -0.01148120474372638,
+        "v13_mse_improvement_vs_m0": -0.010509899947582113,
+        "v13_net_change_vs_low_vol20": -0.005461625006723413
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "full",
+      "days": 5,
+      "lag_sessions": 2,
+      "dates": 126,
+      "v1_original": {
+        "mse": 0.0077937411787309015,
+        "rank_ic": -0.07105232021042418,
+        "net_return": -0.023389316652031755
+      },
+      "v1_same_p": {
+        "mse": 0.005753579746133722,
+        "rank_ic": null,
+        "net_return": -0.016747462026620884
+      },
+      "c2": {
+        "mse": 0.007779811620820221,
+        "rank_ic": -0.04603210393899739,
+        "pool_mse": 0.005729904547527397,
+        "pool_rank_ic": -0.04481155335941148,
+        "net_return": -0.00841582803993717
+      },
+      "v13": {
+        "mse": 0.007779630048268893,
+        "rank_ic": -0.04543329113867137,
+        "pool_mse": 0.005729865056871445,
+        "pool_rank_ic": -0.044387972144085006,
+        "net_return": -0.008459664530949628
+      },
+      "vs_v1": {
+        "mse_improvement": 0.001810572116574427,
+        "rank_ic_change": 0.025619029071752814,
+        "net_return_change": 0.014929652121082127
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.004121727743186754,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.008287797495671255
+      },
+      "vs_c2": {
+        "mse_improvement": 2.3338939318495733e-05,
+        "rank_ic_change": 0.0005988128003260249,
+        "pool_mse_improvement": 6.89202684345247e-06,
+        "pool_mse_change": 3.9490655951920917e-08,
+        "pool_rank_ic_change": 0.0004235812153264712,
+        "net_return_change": -4.3836491012458345e-05
+      },
+      "baselines": {
+        "m0_mse": 0.00769171979975654,
+        "zero_mse": 0.007628912750544676,
+        "median_mse": 0.007714884479447169,
+        "low_vol20_net_return": -0.002118104955679653,
+        "high_mom20_net_return": -0.0024540313886885585,
+        "low_r5_net_return": -0.013590373767495728,
+        "laggard_net_return": -0.011924677786127096,
+        "v13_mse_improvement_vs_m0": -0.011429205795449704,
+        "v13_net_change_vs_low_vol20": -0.006341559575269976
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "recent60",
+      "days": 1,
+      "lag_sessions": 1,
+      "dates": 60,
+      "v1_original": {
+        "mse": 0.0022149997848665715,
+        "rank_ic": -0.09428925377248466,
+        "net_return": -0.012812111658947712
+      },
+      "v1_same_p": {
+        "mse": 0.0015709473313022175,
+        "rank_ic": null,
+        "net_return": -0.006904515567927665
+      },
+      "c2": {
+        "mse": 0.00217997769733331,
+        "rank_ic": -0.052897332741279196,
+        "pool_mse": 0.001546624536987279,
+        "pool_rank_ic": -0.04366034224807301,
+        "net_return": -0.006714299197177518
+      },
+      "v13": {
+        "mse": 0.0021799480746219515,
+        "rank_ic": -0.053029188178841904,
+        "pool_mse": 0.0015466851417921047,
+        "pool_rank_ic": -0.044029159296784366,
+        "net_return": -0.007113600622185531
+      },
+      "vs_v1": {
+        "mse_improvement": 0.015824701421689458,
+        "rank_ic_change": 0.04126006559364276,
+        "net_return_change": 0.005698511036762181
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.015444304864123626,
+        "pool_rank_ic_change": null,
+        "net_return_change": -0.0002090850542578659
+      },
+      "vs_c2": {
+        "mse_improvement": 1.3588538724351729e-05,
+        "rank_ic_change": -0.00013185543756270846,
+        "pool_mse_improvement": -3.918520841761364e-05,
+        "pool_mse_change": -6.060480482565633e-08,
+        "pool_rank_ic_change": -0.00036881704871135484,
+        "net_return_change": -0.00039930142500801263
+      },
+      "baselines": {
+        "m0_mse": 0.002155068047810718,
+        "zero_mse": 0.002141986933902724,
+        "median_mse": 0.0021832978847571094,
+        "low_vol20_net_return": -0.00039888795944056156,
+        "high_mom20_net_return": -0.004701793618489787,
+        "low_r5_net_return": -0.005887571782071279,
+        "laggard_net_return": -0.005081766634606936,
+        "v13_mse_improvement_vs_m0": -0.011544891511202415,
+        "v13_net_change_vs_low_vol20": -0.006714712662744969
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v1",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "recent60",
+      "days": 1,
+      "lag_sessions": 2,
+      "dates": 60,
+      "v1_original": {
+        "mse": 0.002147926857300945,
+        "rank_ic": -0.0838068615578826,
+        "net_return": -0.01211688187792021
+      },
+      "v1_same_p": {
+        "mse": 0.0015531235480472346,
+        "rank_ic": null,
+        "net_return": -0.007115233427772778
+      },
+      "c2": {
+        "mse": 0.0021196647364235574,
+        "rank_ic": -0.04623969089977602,
+        "pool_mse": 0.0015319815869443156,
+        "pool_rank_ic": -0.035015808595504905,
+        "net_return": -0.00524103326069647
+      },
+      "v13": {
+        "mse": 0.0021196359645904352,
+        "rank_ic": -0.0462147001759252,
+        "pool_mse": 0.0015320379367381454,
+        "pool_rank_ic": -0.035243943730032486,
+        "net_return": -0.005787371960858504
+      },
+      "vs_v1": {
+        "mse_improvement": 0.013171255163716311,
+        "rank_ic_change": 0.037592161381957395,
+        "net_return_change": 0.006329509917061706
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.013576261422087454,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.0013278614669142734
+      },
+      "vs_c2": {
+        "mse_improvement": 1.3573765995977816e-05,
+        "rank_ic_change": 2.4990723850815133e-05,
+        "pool_mse_improvement": -3.6782291843451276e-05,
+        "pool_mse_change": -5.634979382976649e-08,
+        "pool_rank_ic_change": -0.00022813513452758089,
+        "net_return_change": -0.0005463387001620346
+      },
+      "baselines": {
+        "m0_mse": 0.0020983531087563267,
+        "zero_mse": 0.00208980169298452,
+        "median_mse": 0.0021310710793980034,
+        "low_vol20_net_return": -0.0008371513909214499,
+        "high_mom20_net_return": -0.0043106547302130226,
+        "low_r5_net_return": -0.0020127707007795014,
+        "laggard_net_return": -0.002622267654094262,
+        "v13_mse_improvement_vs_m0": -0.01014264746257254,
+        "v13_net_change_vs_low_vol20": -0.004950220569937054
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v1",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "recent60",
+      "days": 3,
+      "lag_sessions": 1,
+      "dates": 60,
+      "v1_original": {
+        "mse": 0.0047659961913214055,
+        "rank_ic": -0.09663928956689036,
+        "net_return": -0.024088019136128895
+      },
+      "v1_same_p": {
+        "mse": 0.0033916592348923837,
+        "rank_ic": null,
+        "net_return": -0.017843074331885152
+      },
+      "c2": {
+        "mse": 0.004692862667870563,
+        "rank_ic": -0.05156338233858497,
+        "pool_mse": 0.003341035671765505,
+        "pool_rank_ic": -0.043645748741899706,
+        "net_return": -0.010570248234253156
+      },
+      "v13": {
+        "mse": 0.0046927357261534785,
+        "rank_ic": -0.051503017145634274,
+        "pool_mse": 0.0033412984998742387,
+        "pool_rank_ic": -0.04395431439072279,
+        "net_return": -0.00999043040946667
+      },
+      "vs_v1": {
+        "mse_improvement": 0.015371490497900542,
+        "rank_ic_change": 0.045136272421256084,
+        "net_return_change": 0.014097588726662225
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.014848406496752009,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.007852643922418481
+      },
+      "vs_c2": {
+        "mse_improvement": 2.704995352909023e-05,
+        "rank_ic_change": 6.036519295069681e-05,
+        "pool_mse_improvement": -7.866665745437373e-05,
+        "pool_mse_change": -2.6282810873350104e-07,
+        "pool_rank_ic_change": -0.0003085656488230823,
+        "net_return_change": 0.0005798178247864855
+      },
+      "baselines": {
+        "m0_mse": 0.004615635697276452,
+        "zero_mse": 0.00457009307535424,
+        "median_mse": 0.004711503453176725,
+        "low_vol20_net_return": 0.0008718693416693868,
+        "high_mom20_net_return": -0.011329328954010683,
+        "low_r5_net_return": -0.0058470671187852135,
+        "laggard_net_return": -0.006231927592146769,
+        "v13_mse_improvement_vs_m0": -0.016704097535800155,
+        "v13_net_change_vs_low_vol20": -0.010862299751136057
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "recent60",
+      "days": 3,
+      "lag_sessions": 2,
+      "dates": 60,
+      "v1_original": {
+        "mse": 0.004698479574716459,
+        "rank_ic": -0.08221949617797873,
+        "net_return": -0.02033764529811125
+      },
+      "v1_same_p": {
+        "mse": 0.00340546279678626,
+        "rank_ic": null,
+        "net_return": -0.016586682000688437
+      },
+      "c2": {
+        "mse": 0.004646776975972228,
+        "rank_ic": -0.050188223743638925,
+        "pool_mse": 0.003368198641976401,
+        "pool_rank_ic": -0.04270015186694084,
+        "net_return": -0.009628442437943054
+      },
+      "v13": {
+        "mse": 0.004646592370659993,
+        "rank_ic": -0.04990422599823654,
+        "pool_mse": 0.0033683659807169754,
+        "pool_rank_ic": -0.0427192245110573,
+        "net_return": -0.00941515195654925
+      },
+      "vs_v1": {
+        "mse_improvement": 0.01104340313315011,
+        "rank_ic_change": 0.03231527017974219,
+        "net_return_change": 0.010922493341562
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.010893325895174333,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.007171530044139188
+      },
+      "vs_c2": {
+        "mse_improvement": 3.972760328074809e-05,
+        "rank_ic_change": 0.00028399774540238676,
+        "pool_mse_improvement": -4.968196901722344e-05,
+        "pool_mse_change": -1.6733874057435483e-07,
+        "pool_rank_ic_change": -1.9072644116463477e-05,
+        "net_return_change": 0.0002132904813938047
+      },
+      "baselines": {
+        "m0_mse": 0.004578731284399047,
+        "zero_mse": 0.004547365699967217,
+        "median_mse": 0.00466850006609104,
+        "low_vol20_net_return": -2.47338418872754e-05,
+        "high_mom20_net_return": -0.009967294754244134,
+        "low_r5_net_return": -0.004705615958170415,
+        "laggard_net_return": -0.005348841202851067,
+        "v13_mse_improvement_vs_m0": -0.01482093664071682,
+        "v13_net_change_vs_low_vol20": -0.009390418114661974
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "recent60",
+      "days": 5,
+      "lag_sessions": 1,
+      "dates": 60,
+      "v1_original": {
+        "mse": 0.007354655290510649,
+        "rank_ic": -0.09734048744584084,
+        "net_return": -0.03286259311590866
+      },
+      "v1_same_p": {
+        "mse": 0.005327078396579683,
+        "rank_ic": null,
+        "net_return": -0.02497695461811655
+      },
+      "c2": {
+        "mse": 0.007326909086739357,
+        "rank_ic": -0.053864412483857795,
+        "pool_mse": 0.005300069363486587,
+        "pool_rank_ic": -0.04635958798155227,
+        "net_return": -0.013266444690931445
+      },
+      "v13": {
+        "mse": 0.007326546555023131,
+        "rank_ic": -0.053545701732464944,
+        "pool_mse": 0.005300259552100504,
+        "pool_rank_ic": -0.04627660930342913,
+        "net_return": -0.013272756675121592
+      },
+      "vs_v1": {
+        "mse_improvement": 0.0038218970675328867,
+        "rank_ic_change": 0.043794785713375896,
+        "net_return_change": 0.019589836440787066
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.005034437731646357,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.011704197942994958
+      },
+      "vs_c2": {
+        "mse_improvement": 4.947948881772746e-05,
+        "rank_ic_change": 0.00031871075139285054,
+        "pool_mse_improvement": -3.588417450295367e-05,
+        "pool_mse_change": -1.9018861391675856e-07,
+        "pool_rank_ic_change": 8.297867812313842e-05,
+        "net_return_change": -6.311984190147946e-06
+      },
+      "baselines": {
+        "m0_mse": 0.007188874457503291,
+        "zero_mse": 0.0071143196250325995,
+        "median_mse": 0.007363658735818156,
+        "low_vol20_net_return": 0.0012377946887209368,
+        "high_mom20_net_return": -0.01562881461773786,
+        "low_r5_net_return": -0.008149630435949459,
+        "laggard_net_return": -0.007740582120125285,
+        "v13_mse_improvement_vs_m0": -0.01915071661547052,
+        "v13_net_change_vs_low_vol20": -0.014510551363842529
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    },
+    {
+      "period": "recent60",
+      "days": 5,
+      "lag_sessions": 2,
+      "dates": 60,
+      "v1_original": {
+        "mse": 0.007123511140979056,
+        "rank_ic": -0.08730661599951745,
+        "net_return": -0.030381320880091316
+      },
+      "v1_same_p": {
+        "mse": 0.005290427229099791,
+        "rank_ic": null,
+        "net_return": -0.02138657755053092
+      },
+      "c2": {
+        "mse": 0.00711178658189021,
+        "rank_ic": -0.05379334483462907,
+        "pool_mse": 0.00526774405087908,
+        "pool_rank_ic": -0.048337520964215945,
+        "net_return": -0.010149104783435546
+      },
+      "v13": {
+        "mse": 0.007111396057007385,
+        "rank_ic": -0.05343908939673705,
+        "pool_mse": 0.005267809501136271,
+        "pool_rank_ic": -0.04822693817232145,
+        "net_return": -0.01062721186018169
+      },
+      "vs_v1": {
+        "mse_improvement": 0.0017007180492744078,
+        "rank_ic_change": 0.0338675266027804,
+        "net_return_change": 0.019754109019909625
+      },
+      "vs_same_p_v1": {
+        "pool_mse_improvement": 0.00427521766845429,
+        "pool_rank_ic_change": null,
+        "net_return_change": 0.010759365690349229
+      },
+      "vs_c2": {
+        "mse_improvement": 5.491234562904346e-05,
+        "rank_ic_change": 0.000354255437892019,
+        "pool_mse_improvement": -1.2424722340087513e-05,
+        "pool_mse_change": -6.545025719138786e-08,
+        "pool_rank_ic_change": 0.00011058279189449238,
+        "net_return_change": -0.00047810707674614435
+      },
+      "baselines": {
+        "m0_mse": 0.006985996547414386,
+        "zero_mse": 0.006937081897239861,
+        "median_mse": 0.007173981158098607,
+        "low_vol20_net_return": 0.000376898819550965,
+        "high_mom20_net_return": -0.011301981257287893,
+        "low_r5_net_return": -0.005161440733472645,
+        "laggard_net_return": -0.005216272825803248,
+        "v13_mse_improvement_vs_m0": -0.017950124759138486,
+        "v13_net_change_vs_low_vol20": -0.011004110679732657
+      },
+      "failed_original_gates": [
+        "rmse_no_worse_than_m0",
+        "rmse_no_worse_than_zero",
+        "positive_mean_rank_ic",
+        "rank_ic_descriptive_95pct_lower_positive",
+        "positive_observed_top20_after_friction",
+        "positive_same_pool_stress_excess",
+        "corrected_primary_market_lower_positive",
+        "positive_matched_top20_improvement_vs_v2b",
+        "positive_excess_in_two_thirds_qualified_months",
+        "recent60_positive_same_pool_stress_excess",
+        "high_mom20_positive_stress_contrast",
+        "high_mom20_corrected_lower_positive",
+        "high_mom20_recent60_positive_stress_contrast",
+        "low_r5_positive_stress_contrast",
+        "low_r5_corrected_lower_positive",
+        "low_r5_recent60_positive_stress_contrast",
+        "low_vol20_positive_stress_contrast",
+        "low_vol20_corrected_lower_positive",
+        "low_vol20_recent60_positive_stress_contrast",
+        "up_positive_same_pool_stress_excess",
+        "down_positive_same_pool_stress_excess",
+        "positive_matched_top20_improvement_vs_v3s",
+        "laggard_positive_stress_contrast",
+        "laggard_corrected_lower_positive",
+        "laggard_recent60_positive_stress_contrast",
+        "mse_at_least_1pct_below_m0",
+        "mse_no_worse_than_zero",
+        "mse_no_worse_than_training_median",
+        "recent60_mse_no_worse_than_m0",
+        "pool_expert_corrected_mse_improvement_lower_positive",
+        "pool_expert_corrected_rank_ic_lower_positive"
+      ]
+    }
+  ],
+  "units": {
+    "mse": "mean squared decimal return error",
+    "mse_improvement": "relative fraction; positive means lower error",
+    "pool_mse_change": "C2 P MSE minus V13 P MSE",
+    "net_return": "decimal daily-equal cohort holding return after fixed friction",
+    "net_return_change": "decimal difference; multiply by 100 only to display percentage points",
+    "rank_ic": "mean daily Spearman correlation"
+  },
+  "comparison_semantics": {
+    "v1_original": "Full-E MSE and RankIC; original E Top20 selector",
+    "v1_same_p": "Same-P diagnostic MSE and reranked Top20; never labelled the original website strategy; RankIC unavailable",
+    "c2": "Saved, unrefitted V8 C2; full-E errors and P errors shown separately; P Top20",
+    "v13": "One additional joint state and missing flag; full-E errors and P errors shown separately; P Top20"
+  },
+  "counts": {
+    "groups": 6,
+    "full_mse_better_than_v1": 6,
+    "full_ic_better_than_v1": 6,
+    "full_net_better_than_v1": 5,
+    "full_pool_mse_worse_than_c2": 5,
+    "full_net_worse_than_c2": 4,
+    "recent_mse_better_than_v1": 6,
+    "recent_ic_better_than_v1": 6,
+    "recent_net_better_than_v1": 6
+  },
+  "news_repair": {
+    "business_calls": 2,
+    "cached_replay_verified": true,
+    "feature_eligible": false,
+    "coverage": "Bounded news/notice fragments; not a full feed",
+    "limitations": [
+      "Original timezone and security mapping remain unverified",
+      "No historical event-return feature or backfilled forecast"
+    ]
+  },
+  "policy": {
+    "research_record_updated": true,
+    "daily_model_adopted": false,
+    "progressive_research_adoption_allowed": true,
+    "universal_baseline_victory_required_for_research_adoption": false,
+    "original_experiment_verdict_unchanged": true,
+    "old_predictions_rewritten": false,
+    "live_ordering_enabled": false
+  }
+}

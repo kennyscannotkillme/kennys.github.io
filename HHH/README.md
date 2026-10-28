@@ -70,3 +70,12 @@ A paper-derived signed lead–lag feature was tested in 21 new monthly fits acro
 - [中文方法与结果](../docs/research/expected-return-v12-20261024.zh.md)
 - [English methods and results](../docs/research/expected-return-v12-20261024.en.md)
 - [Aggregate data](../docs/research/expected-return-v12-20261024.json)
+
+
+## 2026-10-28 · V13 研究迭代 / Research iteration
+
+自身高成交额与正常收益联合状态已完成：原实验 0/6 组通过。相对当前 V1 的全期误差与 RankIC 均改善，但新增状态相对 C2 的 P 池误差 5/6 组更差、收益 4/6 组更差；每日预测保留 V1。网页新增可切换全期/最近窗口的真实迭代记录，保留失败项。渐进研究更新不要求先胜全部基线，也不等于正式晋升。
+
+The bounded V13 result is recorded without replacing daily V1. Improvements over V1 coexist with unstable increments over C2 and specific regressions. Historical records and the original failed screen remain intact.
+
+[中文研究记录](../docs/research/expected-return-v13-20261028.zh.md) · [English](../docs/research/expected-return-v13-20261028.en.md) · [Aggregate comparison](../docs/research/expected-return-v13-20261028.json)
