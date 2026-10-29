@@ -79,3 +79,11 @@ A paper-derived signed lead–lag feature was tested in 21 new monthly fits acro
 The bounded V13 result is recorded without replacing daily V1. Improvements over V1 coexist with unstable increments over C2 and specific regressions. Historical records and the original failed screen remain intact.
 
 [中文研究记录](../docs/research/expected-return-v13-20261028.zh.md) · [English](../docs/research/expected-return-v13-20261028.en.md) · [Aggregate comparison](../docs/research/expected-return-v13-20261028.json)
+
+## HHH research update · 2026-10-29
+
+完成 V15 固定训练删块压力选择的有界研究。以 126 个复用开发日期，完整比较 T+1/T+3/T+5、两种入场延迟和固定 31bp 成本：全期 5/6 组高于当前 V1，但仅 2/6 组高于同池 C2，T+1 均值及尾部条件未通过，V15 **未采用**。C2 预期收益头和每日 V1 保持不变；完整保留本次失败结果。
+
+Completed one bounded V15 study using fixed training-block stress selection. Across 126 reused development dates, all T+1/T+3/T+5 horizons and both entry lags were evaluated with a fixed 31bp cost scenario. V15 improved on the current V1 in 5/6 full-period groups, but on same-pool C2 in only 2/6. It failed the preregistered T+1 mean-return and tail conditions and was **not adopted**. The C2 return head and daily V1 remain unchanged. Complete results are retained.
+
+[研究记录 / Full research record](./research/expected-return-v15-20261029.html)
