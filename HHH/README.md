@@ -87,3 +87,11 @@ The bounded V13 result is recorded without replacing daily V1. Improvements over
 Completed one bounded V15 study using fixed training-block stress selection. Across 126 reused development dates, all T+1/T+3/T+5 horizons and both entry lags were evaluated with a fixed 31bp cost scenario. V15 improved on the current V1 in 5/6 full-period groups, but on same-pool C2 in only 2/6. It failed the preregistered T+1 mean-return and tail conditions and was **not adopted**. The C2 return head and daily V1 remain unchanged. Complete results are retained.
 
 [研究记录 / Full research record](./research/expected-return-v15-20261029.html)
+
+## 2026-11-05 · V16 选股研究 / Selection study
+
+固定原 V1 预计收益，在五个近期涨幅组各选四只。全期六组比较中有三组高于 V1，常规 T+1 扣除固定 31bp 情景成本后的平均收益较 V1 低 0.3280 个百分点。V16 未采用，每日预测沿用 V1。
+
+The five-day return quota beat V1 in 3 of 6 development comparisons. Its primary T+1 net return fell below V1, despite a smaller average loss on the worst dates. V16 was rejected. Daily forecasts continue to use V1.
+
+[完整研究结果 / Full research record](./research/expected-return-v16-20261105.html)
