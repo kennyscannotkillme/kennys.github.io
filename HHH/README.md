@@ -95,3 +95,12 @@ Completed one bounded V15 study using fixed training-block stress selection. Acr
 The five-day return quota beat V1 in 3 of 6 development comparisons. Its primary T+1 net return fell below V1, despite a smaller average loss on the worst dates. V16 was rejected. Daily forecasts continue to use V1.
 
 [完整研究结果 / Full research record](./research/expected-return-v16-20261105.html)
+
+
+## V17 research update · 7 November 2026
+
+[中文研究记录 / Research results](./research/expected-return-v17-20261107.html) · [Aggregate JSON](./research/expected-return-v17-20261107.json)
+
+V17 tested two nonnegative return-contribution models on the same full A-share universe and 126 reused development dates, covering T+1/T+3/T+5 and both entry delays. The primary T+1 Top20 comparison deteriorated by 0.337 percentage points per cohort versus V1; lower overall prediction error did not improve selected-stock outcomes. The candidate was not adopted. The complete comparisons, missing coverage, loss and winner decomposition, and limitations are preserved. The daily V1 forecasts and all historical predictions and realized returns remain unchanged.
+
+本轮保留真实失败与改善：T+1 正常入场退步，T+3/T+5全期相对改善但近期与简单基线仍有不足，不以平均误差或“5/6改善”代替前20只选股验收。公告修复取回一个真实文件并完成原生分类；发布时间时区仍缺失，未作为模型特征。
