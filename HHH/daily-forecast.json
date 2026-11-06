@@ -1,12 +1,288 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T09:40:42.945197+00:00",
+  "generated_at": "2026-11-06T12:26:43.203281+00:00",
   "method": {
     "id": "SECTOR_MOMENTUM_V1",
     "label": "代表股趋势预测",
     "description": "固定 A 股代表篮子，按复权价格计算 5 日、20 日趋势。强度分值 0–100，不是上涨概率。分值≥60偏强，≤40偏弱，其余震荡。"
   },
   "records": [
+    {
+      "id": "SECTOR_MOMENTUM_V1_20261106_20261109",
+      "created_at": "2026-11-06T12:26:43.121837+00:00",
+      "signal_date": "20261106",
+      "target_date": "20261109",
+      "data_status": "Estimated",
+      "model_version": "SECTOR_MOMENTUM_V1",
+      "sectors": [
+        {
+          "id": "foundry",
+          "name": "半导体制造与晶圆代工",
+          "rank": 1,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "688981.SH",
+              "name": "中芯国际",
+              "reference_close": 110.9,
+              "return_5d": 0.14577952267796257,
+              "return_20d": 0.022874008485519237
+            },
+            {
+              "ticker": "688347.SH",
+              "name": "华虹宏力",
+              "reference_close": 173.12,
+              "return_5d": 0.3115151515151515,
+              "return_20d": -0.10495295212490952
+            },
+            {
+              "ticker": "688249.SH",
+              "name": "晶合集成",
+              "reference_close": 27.89,
+              "return_5d": 0.1453798767967145,
+              "return_20d": -0.06909212283044053
+            }
+          ],
+          "score": 59.8893616725,
+          "bias": "震荡",
+          "return_5d": 0.14577952267796257,
+          "return_20d": -0.06909212283044053
+        },
+        {
+          "id": "equipment",
+          "name": "半导体设备与先进封装",
+          "rank": 2,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "002371.SZ",
+              "name": "北方华创",
+              "reference_close": 560.0,
+              "return_5d": 0.16973722688724568,
+              "return_20d": -0.05730253854959255
+            },
+            {
+              "ticker": "688012.SH",
+              "name": "中微公司",
+              "reference_close": 254.0,
+              "return_5d": 0.18863774626795848,
+              "return_20d": -0.18327974276527326
+            },
+            {
+              "ticker": "002156.SZ",
+              "name": "通富微电",
+              "reference_close": 43.95,
+              "return_5d": 0.07932220039292748,
+              "return_20d": -0.2088208820882087
+            }
+          ],
+          "score": 51.191310504481706,
+          "bias": "震荡",
+          "return_5d": 0.16973722688724568,
+          "return_20d": -0.18327974276527326
+        },
+        {
+          "id": "ai",
+          "name": "AI算力与数据中心",
+          "rank": 3,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "000977.SZ",
+              "name": "浪潮信息",
+              "reference_close": 55.12,
+              "return_5d": 0.017349575489110203,
+              "return_20d": -0.14793631164013
+            },
+            {
+              "ticker": "603019.SH",
+              "name": "中科曙光",
+              "reference_close": 77.4,
+              "return_5d": 0.08570627016411847,
+              "return_20d": 0.02693379328645351
+            },
+            {
+              "ticker": "601138.SH",
+              "name": "工业富联",
+              "reference_close": 40.71,
+              "return_5d": -0.09533333333333327,
+              "return_20d": -0.27394328517924027
+            }
+          ],
+          "score": 35.80890424733302,
+          "bias": "偏弱",
+          "return_5d": 0.017349575489110203,
+          "return_20d": -0.14793631164013
+        },
+        {
+          "id": "a_share",
+          "name": "A股行业与板块研究",
+          "rank": 4,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "002008.SZ",
+              "name": "大族激光",
+              "reference_close": 52.4,
+              "return_5d": 0.03824053893402035,
+              "return_20d": -0.3059602649006622
+            },
+            {
+              "ticker": "002384.SZ",
+              "name": "东山精密",
+              "reference_close": 80.19,
+              "return_5d": -0.06820822681849892,
+              "return_20d": -0.4488280981510758
+            },
+            {
+              "ticker": "000725.SZ",
+              "name": "京东方A",
+              "reference_close": 4.46,
+              "return_5d": 0.0,
+              "return_20d": -0.1890909090909092
+            }
+          ],
+          "score": 25.109768675284634,
+          "bias": "偏弱",
+          "return_5d": 0.0,
+          "return_20d": -0.3059602649006622
+        },
+        {
+          "id": "infrastructure",
+          "name": "AI服务器、电源与散热",
+          "rank": 5,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "000977.SZ",
+              "name": "浪潮信息",
+              "reference_close": 55.12,
+              "return_5d": 0.017349575489110203,
+              "return_20d": -0.14793631164013
+            },
+            {
+              "ticker": "002837.SZ",
+              "name": "英维克",
+              "reference_close": 37.33,
+              "return_5d": -0.012433862433862353,
+              "return_20d": -0.26645706425623894
+            },
+            {
+              "ticker": "300499.SZ",
+              "name": "高澜股份",
+              "reference_close": 23.26,
+              "return_5d": -0.010633772862611579,
+              "return_20d": -0.1889818688981868
+            }
+          ],
+          "score": 20.87791929149689,
+          "bias": "偏弱",
+          "return_5d": -0.010633772862611579,
+          "return_20d": -0.1889818688981868
+        },
+        {
+          "id": "memory",
+          "name": "DRAM、NAND与HBM",
+          "rank": 6,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "603986.SH",
+              "name": "兆易创新",
+              "reference_close": 239.49,
+              "return_5d": -0.07102404965089215,
+              "return_20d": -0.26640323469950355
+            },
+            {
+              "ticker": "688525.SH",
+              "name": "佰维存储",
+              "reference_close": 126.0,
+              "return_5d": -0.036476256022023534,
+              "return_20d": -0.3039058615546102
+            },
+            {
+              "ticker": "301308.SZ",
+              "name": "江波龙",
+              "reference_close": 214.77,
+              "return_5d": 0.012254324362539482,
+              "return_20d": -0.24376760563380284
+            }
+          ],
+          "score": 9.672132149301397,
+          "bias": "偏弱",
+          "return_5d": -0.036476256022023534,
+          "return_20d": -0.26640323469950355
+        },
+        {
+          "id": "chips",
+          "name": "GPU、ASIC与交换芯片",
+          "rank": 7,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "688256.SH",
+              "name": "寒武纪",
+              "reference_close": 802.9,
+              "return_5d": -0.0876136363636364,
+              "return_20d": -0.18569153845373698
+            },
+            {
+              "ticker": "688041.SH",
+              "name": "海光信息",
+              "reference_close": 189.5,
+              "return_5d": 0.1133960047003526,
+              "return_20d": -0.1377157248323524
+            },
+            {
+              "ticker": "688008.SH",
+              "name": "澜起科技",
+              "reference_close": 150.1,
+              "return_5d": -0.05180037902716361,
+              "return_20d": -0.23950185491440568
+            }
+          ],
+          "score": 6.782510672919681,
+          "bias": "偏弱",
+          "return_5d": -0.05180037902716361,
+          "return_20d": -0.18569153845373698
+        },
+        {
+          "id": "photonics",
+          "name": "光通信、CPO与硅光",
+          "rank": 8,
+          "status": "Estimated",
+          "members": [
+            {
+              "ticker": "300308.SZ",
+              "name": "中际旭创",
+              "reference_close": 448.0,
+              "return_5d": -0.189873417721519,
+              "return_20d": -0.4212592001005959
+            },
+            {
+              "ticker": "300502.SZ",
+              "name": "新易盛",
+              "reference_close": 172.1,
+              "return_5d": -0.12193877551020416,
+              "return_20d": -0.5351161534305782
+            },
+            {
+              "ticker": "300394.SZ",
+              "name": "天孚通信",
+              "reference_close": 122.0,
+              "return_5d": -0.17567567567567566,
+              "return_20d": -0.48093941456773315
+            }
+          ],
+          "score": 0.04766215944045982,
+          "bias": "偏弱",
+          "return_5d": -0.17567567567567566,
+          "return_20d": -0.48093941456773315
+        }
+      ],
+      "basket_version": "20261016",
+      "model_status": "RESEARCH_ONLY"
+    },
     {
       "id": "SECTOR_MOMENTUM_V1_20261105_20261106",
       "created_at": "2026-11-05T09:40:42.878681+00:00",
@@ -5011,6 +5287,68 @@
         {
           "id": "photonics",
           "actual_return": -0.05541984732824423,
+          "actual_bias": "偏弱",
+          "matched": true,
+          "status": "Verified"
+        }
+      ]
+    },
+    {
+      "forecast_id": "SECTOR_MOMENTUM_V1_20261105_20261106",
+      "evaluated_at": "2026-11-06T12:26:43.180685+00:00",
+      "sectors": [
+        {
+          "id": "foundry",
+          "actual_return": 0.0018971903514319877,
+          "actual_bias": "震荡",
+          "matched": false,
+          "status": "Verified"
+        },
+        {
+          "id": "equipment",
+          "actual_return": -0.0018003244148945274,
+          "actual_bias": "震荡",
+          "matched": true,
+          "status": "Verified"
+        },
+        {
+          "id": "ai",
+          "actual_return": -0.02286828576493527,
+          "actual_bias": "偏弱",
+          "matched": true,
+          "status": "Verified"
+        },
+        {
+          "id": "a_share",
+          "actual_return": -0.04414447282013867,
+          "actual_bias": "偏弱",
+          "matched": true,
+          "status": "Verified"
+        },
+        {
+          "id": "chips",
+          "actual_return": -0.04982248520710064,
+          "actual_bias": "偏弱",
+          "matched": true,
+          "status": "Verified"
+        },
+        {
+          "id": "memory",
+          "actual_return": -0.05899925317401056,
+          "actual_bias": "偏弱",
+          "matched": true,
+          "status": "Verified"
+        },
+        {
+          "id": "infrastructure",
+          "actual_return": -0.04867075664621667,
+          "actual_bias": "偏弱",
+          "matched": true,
+          "status": "Verified"
+        },
+        {
+          "id": "photonics",
+          "actual_return": -0.07278702656106906,
           "actual_bias": "偏弱",
           "matched": true,
           "status": "Verified"
