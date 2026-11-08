@@ -128,3 +128,10 @@ V9 已完成：历史规模、估值、收益显著性及特征分组选股均�
 ### HHH research update — 8 November 2026
 
 [V18: signed-volume response and Top20 selection](HHH/research/expected-return-v18-20261108.html) completed a fixed comparison across all eligible A-shares, T+1/T+3/T+5 and both entry delays. It was rejected for adoption: normal-entry T+1 mean cohort return after the fixed 31 bp cost was -0.2983%, versus -0.1166% for V1. The full comparisons with simple baselines and failed conditions are retained; these reused development results are not new out-of-sample evidence. Daily predictions remain V1, and historical predictions and outcomes are unchanged. Ten cached news excerpts were repaired into the offline classification flow; current company-notice acquisition remains unresolved. No profitability or model-promotion claim is made.
+
+
+### HHH research update — 8 November 2026 (V19)
+
+[V19: missingness diagnosis and winner retention](HHH/research/expected-return-v19-20261108.html) isolates the missing-response increment while keeping the saved V1 base unchanged. All eligible A-shares, T+1/T+3/T+5 and both entry delays were compared with V1 and simple baselines. Normal-entry T+1 mean cohort return after the fixed 31 bp cost was -0.2214%, versus -0.1166% for V1. V19 retained 1,052 of V1's 1,172 winning seats but still lost winner contribution; only the two T+5 groups improved versus V1. It was rejected for adoption. These 126 reused development dates are not new out-of-sample evidence. Historical forecasts and outcomes and the daily V1 model remain unchanged.
+
+V19 已查明旧 V18 把不同来源的缺失混为一类的问题；隔离缺失加分后，T+1 仍未改善选股，完整失败结果和赢家保留比较继续公开。已取得并一次分类一份完整公告媒体转载，但这不等于取得交易所原件、修复供应商接口或完成全A覆盖；未作为预测特征。

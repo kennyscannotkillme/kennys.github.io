@@ -23,6 +23,10 @@
     ],
     "links": [
       {
+        "label": "V19 · 保留V1的响应增量：未采用",
+        "url": "./research/expected-return-v19-20261108.html"
+      },
+      {
         "label": "V18 · 历史成交响应：未采用",
         "url": "./research/expected-return-v18-20261108.html"
       },
