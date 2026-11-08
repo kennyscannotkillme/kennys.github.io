@@ -123,3 +123,8 @@ Found an unclear chart, a data inconsistency or a mobile layout issue? [Open an 
 Completed V9 (23 October): 21 native Ridge fits and 21 characteristic-cell table bundles tested historical size/BM and return salience across all three horizons and both entry clocks. D1 and D2 each passed 0/6 development groups. Full Top20 coverage was retained, but prediction and economic gates failed. Public V1 and historical forecasts remain unchanged. [Results / 完整结果](docs/research/v9-20261023.md).
 
 V9 已完成：历史规模、估值、收益显著性及特征分组选股均已按三个期限、两种入场时钟验证。两个候选均 0/6 组通过，保留线上 V1 与全部历史记录。
+
+
+### HHH research update — 8 November 2026
+
+[V18: signed-volume response and Top20 selection](HHH/research/expected-return-v18-20261108.html) completed a fixed comparison across all eligible A-shares, T+1/T+3/T+5 and both entry delays. It was rejected for adoption: normal-entry T+1 mean cohort return after the fixed 31 bp cost was -0.2983%, versus -0.1166% for V1. The full comparisons with simple baselines and failed conditions are retained; these reused development results are not new out-of-sample evidence. Daily predictions remain V1, and historical predictions and outcomes are unchanged. Ten cached news excerpts were repaired into the offline classification flow; current company-notice acquisition remains unresolved. No profitability or model-promotion claim is made.
