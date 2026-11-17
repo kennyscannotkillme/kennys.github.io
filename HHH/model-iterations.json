@@ -23,6 +23,10 @@
     ],
     "links": [
       {
+        "label": "V21 · 固定等权组合未改善T+1：未采用",
+        "url": "./research/expected-return-v21-20261118.html"
+      },
+      {
         "label": "V19 · 保留V1的响应增量：未采用",
         "url": "./research/expected-return-v19-20261108.html"
       },
