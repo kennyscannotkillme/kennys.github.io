@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T13:55:13.580420+00:00",
+  "generated_at": "2026-11-19T09:44:38.924742+00:00",
   "method": {
     "id": "COMPOSITE_VALUE_TREND_LOWVOL_V1",
     "label": "全A综合评分每日观察",
@@ -8,6 +8,251 @@
     "return_basis": "价格跟踪：T 日开盘复权价进入、T+N 日收盘复权价退出，收益=(退出收盘×复权因子)/(T开盘×复权因子)-1。未验证涨跌停、停牌与容量限制，不代表实际账户成交或月度策略回报。"
   },
   "records": [
+    {
+      "id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261119_20261120",
+      "created_at": "2026-11-19T09:44:38.467663+00:00",
+      "signal_date": "20261119",
+      "entry_date": "20261120",
+      "model_version": "COMPOSITE_VALUE_TREND_LOWVOL_V1",
+      "ranked_count": 5371,
+      "risk_on": false,
+      "horizons": [
+        {
+          "days": 1,
+          "exit_date": "20261123"
+        },
+        {
+          "days": 3,
+          "exit_date": "20261125"
+        },
+        {
+          "days": 5,
+          "exit_date": "20261127"
+        }
+      ],
+      "candidates": [
+        {
+          "ticker": "601166.SH",
+          "name": "兴业银行",
+          "rank": 1,
+          "score": 97.93334574567119,
+          "reference_close": 20.09,
+          "expected_return": null,
+          "trend_percentile": 96.2390616272575,
+          "value_percentile": 98.80841556507168,
+          "lowvol_percentile": 98.75256004468442
+        },
+        {
+          "ticker": "601668.SH",
+          "name": "中国建筑",
+          "rank": 2,
+          "score": 97.75336684664558,
+          "reference_close": 4.73,
+          "expected_return": null,
+          "trend_percentile": 94.22826289331596,
+          "value_percentile": 99.55315583690188,
+          "lowvol_percentile": 99.47868180971886
+        },
+        {
+          "ticker": "601328.SH",
+          "name": "交通银行",
+          "rank": 3,
+          "score": 97.71302674858809,
+          "reference_close": 8.75,
+          "expected_return": null,
+          "trend_percentile": 98.3057158815863,
+          "value_percentile": 97.40271830199218,
+          "lowvol_percentile": 97.43064606218582
+        },
+        {
+          "ticker": "600000.SH",
+          "name": "浦发银行",
+          "rank": 4,
+          "score": 97.35617203500279,
+          "reference_close": 10.7,
+          "expected_return": null,
+          "trend_percentile": 97.31893502141128,
+          "value_percentile": 99.10631167380376,
+          "lowvol_percentile": 95.64326940979333
+        },
+        {
+          "ticker": "601998.SH",
+          "name": "中信银行",
+          "rank": 5,
+          "score": 97.22584248743252,
+          "reference_close": 9.57,
+          "expected_return": null,
+          "trend_percentile": 97.52373859616459,
+          "value_percentile": 96.49972072239807,
+          "lowvol_percentile": 97.65406814373488
+        },
+        {
+          "ticker": "601818.SH",
+          "name": "光大银行",
+          "rank": 6,
+          "score": 97.20101781170483,
+          "reference_close": 3.23,
+          "expected_return": null,
+          "trend_percentile": 92.7201638428598,
+          "value_percentile": 99.6276298640849,
+          "lowvol_percentile": 99.2552597281698
+        },
+        {
+          "ticker": "601577.SH",
+          "name": "长沙银行",
+          "rank": 7,
+          "score": 97.17619313597717,
+          "reference_close": 10.19,
+          "expected_return": null,
+          "trend_percentile": 95.02885868553342,
+          "value_percentile": 98.56637497672686,
+          "lowvol_percentile": 97.93334574567119
+        },
+        {
+          "ticker": "601997.SH",
+          "name": "贵阳银行",
+          "rank": 8,
+          "score": 97.14516229131758,
+          "reference_close": 5.94,
+          "expected_return": null,
+          "trend_percentile": 94.09793334574566,
+          "value_percentile": 99.83243343883821,
+          "lowvol_percentile": 97.50512008936883
+        },
+        {
+          "ticker": "600019.SH",
+          "name": "宝钢股份",
+          "rank": 9,
+          "score": 97.12964686898778,
+          "reference_close": 6.3,
+          "expected_return": null,
+          "trend_percentile": 95.1591882331037,
+          "value_percentile": 97.16067771364737,
+          "lowvol_percentile": 99.06907466021225
+        },
+        {
+          "ticker": "000001.SZ",
+          "name": "平安银行",
+          "rank": 10,
+          "score": 97.06448209520264,
+          "reference_close": 12.04,
+          "expected_return": null,
+          "trend_percentile": 94.0048408117669,
+          "value_percentile": 98.90150809905046,
+          "lowvol_percentile": 98.28709737479055
+        },
+        {
+          "ticker": "601916.SH",
+          "name": "浙商银行",
+          "rank": 11,
+          "score": 96.8534723515174,
+          "reference_close": 2.98,
+          "expected_return": null,
+          "trend_percentile": 91.78923850307206,
+          "value_percentile": 99.23664122137404,
+          "lowvol_percentile": 99.53453733010612
+        },
+        {
+          "ticker": "601169.SH",
+          "name": "北京银行",
+          "rank": 12,
+          "score": 96.61143176317259,
+          "reference_close": 6.2,
+          "expected_return": null,
+          "trend_percentile": 97.67268665053062,
+          "value_percentile": 99.18078570098679,
+          "lowvol_percentile": 92.98082293800037
+        },
+        {
+          "ticker": "601528.SH",
+          "name": "瑞丰银行",
+          "rank": 13,
+          "score": 96.57419474958108,
+          "reference_close": 5.46,
+          "expected_return": null,
+          "trend_percentile": 95.99702103891268,
+          "value_percentile": 98.69670452429715,
+          "lowvol_percentile": 95.02885868553342
+        },
+        {
+          "ticker": "002807.SZ",
+          "name": "江阴银行",
+          "rank": 14,
+          "score": 96.4128343573512,
+          "reference_close": 4.36,
+          "expected_return": null,
+          "trend_percentile": 94.63787004282257,
+          "value_percentile": 98.3429528951778,
+          "lowvol_percentile": 96.25768013405325
+        },
+        {
+          "ticker": "601006.SH",
+          "name": "大秦铁路",
+          "rank": 15,
+          "score": 96.33836033016819,
+          "reference_close": 4.98,
+          "expected_return": null,
+          "trend_percentile": 92.51536026810649,
+          "value_percentile": 97.98920126605846,
+          "lowvol_percentile": 98.51051945633961
+        },
+        {
+          "ticker": "601398.SH",
+          "name": "工商银行",
+          "rank": 16,
+          "score": 96.31974182337242,
+          "reference_close": 9.1,
+          "expected_return": null,
+          "trend_percentile": 97.69130515732638,
+          "value_percentile": 94.56339601563954,
+          "lowvol_percentile": 96.70452429715138
+        },
+        {
+          "ticker": "603323.SH",
+          "name": "苏农银行",
+          "rank": 17,
+          "score": 96.29491714764477,
+          "reference_close": 4.57,
+          "expected_return": null,
+          "trend_percentile": 93.87451126419661,
+          "value_percentile": 98.78979705827592,
+          "lowvol_percentile": 96.22044312046174
+        },
+        {
+          "ticker": "600015.SH",
+          "name": "华夏银行",
+          "rank": 18,
+          "score": 96.23285545832557,
+          "reference_close": 6.74,
+          "expected_return": null,
+          "trend_percentile": 92.31055669335319,
+          "value_percentile": 99.75795941165518,
+          "lowvol_percentile": 96.63005026996835
+        },
+        {
+          "ticker": "002936.SZ",
+          "name": "郑州银行",
+          "rank": 19,
+          "score": 96.1335567554149,
+          "reference_close": 1.76,
+          "expected_return": null,
+          "trend_percentile": 89.7039657419475,
+          "value_percentile": 99.72072239806367,
+          "lowvol_percentile": 98.97598212623348
+        },
+        {
+          "ticker": "601825.SH",
+          "name": "沪农商行",
+          "rank": 20,
+          "score": 96.12735058648298,
+          "reference_close": 9.84,
+          "expected_return": null,
+          "trend_percentile": 98.19400484081177,
+          "value_percentile": 96.31353565444051,
+          "lowvol_percentile": 93.87451126419661
+        }
+      ]
+    },
     {
       "id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261117_20261118",
       "created_at": "2026-11-17T13:55:12.559854+00:00",
@@ -4176,97 +4421,35 @@
   ],
   "observations": [
     {
-      "forecast_id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261117_20261118",
-      "as_of": "20261117",
-      "evaluated_at": "2026-11-17T13:55:13.454613+00:00",
+      "forecast_id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261119_20261120",
+      "as_of": "20261119",
+      "evaluated_at": "2026-11-19T09:44:38.813042+00:00",
       "items": [
         {
           "ticker": "601166.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 20.17,
+          "mark_date": "20261119",
+          "mark_close": 20.09,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "600000.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 10.86,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
               "days": 3,
-              "exit_date": "20261123",
+              "exit_date": "20261125",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
               "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "601328.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 8.73,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
-              "exit_date": "20261123",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 5,
-              "exit_date": "20261125",
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4276,28 +4459,28 @@
         {
           "ticker": "601668.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 4.7,
+          "mark_date": "20261119",
+          "mark_close": 4.73,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4305,30 +4488,30 @@
           ]
         },
         {
-          "ticker": "000001.SZ",
+          "ticker": "601328.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 12.25,
+          "mark_date": "20261119",
+          "mark_close": 8.75,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4336,216 +4519,30 @@
           ]
         },
         {
-          "ticker": "601818.SH",
+          "ticker": "600000.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 3.27,
+          "mark_date": "20261119",
+          "mark_close": 10.7,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "601577.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 10.26,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
               "days": 3,
-              "exit_date": "20261123",
+              "exit_date": "20261125",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
               "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "601528.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 5.62,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
-              "exit_date": "20261123",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "601997.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 6.01,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
-              "exit_date": "20261123",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "601169.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 6.31,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
-              "exit_date": "20261123",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "002807.SZ",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 4.5,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
-              "exit_date": "20261123",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "600019.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 6.24,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
-              "exit_date": "20261123",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 5,
-              "exit_date": "20261125",
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4555,28 +4552,28 @@
         {
           "ticker": "601998.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 9.49,
+          "mark_date": "20261119",
+          "mark_close": 9.57,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4584,30 +4581,154 @@
           ]
         },
         {
-          "ticker": "603323.SH",
+          "ticker": "601818.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 4.65,
+          "mark_date": "20261119",
+          "mark_close": 3.23,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "601577.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 10.19,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "601997.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 5.94,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "600019.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 6.3,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "000001.SZ",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 12.04,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4617,28 +4738,28 @@
         {
           "ticker": "601916.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 3.02,
+          "mark_date": "20261119",
+          "mark_close": 2.98,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4646,30 +4767,92 @@
           ]
         },
         {
-          "ticker": "601398.SH",
+          "ticker": "601169.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 9.06,
+          "mark_date": "20261119",
+          "mark_close": 6.2,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "601528.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 5.46,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "002807.SZ",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 4.36,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4679,28 +4862,121 @@
         {
           "ticker": "601006.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 4.95,
+          "mark_date": "20261119",
+          "mark_close": 4.98,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "601398.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 9.1,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "603323.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 4.57,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            }
+          ]
+        },
+        {
+          "ticker": "600015.SH",
+          "entry_open": null,
+          "mark_date": "20261119",
+          "mark_close": 6.74,
+          "current_return": null,
+          "status": "WaitingEntry",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4710,59 +4986,28 @@
         {
           "ticker": "002936.SZ",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 1.8,
+          "mark_date": "20261119",
+          "mark_close": 1.76,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
-              "exit_date": "20261125",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            }
-          ]
-        },
-        {
-          "ticker": "600908.SH",
-          "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 6.15,
-          "current_return": null,
-          "status": "WaitingEntry",
-          "horizons": [
-            {
-              "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
               "days": 3,
-              "exit_date": "20261123",
+              "exit_date": "20261125",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
               "days": 5,
-              "exit_date": "20261125",
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4772,28 +5017,28 @@
         {
           "ticker": "601825.SH",
           "entry_open": null,
-          "mark_date": "20261117",
-          "mark_close": 9.7,
+          "mark_date": "20261119",
+          "mark_close": 9.84,
           "current_return": null,
           "status": "WaitingEntry",
           "horizons": [
             {
               "days": 1,
-              "exit_date": "20261119",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "WaitingEntry"
-            },
-            {
-              "days": 3,
               "exit_date": "20261123",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
             },
             {
-              "days": 5,
+              "days": 3,
               "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "WaitingEntry"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261127",
               "exit_close": null,
               "realized_return": null,
               "status": "WaitingEntry"
@@ -4803,17 +5048,644 @@
       ]
     },
     {
+      "forecast_id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261117_20261118",
+      "as_of": "20261119",
+      "evaluated_at": "2026-11-19T09:44:38.757940+00:00",
+      "items": [
+        {
+          "ticker": "601166.SH",
+          "entry_open": 20.17,
+          "mark_date": "20261119",
+          "mark_close": 20.09,
+          "current_return": -0.003966286564204391,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 20.09,
+              "realized_return": -0.003966286564204391,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "600000.SH",
+          "entry_open": 10.76,
+          "mark_date": "20261119",
+          "mark_close": 10.7,
+          "current_return": -0.005576208178438624,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 10.7,
+              "realized_return": -0.005576208178438624,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601328.SH",
+          "entry_open": 8.69,
+          "mark_date": "20261119",
+          "mark_close": 8.75,
+          "current_return": 0.0069044879171462625,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 8.75,
+              "realized_return": 0.0069044879171462625,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601668.SH",
+          "entry_open": 4.7,
+          "mark_date": "20261119",
+          "mark_close": 4.73,
+          "current_return": 0.006382978723404431,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 4.73,
+              "realized_return": 0.006382978723404431,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "000001.SZ",
+          "entry_open": 12.24,
+          "mark_date": "20261119",
+          "mark_close": 12.04,
+          "current_return": -0.016339869281045805,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 12.04,
+              "realized_return": -0.016339869281045805,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601818.SH",
+          "entry_open": 3.28,
+          "mark_date": "20261119",
+          "mark_close": 3.23,
+          "current_return": -0.015243902439024293,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 3.23,
+              "realized_return": -0.015243902439024293,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601577.SH",
+          "entry_open": 10.22,
+          "mark_date": "20261119",
+          "mark_close": 10.19,
+          "current_return": -0.0029354207436399493,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 10.19,
+              "realized_return": -0.0029354207436399493,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601528.SH",
+          "entry_open": 5.61,
+          "mark_date": "20261119",
+          "mark_close": 5.46,
+          "current_return": -0.026737967914438387,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 5.46,
+              "realized_return": -0.026737967914438387,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601997.SH",
+          "entry_open": 6.0,
+          "mark_date": "20261119",
+          "mark_close": 5.94,
+          "current_return": -0.009999999999999898,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 5.94,
+              "realized_return": -0.009999999999999898,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601169.SH",
+          "entry_open": 6.28,
+          "mark_date": "20261119",
+          "mark_close": 6.2,
+          "current_return": -0.01273885350318471,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 6.2,
+              "realized_return": -0.01273885350318471,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "002807.SZ",
+          "entry_open": 4.49,
+          "mark_date": "20261119",
+          "mark_close": 4.36,
+          "current_return": -0.028953229398663627,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 4.36,
+              "realized_return": -0.028953229398663627,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "600019.SH",
+          "entry_open": 6.26,
+          "mark_date": "20261119",
+          "mark_close": 6.3,
+          "current_return": 0.006389776357827559,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 6.3,
+              "realized_return": 0.006389776357827559,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601998.SH",
+          "entry_open": 9.49,
+          "mark_date": "20261119",
+          "mark_close": 9.57,
+          "current_return": 0.008429926238145313,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 9.57,
+              "realized_return": 0.008429926238145313,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "603323.SH",
+          "entry_open": 4.63,
+          "mark_date": "20261119",
+          "mark_close": 4.57,
+          "current_return": -0.01295896328293733,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 4.57,
+              "realized_return": -0.01295896328293733,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601916.SH",
+          "entry_open": 3.03,
+          "mark_date": "20261119",
+          "mark_close": 2.98,
+          "current_return": -0.01650165016501648,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 2.98,
+              "realized_return": -0.01650165016501648,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601398.SH",
+          "entry_open": 9.03,
+          "mark_date": "20261119",
+          "mark_close": 9.1,
+          "current_return": 0.007751937984496138,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 9.1,
+              "realized_return": 0.007751937984496138,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601006.SH",
+          "entry_open": 4.97,
+          "mark_date": "20261119",
+          "mark_close": 4.98,
+          "current_return": 0.00201207243460777,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 4.98,
+              "realized_return": 0.00201207243460777,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "002936.SZ",
+          "entry_open": 1.79,
+          "mark_date": "20261119",
+          "mark_close": 1.76,
+          "current_return": -0.016759776536312776,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 1.76,
+              "realized_return": -0.016759776536312776,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "600908.SH",
+          "entry_open": 6.13,
+          "mark_date": "20261119",
+          "mark_close": 6.01,
+          "current_return": -0.019575856443719397,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 6.01,
+              "realized_return": -0.019575856443719397,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        },
+        {
+          "ticker": "601825.SH",
+          "entry_open": 9.73,
+          "mark_date": "20261119",
+          "mark_close": 9.84,
+          "current_return": 0.01130524152106882,
+          "status": "Tracking",
+          "horizons": [
+            {
+              "days": 1,
+              "exit_date": "20261119",
+              "exit_close": 9.84,
+              "realized_return": 0.01130524152106882,
+              "status": "Completed"
+            },
+            {
+              "days": 3,
+              "exit_date": "20261123",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            },
+            {
+              "days": 5,
+              "exit_date": "20261125",
+              "exit_close": null,
+              "realized_return": null,
+              "status": "Tracking"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "forecast_id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261110_20261111",
-      "as_of": "20261117",
-      "evaluated_at": "2026-11-17T13:55:13.371948+00:00",
+      "as_of": "20261119",
+      "evaluated_at": "2026-11-19T09:44:38.706346+00:00",
       "items": [
         {
           "ticker": "601328.SH",
           "entry_open": 8.45,
-          "mark_date": "20261117",
-          "mark_close": 8.73,
-          "current_return": 0.03313609467455625,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 8.75,
+          "current_return": 0.035502958579881616,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -4832,19 +5704,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 8.74,
+              "realized_return": 0.03431952662721893,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "600000.SH",
           "entry_open": 10.22,
-          "mark_date": "20261117",
-          "mark_close": 10.86,
-          "current_return": 0.06262230919765166,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 10.7,
+          "current_return": 0.046966731898238745,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -4863,19 +5735,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 10.72,
+              "realized_return": 0.048923679060665526,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601166.SH",
           "entry_open": 19.7,
-          "mark_date": "20261117",
-          "mark_close": 20.17,
-          "current_return": 0.023857868020304762,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 20.09,
+          "current_return": 0.01979695431472095,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -4894,19 +5766,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 19.97,
+              "realized_return": 0.013705583756345119,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601528.SH",
           "entry_open": 5.42,
-          "mark_date": "20261117",
-          "mark_close": 5.62,
-          "current_return": 0.03690036900368998,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 5.46,
+          "current_return": 0.007380073800737907,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -4925,19 +5797,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 5.53,
+              "realized_return": 0.020295202952029356,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "002807.SZ",
           "entry_open": 4.44,
-          "mark_date": "20261117",
-          "mark_close": 4.5,
-          "current_return": 0.013513513513513375,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.36,
+          "current_return": -0.018018018018018167,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -4956,19 +5828,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.44,
+              "realized_return": 0.0,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601169.SH",
           "entry_open": 5.98,
-          "mark_date": "20261117",
-          "mark_close": 6.31,
-          "current_return": 0.05518394648829417,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.2,
+          "current_return": 0.03678929765886285,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -4987,19 +5859,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.29,
+              "realized_return": 0.051839464882943,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601668.SH",
           "entry_open": 4.65,
-          "mark_date": "20261117",
-          "mark_close": 4.7,
-          "current_return": 0.010752688172043001,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.73,
+          "current_return": 0.017204301075268935,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5018,19 +5890,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.72,
+              "realized_return": 0.01505376344086029,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "000001.SZ",
           "entry_open": 11.83,
-          "mark_date": "20261117",
-          "mark_close": 12.25,
-          "current_return": 0.035502958579881616,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 12.04,
+          "current_return": 0.017751479289940697,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5049,19 +5921,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 12.2,
+              "realized_return": 0.03127641589180041,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601577.SH",
           "entry_open": 10.1,
-          "mark_date": "20261117",
-          "mark_close": 10.26,
-          "current_return": 0.015841584158415856,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 10.19,
+          "current_return": 0.008910891089108919,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5080,19 +5952,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 10.22,
+              "realized_return": 0.011881188118811892,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601998.SH",
           "entry_open": 9.17,
-          "mark_date": "20261117",
-          "mark_close": 9.49,
-          "current_return": 0.034896401308615044,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 9.57,
+          "current_return": 0.043620501635768694,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5111,19 +5983,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 9.57,
+              "realized_return": 0.043620501635768694,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "600019.SH",
           "entry_open": 6.19,
-          "mark_date": "20261117",
-          "mark_close": 6.24,
-          "current_return": 0.008077544426494221,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.3,
+          "current_return": 0.017770597738287375,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5142,19 +6014,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.32,
+              "realized_return": 0.02100161550888524,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "603323.SH",
           "entry_open": 4.56,
-          "mark_date": "20261117",
-          "mark_close": 4.65,
-          "current_return": 0.019736842105263275,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.57,
+          "current_return": 0.002192982456140413,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5173,19 +6045,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.6,
+              "realized_return": 0.00877192982456143,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601818.SH",
           "entry_open": 3.2,
-          "mark_date": "20261117",
-          "mark_close": 3.27,
-          "current_return": 0.02187500000000009,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 3.23,
+          "current_return": 0.009375000000000133,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5204,19 +6076,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 3.27,
+              "realized_return": 0.02187500000000009,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601997.SH",
           "entry_open": 5.96,
-          "mark_date": "20261117",
-          "mark_close": 6.01,
-          "current_return": 0.008389261744966348,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 5.94,
+          "current_return": -0.003355704697986517,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5235,19 +6107,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 5.99,
+              "realized_return": 0.005033557046979942,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601398.SH",
           "entry_open": 8.63,
-          "mark_date": "20261117",
-          "mark_close": 9.06,
-          "current_return": 0.049826187717265435,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 9.1,
+          "current_return": 0.05446118192352234,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5266,19 +6138,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 9.06,
+              "realized_return": 0.049826187717265435,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601939.SH",
           "entry_open": 12.01,
-          "mark_date": "20261117",
-          "mark_close": 12.3,
-          "current_return": 0.024146544546211457,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 12.38,
+          "current_return": 0.03080766028309756,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5297,19 +6169,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 12.31,
+              "realized_return": 0.02497918401332222,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "600908.SH",
           "entry_open": 6.0,
-          "mark_date": "20261117",
-          "mark_close": 6.15,
-          "current_return": 0.025000000000000355,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.01,
+          "current_return": 0.0016666666666667052,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5328,19 +6200,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.1,
+              "realized_return": 0.016666666666666607,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601333.SH",
           "entry_open": 3.31,
-          "mark_date": "20261117",
-          "mark_close": 3.3,
-          "current_return": -0.0030211480362539733,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 3.26,
+          "current_return": -0.01510574018126909,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5359,19 +6231,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 3.29,
+              "realized_return": -0.006042296072507614,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601825.SH",
           "entry_open": 9.19,
-          "mark_date": "20261117",
-          "mark_close": 9.7,
-          "current_return": 0.055495103373231824,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 9.84,
+          "current_return": 0.07072905331882473,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5390,19 +6262,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 9.77,
+              "realized_return": 0.06311207834602817,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "002936.SZ",
           "entry_open": 1.81,
-          "mark_date": "20261117",
-          "mark_close": 1.8,
-          "current_return": -0.0055248618784530246,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 1.76,
+          "current_return": -0.027624309392265123,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5421,9 +6293,9 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 1.79,
+              "realized_return": -0.01104972375690616,
+              "status": "Completed"
             }
           ]
         }
@@ -5431,16 +6303,16 @@
     },
     {
       "forecast_id": "COMPOSITE_VALUE_TREND_LOWVOL_V1_20261109_20261111",
-      "as_of": "20261117",
-      "evaluated_at": "2026-11-17T13:55:13.272252+00:00",
+      "as_of": "20261119",
+      "evaluated_at": "2026-11-19T09:44:38.656686+00:00",
       "items": [
         {
           "ticker": "601328.SH",
           "entry_open": 8.45,
-          "mark_date": "20261117",
-          "mark_close": 8.73,
-          "current_return": 0.03313609467455625,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 8.75,
+          "current_return": 0.035502958579881616,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5459,19 +6331,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 8.74,
+              "realized_return": 0.03431952662721893,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "600000.SH",
           "entry_open": 10.22,
-          "mark_date": "20261117",
-          "mark_close": 10.86,
-          "current_return": 0.06262230919765166,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 10.7,
+          "current_return": 0.046966731898238745,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5490,19 +6362,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 10.72,
+              "realized_return": 0.048923679060665526,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601166.SH",
           "entry_open": 19.7,
-          "mark_date": "20261117",
-          "mark_close": 20.17,
-          "current_return": 0.023857868020304762,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 20.09,
+          "current_return": 0.01979695431472095,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5521,19 +6393,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 19.97,
+              "realized_return": 0.013705583756345119,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601528.SH",
           "entry_open": 5.42,
-          "mark_date": "20261117",
-          "mark_close": 5.62,
-          "current_return": 0.03690036900368998,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 5.46,
+          "current_return": 0.007380073800737907,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5552,19 +6424,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 5.53,
+              "realized_return": 0.020295202952029356,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601668.SH",
           "entry_open": 4.65,
-          "mark_date": "20261117",
-          "mark_close": 4.7,
-          "current_return": 0.010752688172043001,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.73,
+          "current_return": 0.017204301075268935,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5583,19 +6455,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.72,
+              "realized_return": 0.01505376344086029,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601169.SH",
           "entry_open": 5.98,
-          "mark_date": "20261117",
-          "mark_close": 6.31,
-          "current_return": 0.05518394648829417,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.2,
+          "current_return": 0.03678929765886285,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5614,19 +6486,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.29,
+              "realized_return": 0.051839464882943,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "002807.SZ",
           "entry_open": 4.44,
-          "mark_date": "20261117",
-          "mark_close": 4.5,
-          "current_return": 0.013513513513513375,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.36,
+          "current_return": -0.018018018018018167,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5645,19 +6517,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.44,
+              "realized_return": 0.0,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "000001.SZ",
           "entry_open": 11.83,
-          "mark_date": "20261117",
-          "mark_close": 12.25,
-          "current_return": 0.035502958579881616,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 12.04,
+          "current_return": 0.017751479289940697,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5676,19 +6548,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 12.2,
+              "realized_return": 0.03127641589180041,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "600019.SH",
           "entry_open": 6.19,
-          "mark_date": "20261117",
-          "mark_close": 6.24,
-          "current_return": 0.008077544426494221,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.3,
+          "current_return": 0.017770597738287375,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5707,19 +6579,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.32,
+              "realized_return": 0.02100161550888524,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601577.SH",
           "entry_open": 10.1,
-          "mark_date": "20261117",
-          "mark_close": 10.26,
-          "current_return": 0.015841584158415856,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 10.19,
+          "current_return": 0.008910891089108919,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5738,19 +6610,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 10.22,
+              "realized_return": 0.011881188118811892,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601398.SH",
           "entry_open": 8.63,
-          "mark_date": "20261117",
-          "mark_close": 9.06,
-          "current_return": 0.049826187717265435,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 9.1,
+          "current_return": 0.05446118192352234,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5769,19 +6641,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 9.06,
+              "realized_return": 0.049826187717265435,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601939.SH",
           "entry_open": 12.01,
-          "mark_date": "20261117",
-          "mark_close": 12.3,
-          "current_return": 0.024146544546211457,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 12.38,
+          "current_return": 0.03080766028309756,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5800,19 +6672,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 12.31,
+              "realized_return": 0.02497918401332222,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601800.SH",
           "entry_open": 6.1,
-          "mark_date": "20261117",
-          "mark_close": 6.02,
-          "current_return": -0.013114754098360604,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.01,
+          "current_return": -0.014754098360655665,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5831,19 +6703,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.02,
+              "realized_return": -0.013114754098360604,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "603323.SH",
           "entry_open": 4.56,
-          "mark_date": "20261117",
-          "mark_close": 4.65,
-          "current_return": 0.019736842105263275,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.57,
+          "current_return": 0.002192982456140413,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5862,19 +6734,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.6,
+              "realized_return": 0.00877192982456143,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601998.SH",
           "entry_open": 9.17,
-          "mark_date": "20261117",
-          "mark_close": 9.49,
-          "current_return": 0.034896401308615044,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 9.57,
+          "current_return": 0.043620501635768694,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5893,19 +6765,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 9.57,
+              "realized_return": 0.043620501635768694,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601997.SH",
           "entry_open": 5.96,
-          "mark_date": "20261117",
-          "mark_close": 6.01,
-          "current_return": 0.008389261744966348,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 5.94,
+          "current_return": -0.003355704697986517,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5924,19 +6796,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 5.99,
+              "realized_return": 0.005033557046979942,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "000028.SZ",
           "entry_open": 21.05,
-          "mark_date": "20261117",
-          "mark_close": 21.09,
-          "current_return": 0.0019002375296912621,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 20.97,
+          "current_return": -0.0038004750593826353,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5955,19 +6827,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 21.24,
+              "realized_return": 0.009026128266033107,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "600908.SH",
           "entry_open": 6.0,
-          "mark_date": "20261117",
-          "mark_close": 6.15,
-          "current_return": 0.025000000000000355,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 6.01,
+          "current_return": 0.0016666666666667052,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -5986,19 +6858,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 6.1,
+              "realized_return": 0.016666666666666607,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601006.SH",
           "entry_open": 4.87,
-          "mark_date": "20261117",
-          "mark_close": 4.95,
-          "current_return": 0.01642710472279263,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 4.98,
+          "current_return": 0.022587268993839782,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -6017,19 +6889,19 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 4.99,
+              "realized_return": 0.024640657084188833,
+              "status": "Completed"
             }
           ]
         },
         {
           "ticker": "601818.SH",
           "entry_open": 3.2,
-          "mark_date": "20261117",
-          "mark_close": 3.27,
-          "current_return": 0.02187500000000009,
-          "status": "Tracking",
+          "mark_date": "20261119",
+          "mark_close": 3.23,
+          "current_return": 0.009375000000000133,
+          "status": "Completed",
           "horizons": [
             {
               "days": 1,
@@ -6048,9 +6920,9 @@
             {
               "days": 5,
               "exit_date": "20261118",
-              "exit_close": null,
-              "realized_return": null,
-              "status": "Tracking"
+              "exit_close": 3.27,
+              "realized_return": 0.02187500000000009,
+              "status": "Completed"
             }
           ]
         }
